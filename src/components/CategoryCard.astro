@@ -1,4 +1,4 @@
 ---
-const { name, icon } = Astro.props;
+const { name, icon, href } = Astro.props;
 ---
-<article class="category-card"><span aria-hidden="true">{icon}</span><h3>{name}</h3><p>Tests en préparation</p></article>
+<article class="category-card"><span aria-hidden="true">{icon}</span><h3>{href ? <a href={href}>{name}</a> : name}</h3><p>{href ? 'Découvrir la catégorie' : 'Tests en préparation'}</p></article>

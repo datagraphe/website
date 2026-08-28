@@ -8,17 +8,17 @@ interface Props { title: string; description: string; image?: string; noindex?: 
 const { title, description, image='/brand/datagraphe-logo.png', noindex=false, ogTitle=title, ogDescription=description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const social = new URL(image, Astro.site);
-const org = {'@context':'https://schema.org','@type':'Organization',name:'Datagraphe',url:'https://datagraphe.com',logo:'https://datagraphe.com/brand/datagraphe-icon.png'};
+const structuredData = {'@context':'https://schema.org','@graph':[{'@type':'Organization','@id':'https://datagraphe.com/#organization',name:'Datagraphe',url:'https://datagraphe.com/',logo:{'@type':'ImageObject',url:'https://datagraphe.com/brand/datagraphe-logo.png',width:1254,height:1254}},{'@type':'WebSite','@id':'https://datagraphe.com/#website',url:'https://datagraphe.com/',name:'Datagraphe',description:'Tests et comparatifs de logiciels pour indépendants, TPE et PME.',publisher:{'@id':'https://datagraphe.com/#organization'},inLanguage:'fr-FR'}]};
 ---
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="theme-color" content="#071326"/>
     <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
-    <link rel="icon" href="/brand/favicon.png" type="image/png"/>{noindex && <meta name="robots" content="noindex"/>}
-    <meta property="og:type" content="website"/><meta property="og:locale" content="fr_FR"/><meta property="og:title" content={ogTitle}/><meta property="og:description" content={ogDescription}/><meta property="og:url" content={canonical}/><meta property="og:image" content={social}/>
-    <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={ogTitle}/><meta name="twitter:description" content={ogDescription}/><meta name="twitter:image" content={social}/>
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(org)}/>
+    <link rel="icon" href="/brand/favicon.png" type="image/png"/><meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}/>
+    <meta property="og:type" content="website"/><meta property="og:locale" content="fr_FR"/><meta property="og:site_name" content="Datagraphe"/><meta property="og:title" content={ogTitle}/><meta property="og:description" content={ogDescription}/><meta property="og:url" content={canonical}/><meta property="og:image" content={social}/><meta property="og:image:alt" content="Datagraphe"/>
+    <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={ogTitle}/><meta name="twitter:description" content={ogDescription}/><meta name="twitter:image" content={social}/><meta name="twitter:image:alt" content="Datagraphe"/>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)}/>
   </head>
   <body><a class="skip" href="#contenu">Aller au contenu</a><Header/><main id="contenu"><slot/></main><Footer/></body>
 </html>

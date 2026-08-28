@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://datagraphe.com/sitemap-index.xml

@@ -1,14 +1,10 @@
 ---
 import SocialLinks from '@/components/SocialLinks.astro';
+import { localizedPath, type Locale } from '@/i18n/config';
+import { t } from '@/i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale).common;
+const links = [['tests',tr.tests],['comparatifs',tr.comparisons],['methodologie',tr.methodology],['services',tr.services],['a-propos',tr.about],['contact',tr.contact],['transparence',tr.transparency],['confidentialite',tr.privacy],['mentions-legales',tr.legal]];
 ---
-<footer class="site-footer">
-  <div class="shell footer-grid">
-    <div>
-      <a class="brand brand-light" href="/"><img src="/brand/datagraphe-icon.png" alt="" width="38" height="38"/><span>Datagraphe</span></a>
-      <p>Tests et comparatifs de logiciels pour indépendants, TPE et PME, basés sur des observations documentées.</p>
-      <SocialLinks class="social-links-footer" />
-    </div>
-    <nav aria-label="Navigation de pied de page"><a href="/tests/">Tests</a><a href="/categories/">Catégories</a><a href="/comparatifs/">Comparatifs</a><a href="/methodologie/">Méthodologie</a><a href="/services/">Services</a><a href="/a-propos/">À propos</a><a href="/contact/">Contact</a><a href="/transparence/">Transparence</a><a href="/confidentialite/">Confidentialité</a><a href="/mentions-legales/">Mentions légales</a></nav>
-  </div>
-  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} Datagraphe</span><span>datagraphe.com</span></div>
-</footer>
+<footer class="site-footer"><div class="shell footer-grid"><div><a class="brand brand-light" href={localizedPath(locale)}><img src="/brand/datagraphe-icon.png" alt="" width="38" height="38"/><span>Datagraphe</span></a><p>{tr.footerText}</p><SocialLinks locale={locale} class="social-links-footer" /></div><nav aria-label={tr.footerNav}>{links.map(([route,label])=><a href={localizedPath(locale,route)}>{label}</a>)}</nav></div><div class="shell footer-bottom"><span>© {new Date().getFullYear()} Datagraphe</span><span>datagraphe.com</span></div></footer>

@@ -1,8 +1,11 @@
 ---
 import { socials, type SocialPlatform } from '@/config/socials';
+import type { Locale } from '@/i18n/config';
+import { t } from '@/i18n';
 
-interface Props { class?: string }
-const { class: className = '' } = Astro.props;
+interface Props { class?: string; locale?: Locale }
+const { class: className = '', locale = 'fr' } = Astro.props;
+const tr = t(locale).common;
 const platforms: Array<{ key: SocialPlatform; label: string }> = [
   { key: 'youtube', label: 'YouTube' },
   { key: 'linkedin', label: 'LinkedIn' },
@@ -10,10 +13,10 @@ const platforms: Array<{ key: SocialPlatform; label: string }> = [
   { key: 'instagram', label: 'Instagram' },
 ];
 ---
-<div class:list={['social-links', className]} aria-label="Réseaux sociaux Datagraphe">
+<div class:list={['social-links', className]} aria-label={tr.follow}>
   {platforms.map(({ key, label }) => {
     const url = socials[key];
-    const accessibleLabel = `Datagraphe sur ${label}`;
+    const accessibleLabel = `${tr.socialAria} ${label}`;
     const icon = (
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         {key === 'youtube' && <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" />}
@@ -25,7 +28,7 @@ const platforms: Array<{ key: SocialPlatform; label: string }> = [
     return url ? (
       <a href={url} target="_blank" rel="noopener noreferrer" aria-label={accessibleLabel} title={label}>{icon}</a>
     ) : (
-      <span class="social-link-unconfigured" role="img" aria-label={`${accessibleLabel} — lien à venir`} title={`${label} — lien à venir`}>{icon}</span>
+      <span class="social-link-unconfigured" role="img" aria-label={`${accessibleLabel} — ${tr.linkSoon}`} title={`${label} — ${tr.linkSoon}`}>{icon}</span>
     );
   })}
 </div>

@@ -1,0 +1,23 @@
+{
+  "software_id": "jibble",
+  "name": "Jibble",
+  "test_date": null,
+  "updated_date": null,
+  "score": null,
+  "status": "PARTIAL",
+  "features": [
+    { "claim_id": "CLAIM-JIBBLE-001", "key": "clocking", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-002", "key": "timesheets", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-003", "key": "overtime", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-004", "key": "projects", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-005", "key": "reports", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-006", "key": "exports", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-007", "key": "gps", "status": "UNVERIFIED", "evidence": [] },
+    { "claim_id": "CLAIM-JIBBLE-008", "key": "kiosk", "status": "UNVERIFIED", "evidence": [] }
+  ],
+  "advantages": [],
+  "limitations": [],
+  "pricing": null,
+  "affiliate_url": null,
+  "alternatives": ["Clockify", "Toggl Track", "Deputy"]
+}

@@ -37,7 +37,7 @@ Counts: 15 FR + 15 EN + 15 DE + 15 IT + 15 ES = 75 localized URLs, including 65 
 ## Permanent redirects
 
 - `https://www.datagraphe.com/*` → `https://datagraphe.com/:splat`
-- `/` → `/fr/`
+- `/` → `/{preferred-locale}/` — temporary 302 based on the saved selector choice, then the browser `Accept-Language`; fallback to `/fr/`
 - `/tests/` → `/fr/tests/`
 - `/tests/jibble/` → `/fr/tests/jibble/`
 - `/comparatifs/` → `/fr/comparatifs/`
@@ -55,7 +55,7 @@ Counts: 15 FR + 15 EN + 15 DE + 15 IT + 15 ES = 75 localized URLs, including 65 
 - `/categories/` → `/fr/`
 - `/categories/gestion-du-temps/` → `/fr/tests/jibble/`
 
-All rules are 301 redirects. There is no IP-, country- or browser-language redirect.
+All legacy-content and `www` rules are permanent 301 redirects. Only the neutral root uses a non-cacheable 302 because its destination varies by language preference. Detection never uses an IP address or country, never overrides an explicitly prefixed URL, and the selector remains available on every localized page.
 
 ## SEO and quality checks
 

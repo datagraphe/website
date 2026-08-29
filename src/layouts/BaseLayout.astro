@@ -4,6 +4,7 @@ import Footer from '@/components/Footer.astro';
 import '../styles/global.css';
 import '../styles/brand.css';
 import '../styles/services.css';
+import '../styles/socials.css';
 interface Props { title: string; description: string; image?: string; noindex?: boolean; ogTitle?: string; ogDescription?: string }
 const { title, description, image='/brand/datagraphe-logo.png', noindex=false, ogTitle=title, ogDescription=description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);

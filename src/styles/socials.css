@@ -1,0 +1,12 @@
+.social-section{padding:54px 0;background:var(--soft);border-top:1px solid var(--line)}
+.social-section-inner{display:flex;align-items:center;justify-content:space-between;gap:42px}
+.social-section h2{margin:8px 0 4px;color:var(--navy);font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.04em}
+.social-section p{margin:0;color:var(--muted)}
+.social-links{display:flex;align-items:center;gap:10px}
+.social-links a,.social-link-unconfigured{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);transition:transform .18s ease,color .18s ease,border-color .18s ease,background .18s ease}
+.social-links svg{width:20px;height:20px;fill:currentColor}
+.social-links a:hover{color:var(--orange);border-color:rgba(255,116,16,.45);transform:translateY(-2px)}
+.social-link-unconfigured{opacity:.46;cursor:default}
+.social-links-footer{margin-top:22px}
+.social-links-footer a,.social-links-footer .social-link-unconfigured{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:#fff}
+@media(max-width:620px){.social-section-inner{align-items:flex-start;flex-direction:column;gap:24px}}

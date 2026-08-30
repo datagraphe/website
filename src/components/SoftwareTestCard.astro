@@ -1,0 +1,34 @@
+---
+import type { Locale } from '@/i18n/config';
+import { localizedPath } from '@/i18n/config';
+import type { CatalogCopy } from '@/i18n/catalog';
+import type { SoftwareTest } from '@/data/software';
+import { softwareTestPath } from '@/data/software';
+import type { SoftwareCategory } from '@/data/software-categories';
+import { categoryLabel } from '@/data/software-categories';
+
+interface Props { software:SoftwareTest; category:SoftwareCategory; locale:Locale; copy:CatalogCopy }
+const { software, category, locale, copy } = Astro.props;
+const status = software.catalog_status === 'TESTED' ? copy.tested : software.catalog_status === 'PARTIAL' ? copy.partial : copy.updating;
+const formatter = new Intl.DateTimeFormat(locale,{day:'numeric',month:'long',year:'numeric'});
+const formatDate = (value:string|null) => value ? formatter.format(new Date(`${value}T12:00:00Z`)) : null;
+const testDate = formatDate(software.test_date);
+const updatedDate = formatDate(software.updated_date);
+---
+<article class="software-card" data-software-card data-category={software.category} data-name={software.name.toLocaleLowerCase(locale)} data-date={software.updated_date ?? software.test_date ?? ''} data-score={software.score ?? ''}>
+  <div class="software-card-top">
+    <div class="software-monogram" aria-hidden="true">{software.name.slice(0,1)}</div>
+    <span class={`catalog-status catalog-status-${software.catalog_status.toLowerCase()}`}><span></span>{status}</span>
+  </div>
+  <div class="software-card-body">
+    <p class="software-category">{categoryLabel(category,locale)}</p>
+    <h2>{software.name}</h2>
+    <p>{software.summary[locale]}</p>
+  </div>
+  {(testDate || updatedDate || software.score !== null) && <dl class="software-meta">
+    {testDate && <div><dt>{copy.testedOn}</dt><dd>{testDate}</dd></div>}
+    {updatedDate && <div><dt>{copy.updatedOn}</dt><dd>{updatedDate}</dd></div>}
+    {software.score !== null && <div><dt>{copy.scoreLabel}</dt><dd>{software.score}/10</dd></div>}
+  </dl>}
+  <a class="software-card-link" href={localizedPath(locale,softwareTestPath(software))}>{copy.viewTest}<span aria-hidden="true">→</span></a>
+</article>

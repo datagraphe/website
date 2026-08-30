@@ -1,9 +1,22 @@
 {
-  "software_id": "jibble",
+  "id": "jibble",
+  "slug": "jibble",
   "name": "Jibble",
+  "category": "time-tracking-attendance",
+  "tags": ["time-tracking", "attendance", "timesheets", "overtime", "projects"],
+  "tested": true,
+  "catalog_status": "TESTED",
   "test_date": null,
   "updated_date": null,
   "score": null,
+  "test_url": "/tests/jibble/",
+  "summary": {
+    "fr": "Suivi du temps, feuilles de temps et gestion des présences.",
+    "en": "Time tracking, timesheets and attendance management.",
+    "de": "Zeiterfassung, Stundenzettel und Anwesenheitsverwaltung.",
+    "it": "Rilevazione del tempo, fogli ore e gestione delle presenze.",
+    "es": "Control horario, hojas de horas y gestión de asistencia."
+  },
   "status": "PARTIAL",
   "features": [
     { "claim_id": "CLAIM-JIBBLE-001", "key": "clocking", "status": "UNVERIFIED", "evidence": [] },

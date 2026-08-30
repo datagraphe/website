@@ -1,4 +1,4 @@
-export type PageKind = 'home' | 'standard' | 'jibble';
+export type PageKind = 'home' | 'catalog' | 'standard' | 'jibble';
 
 export interface RouteDefinition {
   path: string;
@@ -9,7 +9,7 @@ export interface RouteDefinition {
 
 export const routes: RouteDefinition[] = [
   { path: '', key: 'home', kind: 'home', indexable: true },
-  { path: 'tests', key: 'tests', kind: 'standard', indexable: true },
+  { path: 'tests', key: 'tests', kind: 'catalog', indexable: true },
   { path: 'tests/jibble', key: 'jibble', kind: 'jibble', indexable: true },
   { path: 'comparatifs', key: 'comparatifs', kind: 'standard', indexable: false },
   { path: 'methodologie', key: 'methodologie', kind: 'standard', indexable: true },

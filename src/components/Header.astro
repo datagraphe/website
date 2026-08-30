@@ -10,6 +10,26 @@ const links = [['tests',tr.tests],['comparatifs',tr.comparisons],['methodologie'
 <header class="site-header"><div class="shell nav-wrap">
   <a class="brand" href={localizedPath(locale)} aria-label={`Datagraphe — ${tr.home}`}><img src="/brand/datagraphe-logo.png" alt="" width="38" height="38" decoding="async" fetchpriority="high"/><span>Datagraphe</span></a>
   <button class="menu-button" aria-label={tr.menuOpen} data-label-open={tr.menuOpen} data-label-close={tr.menuClose} aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
-  <nav id="main-nav" aria-label={tr.mainNav}>{links.map(([route,label]) => { const href=localizedPath(locale,route); return <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a> })}<a class="nav-cta" href={localizedPath(locale,'tests')}>{tr.allTests}</a><div class="language-switcher" aria-label={tr.language}>{locales.map(code => <a href={localizedPath(code,routePath)} lang={code} hreflang={code} aria-label={localeNames[code]} aria-current={code===locale ? 'page' : undefined}>{code.toUpperCase()}</a>)}</div></nav>
+  <nav id="main-nav" aria-label={tr.mainNav}>
+    {links.map(([route,label]) => {
+      const href=localizedPath(locale,route);
+      return <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>
+    })}
+    <div class="language-switcher">
+      <select aria-label={tr.language} data-language-select>
+        {locales.map(code => <option value={localizedPath(code,routePath)} data-locale={code} selected={code===locale}>{localeNames[code]}</option>)}
+      </select>
+    </div>
+  </nav>
 </div></header>
-<script is:inline>const b=document.querySelector('.menu-button'),n=document.querySelector('#main-nav'),saveLocale=locale=>document.cookie=`datagraphe_locale=${locale}; Path=/; Max-Age=31536000; SameSite=Lax; Secure`;saveLocale(document.documentElement.lang);document.querySelectorAll('.language-switcher a[lang]').forEach(link=>link.addEventListener('click',()=>saveLocale(link.getAttribute('lang'))));b?.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?b.dataset.labelOpen:b.dataset.labelClose);n?.classList.toggle('open',!o)});</script>
+<script is:inline>
+  const b=document.querySelector('.menu-button'),n=document.querySelector('#main-nav'),languageSelect=document.querySelector('[data-language-select]'),saveLocale=locale=>document.cookie=`datagraphe_locale=${locale}; Path=/; Max-Age=31536000; SameSite=Lax; Secure`;
+  saveLocale(document.documentElement.lang);
+  languageSelect?.addEventListener('change',event=>{
+    const select=event.currentTarget;
+    const option=select.options[select.selectedIndex];
+    saveLocale(option.dataset.locale);
+    window.location.assign(select.value);
+  });
+  b?.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?b.dataset.labelOpen:b.dataset.labelClose);n?.classList.toggle('open',!o)});
+</script>

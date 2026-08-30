@@ -10,6 +10,7 @@ import '../styles/socials.css';
 import '../styles/catalog.css';
 import '../styles/methodology.css';
 import '../styles/services-landing.css';
+import '../styles/jibble-report.css';
 interface Props { locale?: Locale; routePath?: string; title: string; description: string; image?: string; noindex?: boolean; ogTitle?: string; ogDescription?: string }
 const fallbackRoute = Astro.url.pathname.replace(/^\/+|\/+$/g,'');
 const { locale = 'fr', routePath = fallbackRoute, title, description, image='/brand/datagraphe-logo.png', noindex=false, ogTitle=title, ogDescription=description } = Astro.props;

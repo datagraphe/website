@@ -78,7 +78,11 @@ echo "1/6 — Synchronisation avec GitHub"
 git pull --rebase --autostash "$REMOTE" "$BRANCH"
 
 echo "2/6 — Installation reproductible des dépendances"
-npm ci
+if ! npm ci; then
+  echo "npm ci n'a pas pu remplacer node_modules proprement."
+  echo "Réparation des dépendances à partir du fichier package-lock.json…"
+  npm install --no-audit --no-fund
+fi
 
 RELEASE_ID="$(date -u '+%Y%m%dT%H%M%SZ')"
 printf '%s\n' "$RELEASE_ID" > public/deploy-version.txt

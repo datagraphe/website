@@ -8,13 +8,13 @@ import SoftwareCatalog from '@/components/SoftwareCatalog.astro';
 import SoftwareTestCard from '@/components/SoftwareTestCard.astro';
 import MethodologyPage from '@/components/MethodologyPage.astro';
 import ServicesLandingPage from '@/components/ServicesLandingPage.astro';
-import { locales, localizedPath, localeTags, type Locale } from '@/i18n/config';
+import JibbleReportPage from '@/components/JibbleReportPage.astro';
+import { locales, localizedPath, type Locale } from '@/i18n/config';
 import { routes, type RouteDefinition } from '@/i18n/routes';
 import { t } from '@/i18n';
 import { catalogCopy } from '@/i18n/catalog';
 import { categoryById } from '@/data/software-categories';
 import { testedSoftware } from '@/data/software';
-import jibble from '@/data/software/jibble.json';
 
 export function getStaticPaths() {
   return locales.flatMap((locale) => routes.map((route) => ({
@@ -38,7 +38,6 @@ const crumbItems = route.path.includes('/')
 
 const serviceKeys = ['integration','regression','migration','monitoring'];
 const serviceRoutes = ['services/integration-logiciels','services/tests-regression','services/controle-migration','services/surveillance-logiciel'];
-const softwareSchema = {'@context':'https://schema.org','@type':'SoftwareApplication',name:'Jibble',url:'https://www.jibble.io',applicationCategory:'BusinessApplication',applicationSubCategory:content.jibble.category,operatingSystem:'Web',description:content.jibble.description,inLanguage:localeTags[locale]};
 ---
 
 {route.kind === 'home' && <BaseLayout locale={locale} routePath="" title={content.home.title} description={content.home.description}>
@@ -68,7 +67,4 @@ const softwareSchema = {'@context':'https://schema.org','@type':'SoftwareApplica
   </article></section>
 </BaseLayout>}
 
-{route.kind === 'jibble' && <BaseLayout locale={locale} routePath={routePath} title={content.jibble.title} description={content.jibble.description}>
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(softwareSchema)}/><header class="page-hero"><div class="shell"><Breadcrumb items={crumbItems} ariaLabel={`${common.tests} — Jibble`}/><div><span class="status status-partial">Datagraphe Test</span> <span class="status">{content.jibble.category}</span></div><h1>{content.jibble.heading}</h1><p>{content.jibble.question}</p></div></header>
-  <section><div class="shell test-layout"><article class="content" style="width:auto"><div id="verdict" class="verdict-box"><span class="eyebrow">{content.jibble.verdictEyebrow}</span><h2>{content.jibble.verdictHeading}</h2><p>{content.jibble.verdictText}</p><span class="status status-partial">{content.jibble.partial}</span></div><h2 id="protocol">{content.jibble.protocolHeading}</h2><p>{content.jibble.protocolText}</p><p><a href={localizedPath(locale,'methodologie')}>{content.jibble.methodologyLink}</a>.</p><div class="two-col"><div><h3>{content.jibble.testedHeading}</h3><div class="placeholder">{content.jibble.testedPlaceholder}</div></div><div><h3>{content.jibble.notTestedHeading}</h3><div class="placeholder">{content.jibble.notTestedPlaceholder}</div></div></div><h2>{content.jibble.audienceHeading}</h2><div class="placeholder">{content.jibble.audiencePlaceholder}</div><h2>{content.jibble.avoidHeading}</h2><div class="placeholder">{content.jibble.avoidPlaceholder}</div><h2 id="features">{content.jibble.featuresHeading}</h2><div class="feature-grid">{jibble.features.map(feature=><article class="feature-card" data-claim-id={feature.claim_id}><h3>{content.jibble.features[feature.key]}</h3><span class="status status-unverified">{content.jibble.statusLabels[feature.status]}</span><p>{content.jibble.featurePending}</p></article>)}</div><h2>{content.jibble.prosConsHeading}</h2><div class="two-col"><div class="placeholder"><strong>{content.jibble.pros}</strong><p>{content.jibble.pending}</p></div><div class="placeholder"><strong>{content.jibble.cons}</strong><p>{content.jibble.pending}</p></div></div><h2>{content.jibble.sourcesHeading}</h2><ul><li><a href="https://www.jibble.io/help/using-jibbles-api-for-your-specific-needs">Jibble API</a></li><li><a href="https://www.jibble.io/help/how-is-my-bill-calculated">Jibble billing</a></li></ul><p>{content.jibble.sourcesText}</p><h2>{content.jibble.alternativesHeading}</h2><p>{content.jibble.alternativesText}</p><h2>{content.jibble.faqHeading}</h2><div class="faq">{content.jibble.faqs.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div><h2>{content.jibble.finalHeading}</h2><div class="placeholder">{content.jibble.finalText}</div><aside class="disclosure" style="margin-top:32px"><strong>{content.jibble.disclosureTitle}</strong><p>{content.jibble.disclosureText}</p></aside></article><aside class="toc"><strong>{content.jibble.toc}</strong><a href="#verdict">{content.jibble.verdictEyebrow}</a><a href="#protocol">{content.jibble.protocolHeading}</a><a href="#features">{content.jibble.featuresHeading}</a></aside></div></section>
-</BaseLayout>}
+{route.kind === 'jibble' && <JibbleReportPage locale={locale} routePath={routePath}/>}

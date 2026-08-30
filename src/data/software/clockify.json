@@ -1,0 +1,36 @@
+{
+  "id": "clockify",
+  "slug": "clockify",
+  "name": "Clockify",
+  "category": "time-tracking-attendance",
+  "tags": ["time-tracking", "timesheets", "projects", "invoicing", "reports"],
+  "tested": true,
+  "catalog_status": "TESTED",
+  "test_date": "2026-08-30",
+  "updated_date": "2026-08-30",
+  "score": 8.1,
+  "test_url": "/tests/clockify/",
+  "summary": {
+    "fr": "Test complet du pointage web, des projets, rapports, approbations, congés, dépenses et facturation, avec limites clairement documentées.",
+    "en": "Complete review of web time tracking, projects, reports, approvals, leave, expenses and invoicing, with clearly documented limits.",
+    "de": "Vollständiger Test von Web-Zeiterfassung, Projekten, Berichten, Freigaben, Urlaub, Ausgaben und Rechnungen mit klar dokumentierten Grenzen.",
+    "it": "Test completo di rilevazione web, progetti, report, approvazioni, ferie, spese e fatturazione, con limiti chiaramente documentati.",
+    "es": "Prueba completa de seguimiento web, proyectos, informes, aprobaciones, permisos, gastos y facturación, con límites claramente documentados."
+  },
+  "status": "TESTED",
+  "features": [
+    { "claim_id": "CLAIM-CLOCKIFY-001", "key": "timer", "status": "TESTED", "evidence": ["CLK-V1-010", "CLK-V1-011"] },
+    { "claim_id": "CLAIM-CLOCKIFY-002", "key": "timesheets", "status": "TESTED", "evidence": ["CLK-V1-019", "CLK-V1-020"] },
+    { "claim_id": "CLAIM-CLOCKIFY-003", "key": "projects", "status": "TESTED", "evidence": ["CLK-V1-006", "CLK-V1-007"] },
+    { "claim_id": "CLAIM-CLOCKIFY-004", "key": "reports", "status": "TESTED", "evidence": ["CLK-V1-022", "CLK-V1-025"] },
+    { "claim_id": "CLAIM-CLOCKIFY-005", "key": "invoicing", "status": "TESTED", "evidence": ["CLK-V1-034"] },
+    { "claim_id": "CLAIM-CLOCKIFY-006", "key": "exports", "status": "BLOCKED", "evidence": ["CLK-V1-022"] },
+    { "claim_id": "CLAIM-CLOCKIFY-007", "key": "gps", "status": "NOT_TESTABLE", "evidence": [] },
+    { "claim_id": "CLAIM-CLOCKIFY-008", "key": "kiosk", "status": "NOT_TESTABLE", "evidence": [] }
+  ],
+  "advantages": ["Pointage web simple", "Gestion structurée des projets", "Coûts et profit calculés", "Facturation depuis le temps"],
+  "limitations": ["Exports non audités", "GPS et kiosque non testés", "Fonctions avancées payantes", "Seuil de 8 h non démontré"],
+  "pricing": null,
+  "affiliate_url": null,
+  "alternatives": ["Jibble", "Toggl Track", "Harvest"]
+}

@@ -9,6 +9,7 @@ import SoftwareTestCard from '@/components/SoftwareTestCard.astro';
 import MethodologyPage from '@/components/MethodologyPage.astro';
 import ServicesLandingPage from '@/components/ServicesLandingPage.astro';
 import JibbleReportPage from '@/components/JibbleReportPage.astro';
+import ClockifyReportPage from '@/components/ClockifyReportPage.astro';
 import { locales, localizedPath, type Locale } from '@/i18n/config';
 import { routes, type RouteDefinition } from '@/i18n/routes';
 import { t } from '@/i18n';
@@ -68,3 +69,4 @@ const serviceRoutes = ['services/integration-logiciels','services/tests-regressi
 </BaseLayout>}
 
 {route.kind === 'jibble' && <JibbleReportPage locale={locale} routePath={routePath}/>}
+{route.kind === 'clockify' && <ClockifyReportPage locale={locale} routePath={routePath}/>}

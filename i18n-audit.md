@@ -1,6 +1,6 @@
 # I18n audit
 
-Generated: 2026-08-30T11:15:53.583Z
+Generated: 2026-08-30T13:48:32.605Z
 
 - LOCALES: fr, en, de, it, es
 - EXPECTED_PAGES_PER_LOCALE: 15

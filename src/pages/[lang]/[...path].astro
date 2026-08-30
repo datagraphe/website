@@ -6,6 +6,7 @@ import ServiceCard from '@/components/ServiceCard.astro';
 import SocialLinks from '@/components/SocialLinks.astro';
 import SoftwareCatalog from '@/components/SoftwareCatalog.astro';
 import SoftwareTestCard from '@/components/SoftwareTestCard.astro';
+import MethodologyPage from '@/components/MethodologyPage.astro';
 import { locales, localizedPath, localeTags, type Locale } from '@/i18n/config';
 import { routes, type RouteDefinition } from '@/i18n/routes';
 import { t } from '@/i18n';
@@ -55,7 +56,9 @@ const softwareSchema = {'@context':'https://schema.org','@type':'SoftwareApplica
   <section class="catalog-proof"><div class="shell catalog-proof-inner"><div><span class="eyebrow">Datagraphe</span><h2>{catalog.methodologyTitle}</h2><p>{catalog.methodologyText}</p></div><div class="actions"><a class="button primary" href={localizedPath(locale,'methodologie')}>{catalog.methodologyCta}</a><a class="button secondary" href={localizedPath(locale,'services')}>{catalog.servicesCta}</a></div></div></section>
 </BaseLayout>}
 
-{route.kind === 'standard' && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
+{route.kind === 'standard' && route.key === 'methodologie' && <MethodologyPage locale={locale} routePath={routePath}/>} 
+
+{route.kind === 'standard' && route.key !== 'methodologie' && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
   <header class="page-hero"><div class="shell"><Breadcrumb items={crumbItems} ariaLabel={`${common.home} — ${page.heading}`}/>{page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}<h1>{page.heading}</h1>{page.lead && <p>{page.lead}</p>}</div></header>
   <section><article class="content">{page.sections.map(section=><section class="localized-content-section"><h2>{section.heading}</h2>{section.paragraphs?.map(paragraph=><p>{paragraph}</p>)}{section.items && <ul>{section.items.map(item=><li>{item}</li>)}</ul>}</section>)}
     {route.key==='services' && <div class="services-grid localized-services">{serviceKeys.map((key,index)=>{const item=content.pages[key];return <ServiceCard number={String(index+1).padStart(2,'0')} title={item.heading} text={item.lead||item.description} href={localizedPath(locale,serviceRoutes[index])} cta={common.readMore}/>})}</div>}

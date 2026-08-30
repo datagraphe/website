@@ -7,6 +7,7 @@ import SocialLinks from '@/components/SocialLinks.astro';
 import SoftwareCatalog from '@/components/SoftwareCatalog.astro';
 import SoftwareTestCard from '@/components/SoftwareTestCard.astro';
 import MethodologyPage from '@/components/MethodologyPage.astro';
+import ServicesLandingPage from '@/components/ServicesLandingPage.astro';
 import { locales, localizedPath, localeTags, type Locale } from '@/i18n/config';
 import { routes, type RouteDefinition } from '@/i18n/routes';
 import { t } from '@/i18n';
@@ -58,11 +59,12 @@ const softwareSchema = {'@context':'https://schema.org','@type':'SoftwareApplica
 
 {route.kind === 'standard' && route.key === 'methodologie' && <MethodologyPage locale={locale} routePath={routePath}/>} 
 
-{route.kind === 'standard' && route.key !== 'methodologie' && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
+{route.kind === 'standard' && route.key === 'services' && <ServicesLandingPage locale={locale} routePath={routePath}/>} 
+
+{route.kind === 'standard' && !['methodologie','services'].includes(route.key) && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
   <header class="page-hero"><div class="shell"><Breadcrumb items={crumbItems} ariaLabel={`${common.home} — ${page.heading}`}/>{page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}<h1>{page.heading}</h1>{page.lead && <p>{page.lead}</p>}</div></header>
   <section><article class="content">{page.sections.map(section=><section class="localized-content-section"><h2>{section.heading}</h2>{section.paragraphs?.map(paragraph=><p>{paragraph}</p>)}{section.items && <ul>{section.items.map(item=><li>{item}</li>)}</ul>}</section>)}
-    {route.key==='services' && <div class="services-grid localized-services">{serviceKeys.map((key,index)=>{const item=content.pages[key];return <ServiceCard number={String(index+1).padStart(2,'0')} title={item.heading} text={item.lead||item.description} href={localizedPath(locale,serviceRoutes[index])} cta={common.readMore}/>})}</div>}
-    {serviceKeys.includes(route.key) && <p><a class="button primary" href={localizedPath(locale,'contact')}>{common.contactCta}</a></p>}
+    {serviceKeys.includes(route.key) && <div class="localized-service-links"><p><a href={localizedPath(locale,'services')}>← {common.services}</a></p><div class="mini-services">{serviceKeys.filter(key=>key!==route.key).map(key=>{const index=serviceKeys.indexOf(key);const item=content.pages[key];return <a class="mini-service" href={localizedPath(locale,serviceRoutes[index])}><strong>{item.heading}</strong><span>{common.readMore} →</span></a>})}</div><p><a class="button primary" href={`${localizedPath(locale,'contact')}?type=service`}>{common.contactCta}</a></p></div>}
   </article></section>
 </BaseLayout>}
 

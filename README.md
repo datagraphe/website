@@ -33,6 +33,36 @@ Les fichiers publiables sont générés dans `dist/`.
 10. Créez une règle de redirection permanente `www.datagraphe.com/*` vers `https://datagraphe.com/$1`.
 11. Vérifiez que HTTPS est actif sur les deux noms de domaine.
 
+### Commande de publication locale
+
+Le dépôt contient une commande qui synchronise le projet local, lance tous les
+contrôles, crée un commit, pousse `main` sur GitHub puis attend que le
+déploiement automatique Cloudflare Pages soit réellement disponible.
+
+Installez la commande une seule fois depuis la racine du projet :
+
+```bash
+npm run install:publish-command
+```
+
+Si l'installateur le demande, ajoutez `~/.local/bin` au `PATH`, puis publiez
+depuis n'importe quel dossier :
+
+```bash
+datagraphe-publish "Décrire les modifications"
+```
+
+La commande demande une confirmation avant le commit et la publication. Pour
+une exécution non interactive :
+
+```bash
+datagraphe-publish --yes "Décrire les modifications"
+```
+
+Les captures du dossier `artifacts/` ne sont pas ajoutées automatiquement au
+commit. Cloudflare Pages reste alimenté par l'intégration GitHub déjà active ;
+aucune deuxième publication concurrente avec Wrangler n'est lancée.
+
 ## Contenu et données
 
 La structure source de Jibble se trouve dans `src/content/software/jibble.json`. Les champs non vérifiés restent vides ou à `null`. Ne publiez pas de score, tarif, preuve ou verdict sans importer les données consolidées du dossier de test réel.

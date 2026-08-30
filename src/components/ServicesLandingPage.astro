@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import { localizedPath, localeTags, type Locale } from '@/i18n/config';
+import { t } from '@/i18n';
+import { servicesLandingCopy } from '@/i18n/servicesLanding';
+
+interface Props { locale:Locale; routePath:string }
+const { locale, routePath }=Astro.props;
+const copy=servicesLandingCopy[locale];
+const common=t(locale).common;
+const contactUrl=`${localizedPath(locale,'contact')}?type=service`;
+const serviceSchema={
+  '@context':'https://schema.org',
+  '@graph':[
+    ...copy.offers.map(offer=>({'@type':'Service',name:offer.title,description:offer.text,url:new URL(localizedPath(locale,offer.detailPath),Astro.site).href,provider:{'@type':'Organization',name:'Datagraphe',url:'https://datagraphe.com/'},audience:{'@type':'Audience',audienceType:copy.audiences.items.map(item=>item.title).join(', ')},inLanguage:localeTags[locale]})),
+    {'@type':'FAQPage',mainEntity:copy.faq.items.map(item=>({'@type':'Question',name:item.q,acceptedAnswer:{'@type':'Answer',text:item.a}}))},
+  ],
+};
+---
+
+<BaseLayout locale={locale} routePath={routePath} title={copy.title} description={copy.description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)}/>
+  <header class="services-landing-hero">
+    <div class="shell services-hero-grid">
+      <div><Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.services}]} ariaLabel={`${common.home} — ${common.services}`}/><span class="eyebrow">{copy.labels.services}</span><h1>{copy.hero.heading}</h1><p>{copy.hero.intro}</p><p class="services-subtext">{copy.hero.subtext}</p><div class="actions"><a class="button primary" href={contactUrl}>{copy.hero.primary}</a><a class="button dark-secondary" href="#services">{copy.hero.secondary}</a></div></div>
+      <div class="automation-console" aria-hidden="true"><div class="console-bar"><i></i><i></i><i></i></div><div class="console-flow"><span>APP_A</span><b>→</b><strong>DATAGRAPHE</strong><b>→</b><span>APP_B</span></div><div class="console-status"><span>API</span><span>CHECK</span><span>LOG</span><span>ALERT</span></div><div class="console-lines"><i></i><i></i><i></i><i></i></div></div>
+    </div>
+    <div class="shell hero-service-tags">{copy.hero.tags.map(tag=><span>{tag}</span>)}</div>
+  </header>
+
+  <section class="services-problems"><div class="shell problem-grid"><div><span class="eyebrow">{copy.labels.problems}</span><h2>{copy.problems.heading}</h2><p>{copy.problems.intro}</p><div class="software-tags">{copy.problems.software.map(item=><span>{item}</span>)}</div><h3>{copy.problems.when}</h3><ul class="issue-list">{copy.problems.issues.map(item=><li>{item}</li>)}</ul><p class="service-strong">{copy.problems.conclusion}</p></div><div class="integration-map"><div class="main-flow">{copy.problems.diagram.map((item,index)=><div><strong>{item}</strong>{index < (copy.problems.diagram.length - 1) && <span aria-hidden="true">↓</span>}</div>)}</div><div class="control-orbit">{copy.problems.controls.map(item=><span>{item}</span>)}</div></div></div></section>
+
+  <section id="services" class="service-offers-section"><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.interventions}</span><h2>{copy.servicesHeading}</h2></div><p>{copy.servicesLead}</p></div><div class="premium-offers">{copy.offers.map(offer=><article class="premium-offer"><div class="offer-heading"><span>{offer.number}</span><h3>{offer.title}</h3></div><p class="offer-lead">{offer.text}</p><div class="flow-strip">{offer.diagram.map((item,index)=><div><strong>{item}</strong>{index < (offer.diagram.length - 1) && <span aria-hidden="true">→</span>}</div>)}</div>{offer.scenario&&<ol class="scenario-list">{offer.scenario.map(item=><li>{item}</li>)}</ol>}{offer.examples&&<div class="example-tags">{offer.examples.map(item=><span>{item}</span>)}</div>}{offer.report&&<div class="mini-report"><strong>{copy.labels.demo}</strong>{offer.report.map(row=><div><span>{row[0]}</span><b>{row[1]}</b></div>)}</div>}{offer.capabilities&&<div class="capability-grid">{offer.capabilities.map(item=><span>{item}</span>)}</div>}{offer.reportNote&&<p class="illustrative-note">{offer.reportNote}</p>}<a class="service-detail-link" href={localizedPath(locale,offer.detailPath)}>{offer.detailLabel} →</a></article>)}</div></div></section>
+
+  <section class="ai-automation-section"><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.ai}</span><h2>{copy.ai.heading}</h2></div><p>{copy.ai.intro}</p></div><div class="ai-control-grid"><article><span class="service-code">RULES</span><h3>{copy.ai.classicTitle}</h3><ul>{copy.ai.classic.map(item=><li>{item}</li>)}</ul></article><article><span class="service-code ai-code">AI</span><h3>{copy.ai.aiTitle}</h3><ul>{copy.ai.uses.map(item=><li>{item}</li>)}</ul></article><article><span class="service-code control-code">CONTROL</span><h3>{copy.ai.controlsTitle}</h3><p>{copy.ai.controlsText}</p></article></div><blockquote class="services-statement">{copy.ai.statement.map(line=><strong>{line}</strong>)}</blockquote></div></section>
+
+  <section class="soft"><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.other}</span><h2>{copy.labels.other}</h2></div></div><div class="secondary-automation-grid">{copy.secondary.map(item=><article><h3>{item.title}</h3><p>{item.text}</p><ul>{item.items.map(value=><li>{value}</li>)}</ul></article>)}</div></div></section>
+
+  <section><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.process}</span><h2>{copy.processHeading}</h2></div><p>{copy.processLead}</p></div><div class="mission-process">{copy.process.map((step,index)=><article><span>{String(index+1).padStart(2,'0')}</span><h3>{step.title}</h3><p>{step.text}</p><ul>{step.items.map(item=><li>{item}</li>)}</ul></article>)}</div><p class="process-conclusion">{copy.processStatement}</p></div></section>
+
+  <section class="deliverables-section"><div class="shell deliverables-layout"><div><span class="eyebrow">{copy.labels.deliverables}</span><h2>{copy.deliverables.heading}</h2><p>{copy.deliverables.lead}</p><p class="illustrative-note">{copy.deliverables.note}</p></div><div class="deliverable-list">{copy.deliverables.items.map((item,index)=><div><span>{String(index+1).padStart(2,'0')}</span><strong>{item}</strong></div>)}</div></div></section>
+
+  <section><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.audiences}</span><h2>{copy.audiences.heading}</h2></div></div><div class="audience-grid">{copy.audiences.items.map(item=><article><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
+
+  <section class="soft"><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.missions}</span><h2>{copy.missions.heading}</h2></div><p class="illustrative-note">{copy.missions.note}</p></div><div class="mission-examples">{copy.missions.items.map((item,index)=><article><span>{copy.labels.case} {String(index+1).padStart(2,'0')}</span><h3>{item.title}</h3><b>{item.flow}</b><p>{item.objective}</p></article>)}</div></div></section>
+
+  <section class="limits-security-section"><div class="shell two-service-panels"><article class="human-control"><span class="eyebrow">{copy.labels.limits}</span><h2>{copy.limits.heading}</h2><p>{copy.limits.paragraph}</p><div class="validation-tags">{copy.limits.validations.map(item=><span>{item}</span>)}</div><p class="service-strong">{copy.limits.scope}</p><ul class="never-list">{copy.limits.never.map(item=><li>{item}</li>)}</ul></article><article class="security-panel"><span class="eyebrow">{copy.labels.security}</span><h2>{copy.security.heading}</h2><p>{copy.security.paragraph}</p><ul class="shield-list">{copy.security.items.map(item=><li>{item}</li>)}</ul><p>{copy.security.realData}</p></article></div></section>
+
+  <section class="independence-section"><div class="shell independence-layout"><div><span class="eyebrow">{copy.labels.independence}</span><h2>{copy.independence.heading}</h2>{copy.independence.paragraphs.map(p=><p>{p}</p>)}<ul class="never-list light-never">{copy.independence.benefits.map(item=><li>{item}</li>)}</ul><p>{copy.independence.inverse}</p><a class="button dark-secondary" href={localizedPath(locale,'transparence')}>{copy.independence.cta}</a></div><div class="separation-diagram"><div><strong>DATAGRAPHE TESTS</strong><span>{copy.labels.editorial}</span></div><b aria-hidden="true">≠</b><div><strong>DATAGRAPHE SERVICES</strong><span>{copy.labels.commercial}</span></div></div></div></section>
+
+  <section><div class="shell"><div class="section-head"><div><span class="eyebrow">{copy.labels.models}</span><h2>{copy.models.heading}</h2></div></div><div class="engagement-grid">{copy.models.items.map((item,index)=><article><span>{String(index+1).padStart(2,'0')}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div><div class="actions"><a class="button primary" href={contactUrl}>{copy.models.cta}</a></div></div></section>
+
+  <section class="soft"><div class="shell faq-services"><span class="eyebrow">{copy.labels.faq}</span><h2>{copy.faq.heading}</h2><div class="faq">{copy.faq.items.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div><div class="actions"><a class="button primary" href={contactUrl}>{copy.faq.cta}</a></div></div></section>
+
+  <section class="services-final"><div class="shell"><h2>{copy.final.heading}</h2><p>{copy.final.text}</p><div class="final-service-tags">{copy.final.tags.map(tag=><span>{tag}</span>)}</div><div class="actions"><a class="button primary" href={contactUrl}>{copy.final.cta}</a></div></div></section>
+</BaseLayout>

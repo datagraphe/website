@@ -69,7 +69,7 @@ for (const [path, html] of htmlByPath) {
 
   for (const href of [...html.matchAll(/href="(\/[^"]+)"/g)].map((match) => match[1])) {
     if (href.startsWith('/brand/') || href.startsWith('/_astro/') || href.startsWith('/#')) continue;
-    const target = href.split('#')[0];
+    const target = href.split(/[?#]/)[0];
     if (target && locales.includes(target.split('/')[1]) && !htmlByPath.has(target)) brokenLinks++;
   }
   for (const src of [...html.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map((match) => match[1])) {

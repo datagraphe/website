@@ -1,0 +1,35 @@
+{
+  "id": "toggl-track",
+  "slug": "toggl-track",
+  "name": "Toggl Track",
+  "category": "time-tracking-attendance",
+  "tags": ["time-tracking", "timesheets", "projects", "approvals", "reports"],
+  "tested": true,
+  "catalog_status": "TESTED",
+  "test_date": "2026-08-31",
+  "updated_date": "2026-08-31",
+  "score": null,
+  "test_url": "/tests/toggl-track/",
+  "summary": {
+    "fr": "Test réel de 61 fonctionnalités : suivi du temps, projets, groupes, approbations, verrouillage, export CSV et limites documentées.",
+    "en": "French-only Datagraphe test based on 61 inventoried features.",
+    "de": "Datagraphe-Test nur auf Französisch mit 61 erfassten Funktionen.",
+    "it": "Test Datagraphe disponibile solo in francese, basato su 61 funzioni censite.",
+    "es": "Prueba de Datagraphe disponible solo en francés, basada en 61 funciones inventariadas."
+  },
+  "status": "TESTED",
+  "features": [
+    { "claim_id": "CLAIM-TOGGL-001", "key": "timer", "status": "TESTED", "evidence": ["TGL-V1-005", "TGL-V1-006"] },
+    { "claim_id": "CLAIM-TOGGL-002", "key": "timesheets", "status": "TESTED", "evidence": ["TGL-P1-EV-005", "TGL-P1-EV-006"] },
+    { "claim_id": "CLAIM-TOGGL-003", "key": "groups", "status": "TESTED", "evidence": ["TGL-P1-EV-003"] },
+    { "claim_id": "CLAIM-TOGGL-004", "key": "projects", "status": "TESTED", "evidence": ["TGL-V1-003", "TGL-P1-EV-010"] },
+    { "claim_id": "CLAIM-TOGGL-005", "key": "exports", "status": "TESTED", "evidence": ["TGL-P1-EV-008"] },
+    { "claim_id": "CLAIM-TOGGL-006", "key": "field", "status": "NOT_TESTABLE", "evidence": [] }
+  ],
+  "advantages": ["Cycle de suivi du temps vérifié", "Workflow d’approbation et verrouillage validé", "Export CSV réellement récupéré et inspecté", "Tarif, budget et forfait projet persistants"],
+  "limitations": ["Terrain, GPS, kiosque, mobile et hors ligne non vérifiés", "API, SSO et certaines intégrations non testés", "Essai Premium et contexte à deux membres uniquement"],
+  "pricing": null,
+  "affiliate_url": null,
+  "alternatives": ["Jibble", "Clockify"],
+  "available_locales": ["fr"]
+}

@@ -15,7 +15,7 @@ import { routes, type RouteDefinition } from '@/i18n/routes';
 import { t } from '@/i18n';
 import { catalogCopy } from '@/i18n/catalog';
 import { categoryById } from '@/data/software-categories';
-import { testedSoftware } from '@/data/software';
+import { testedSoftwareForLocale } from '@/data/software';
 
 export function getStaticPaths() {
   return locales.flatMap((locale) => routes.map((route) => ({
@@ -29,6 +29,7 @@ const { locale, route } = Astro.props;
 const content = t(locale);
 const common = content.common;
 const catalog = catalogCopy[locale];
+const testedSoftware = testedSoftwareForLocale(locale);
 const page = route.kind === 'standard' ? content.pages[route.key] : undefined;
 const routePath = route.path;
 const featuredSoftware = testedSoftware.slice(0,1);

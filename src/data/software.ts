@@ -22,6 +22,7 @@ export interface SoftwareTest {
   pricing: unknown;
   affiliate_url: string | null;
   alternatives: string[];
+  available_locales?: Locale[];
 }
 
 const modules = import.meta.glob<SoftwareTest>('./software/*.json', { eager: true, import: 'default' });
@@ -29,6 +30,10 @@ const modules = import.meta.glob<SoftwareTest>('./software/*.json', { eager: tru
 export const testedSoftware = Object.values(modules)
   .filter((software) => software.tested)
   .sort((a, b) => a.name.localeCompare(b.name));
+
+export function testedSoftwareForLocale(locale: Locale) {
+  return testedSoftware.filter((software) => !software.available_locales || software.available_locales.includes(locale));
+}
 
 export function softwareTestPath(software: SoftwareTest) {
   return software.test_url.replace(/^\/+|\/+$/g, '');

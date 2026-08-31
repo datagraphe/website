@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '@/i18n/config';
 import { categoryById, categoryLabel, softwareCategories } from '@/data/software-categories';
-import { testedSoftware } from '@/data/software';
+import { testedSoftwareForLocale } from '@/data/software';
 import { catalogCopy } from '@/i18n/catalog';
 import CategoryIcon from './CategoryIcon.astro';
 import SoftwareTestCard from './SoftwareTestCard.astro';
@@ -9,6 +9,7 @@ import SoftwareTestCard from './SoftwareTestCard.astro';
 interface Props { locale:Locale }
 const { locale } = Astro.props;
 const copy = catalogCopy[locale];
+const testedSoftware = testedSoftwareForLocale(locale);
 const categories = [...softwareCategories].sort((a,b)=>a.sort_order-b.sort_order);
 const countFor = (id:string) => id === 'all' ? testedSoftware.length : testedSoftware.filter((software)=>software.category===id).length;
 const hasScores = testedSoftware.some((software)=>software.score !== null);

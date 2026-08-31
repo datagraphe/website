@@ -1,0 +1,16 @@
+---
+type EvidenceStatus = 'verified' | 'qualified' | 'unverified' | 'not-comparable' | 'unavailable';
+interface Props { status: EvidenceStatus; date?: string; compact?: boolean }
+const { status, date, compact = false } = Astro.props;
+const labels: Record<EvidenceStatus,string> = {
+  verified: 'Vérifié par Datagraphe',
+  qualified: 'Vérifié avec réserve',
+  unverified: 'Non vérifié',
+  'not-comparable': 'Non comparable',
+  unavailable: 'Non disponible',
+};
+---
+<span class:list={['verified-status',`verified-status-${status}`,{'verified-status-compact':compact}]}>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.8 8.2 7 10 4.2-1.8 7-5.4 7-10V6l-7-3Z"/><path d="M9.4 12.1 11 13.7l3.8-4"/></svg>
+  <span>{labels[status]}{date && <small>{date}</small>}</span>
+</span>

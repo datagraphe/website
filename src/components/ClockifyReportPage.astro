@@ -36,6 +36,7 @@ const schema={
     <section id="final" class="jibble-final"><span class="eyebrow">8,1 / 10</span><h2>{c.finalTitle}</h2><p>{c.finalText}</p></section>
     <section id="sources"><h2>{c.sourcesTitle}</h2><p>{c.sourcesText}</p><ul><li><a href="https://clockify.me/pricing" target="_blank" rel="noopener noreferrer">Clockify pricing</a></li><li><a href="https://clockify.me/integrations" target="_blank" rel="noopener noreferrer">Clockify integrations</a></li><li><a href="https://docs.clockify.me/" target="_blank" rel="noopener noreferrer">Clockify API</a></li></ul></section>
     <section id="faq"><h2>{c.faqTitle}</h2><div class="faq">{c.faqs.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>
+    {locale === 'fr' && <section class="comparison-crosslink"><h2>Clockify face à Jibble</h2><p>Nous avons rapproché les scénarios réellement exécutés dans les deux logiciels, sans désigner de gagnant global.</p><a class="button secondary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif Jibble vs Clockify</a></section>}
     <AffiliateDisclosure />
   </article><aside class="toc jibble-toc"><strong>{c.toc}</strong>{['verdict','protocol','results','scores','pros-cons','paid','coverage','evidence','final'].map((id,index)=><a href={`#${id}`}>{c.tocItems[index]}</a>)}</aside></div></section>
 </BaseLayout>

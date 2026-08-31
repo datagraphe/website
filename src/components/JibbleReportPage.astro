@@ -11,7 +11,7 @@ const { locale, routePath } = Astro.props;
 const c = jibbleReportCopy(locale);
 const common = t(locale).common;
 const statusClass=(status:string)=>status.toLowerCase().replaceAll('_','-');
-const coveragePercent='53.6%';
+const coveragePercent='55.7%';
 const schema={
   '@context':'https://schema.org','@type':'Review',name:c.title,datePublished:'2026-08-27',dateModified:'2026-08-27',inLanguage:localeTags[locale],
   author:{'@type':'Organization',name:'Datagraphe',url:'https://datagraphe.com/'},
@@ -27,7 +27,7 @@ const schema={
       <Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.tests,href:localizedPath(locale,'tests')},{label:'Jibble'}]} ariaLabel={`${common.tests} — Jibble`}/>
       <div class="jibble-hero-grid">
         <div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span></div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}</small></div>
-        <div class="jibble-score" aria-label={`${c.scoreLabel}: 6.8 sur 10`}><span>{c.scoreLabel}</span><strong>6,8<small>/10</small></strong><div><i style={`width:${coveragePercent}`}></i></div><small>{c.scopeLabel}: 53,6 %</small></div>
+        <div class="jibble-score" aria-label={`${c.scoreLabel}: 6.8 sur 10`}><span>{c.scoreLabel}</span><strong>6,8<small>/10</small></strong><div><i style={`width:${coveragePercent}`}></i></div><small>{c.scopeLabel}: 55,7 %</small></div>
       </div>
     </div>
   </header>
@@ -55,6 +55,7 @@ const schema={
 
     <section id="sources"><h2>{c.sourcesTitle}</h2><p>{c.sourcesText}</p><ul><li><a href="https://www.jibble.io/help/using-jibbles-api-for-your-specific-needs" target="_blank" rel="noopener noreferrer">Jibble API</a></li><li><a href="https://www.jibble.io/help/how-is-my-bill-calculated" target="_blank" rel="noopener noreferrer">Jibble billing</a></li></ul></section>
     <section id="faq"><h2>{c.faqTitle}</h2><div class="faq">{c.faqs.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>
+    {locale === 'fr' && <section class="comparison-crosslink"><h2>Jibble face à Clockify</h2><p>Nous avons rapproché les scénarios réellement exécutés dans les deux logiciels, sans désigner de gagnant global.</p><a class="button secondary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif Jibble vs Clockify</a></section>}
     <AffiliateDisclosure />
   </article><aside class="toc jibble-toc"><strong>{c.toc}</strong>{['verdict','protocol','results','scores','pros-cons','paid','coverage','evidence','final'].map((id,index)=><a href={`#${id}`}>{c.tocItems[index]}</a>)}</aside></div></section>
 </BaseLayout>

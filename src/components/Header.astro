@@ -1,8 +1,8 @@
 ---
 import { locales, localeNames, localizedPath, type Locale } from '@/i18n/config';
 import { t } from '@/i18n';
-interface Props { locale: Locale; routePath: string }
-const { locale, routePath } = Astro.props;
+interface Props { locale: Locale; routePath: string; availableLocales?: readonly Locale[] }
+const { locale, routePath, availableLocales = locales } = Astro.props;
 const tr = t(locale).common;
 const path = Astro.url.pathname;
 const links = [['tests',tr.tests],['comparatifs',tr.comparisons],['methodologie',tr.methodology],['services',tr.services],['a-propos',tr.about]];
@@ -15,11 +15,11 @@ const links = [['tests',tr.tests],['comparatifs',tr.comparisons],['methodologie'
       const href=localizedPath(locale,route);
       return <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>
     })}
-    <div class="language-switcher">
+    {availableLocales.length > 1 && <div class="language-switcher">
       <select aria-label={tr.language} data-language-select>
-        {locales.map(code => <option value={localizedPath(code,routePath)} data-locale={code} selected={code===locale}>{localeNames[code]}</option>)}
+        {availableLocales.map(code => <option value={localizedPath(code,routePath)} data-locale={code} selected={code===locale}>{localeNames[code]}</option>)}
       </select>
-    </div>
+    </div>}
   </nav>
 </div></header>
 <script is:inline>

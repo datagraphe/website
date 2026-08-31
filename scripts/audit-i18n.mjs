@@ -29,6 +29,7 @@ const toPath = (file) => {
 };
 const htmlByPath = new Map();
 for (const file of localized) htmlByPath.set(toPath(file), await readFile(file, 'utf8'));
+const frenchOnlyPaths = new Set(['/fr/comparatifs/jibble-vs-clockify/']);
 
 let missingHreflang = 0;
 let brokenHreflang = 0;
@@ -61,7 +62,8 @@ for (const [path, html] of htmlByPath) {
   if (!extract(html, /<meta name="description" content="([^"]+)"/i)) missingDescription++;
 
   const alternates = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)];
-  if (alternates.length !== 6) missingHreflang++;
+  const expectedAlternateCount = frenchOnlyPaths.has(path) ? 2 : 6;
+  if (alternates.length !== expectedAlternateCount) missingHreflang++;
   for (const [, code, href] of alternates) {
     if (code === 'x-default') continue;
     if (!htmlByPath.has(new URL(href).pathname)) brokenHreflang++;

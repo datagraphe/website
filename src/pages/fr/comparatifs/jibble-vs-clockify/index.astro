@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import VerifiedStatus from '@/components/VerifiedStatus.astro';
+import { comparisonFreshness, comparisonScenarios, publicLimitations, buyerContexts, insufficientBuyerContexts } from '@/data/comparisons/jibble-clockify';
+import '@/styles/comparison.css';
+
+const routePath = 'comparatifs/jibble-vs-clockify';
+const title = 'Jibble vs Clockify : comparatif basé sur nos tests | Datagraphe';
+const description = 'Jibble vs Clockify : Datagraphe a testé les deux logiciels sur des scénarios comparables. Découvrez les résultats observés, les différences et les limites documentées.';
+const schema = {
+  '@context':'https://schema.org',
+  '@type':'WebPage',
+  name:title,
+  description,
+  url:'https://datagraphe.com/fr/comparatifs/jibble-vs-clockify/',
+  inLanguage:'fr-FR',
+  dateModified:'2026-08-31',
+  publisher:{'@id':'https://datagraphe.com/#organization'},
+  about:[{'@type':'SoftwareApplication',name:'Jibble'},{'@type':'SoftwareApplication',name:'Clockify'}],
+};
+---
+<BaseLayout locale="fr" routePath={routePath} availableLocales={['fr']} title={title} description={description} ogTitle="Jibble vs Clockify — comparaison issue de tests Datagraphe" ogDescription={description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)}/>
+
+  <header class="comparison-hero">
+    <div class="shell">
+      <Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'Comparatifs',href:'/fr/comparatifs/'},{label:'Jibble vs Clockify'}]} ariaLabel="Accueil — Comparatifs — Jibble vs Clockify"/>
+      <div class="comparison-hero-grid">
+        <div>
+          <span class="eyebrow">Comparatif fondé sur des tests</span>
+          <h1>Jibble vs Clockify : nous avons testé les deux logiciels</h1>
+          <p class="comparison-lead">Nous avons rapproché uniquement des scénarios comparables, puis vérifié les résultats et leurs limites. Aucun vainqueur global n’est désigné.</p>
+          <div class="comparison-proof-line"><VerifiedStatus status="qualified" date={comparisonFreshness.lastTest}/><a href="/fr/methodologie/">Voir la méthodologie →</a></div>
+        </div>
+        <aside class="comparison-summary" aria-label="Périmètre du comparatif">
+          <strong>21</strong><span>dimensions exploitables</span>
+          <hr/>
+          <strong>22</strong><span>dimensions sans conclusion publique</span>
+          <small>Observations Jibble : {comparisonFreshness.jibbleObservations}<br/>Observations Clockify : {comparisonFreshness.clockifyObservations}</small>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <section class="comparison-verdict" aria-labelledby="verdict-title"><div class="shell">
+    <span class="eyebrow">Verdict en 30 secondes</span><h2 id="verdict-title">Des différences utiles, mais pas de gagnant universel.</h2>
+    <div class="comparison-verdict-grid">
+      <article><span class="comparison-kicker">Jibble est plus adapté si…</span><h3>La ventilation quotidienne des heures supplémentaires est centrale.</h3><p>Dans notre journée test de 9 h, Jibble a affiché 8 h normales et 1 h supplémentaire. Cette conclusion est limitée aux réglages observés.</p></article>
+      <article><span class="comparison-kicker">Clockify est plus adapté si…</span><h3>Nos tests ne justifient pas encore un avantage produit propre à Clockify.</h3><p>Ses exports orientés projet et client constituent une approche différente, pas la preuve d’une supériorité globale.</p></article>
+      <article><span class="comparison-kicker">À départager</span><h3>Équipes, budgets, verrouillage et terrain.</h3><p>Les preuves disponibles ne permettent pas encore une recommandation fiable sur ces usages.</p></article>
+    </div>
+  </div></section>
+
+  <section id="scenarios" class="comparison-scenarios" aria-labelledby="scenarios-title"><div class="shell">
+    <div class="comparison-section-head"><div><span class="eyebrow">Scénarios exécutés</span><h2 id="scenarios-title">Ce que nous avons réellement comparé</h2></div><p>Le niveau de preuve et le résultat sont affichés séparément. « Vérifié » signifie qu’une observation suffisante existe, pas que le logiciel a forcément réussi.</p></div>
+    <div class="comparison-table-wrap"><table>
+      <caption class="sr-only">Résultats des scénarios comparatifs Jibble et Clockify</caption>
+      <thead><tr><th scope="col">Scénario</th><th scope="col">Jibble</th><th scope="col">Clockify</th><th scope="col">Conclusion</th></tr></thead>
+      <tbody>{comparisonScenarios.map(row => <tr>
+        <th scope="row"><span>{row.scenario}</span><VerifiedStatus status={row.proof} compact={true}/></th>
+        <td data-label="Jibble"><span class="comparison-result">Résultat observé</span>{row.jibble}</td>
+        <td data-label="Clockify"><span class="comparison-result">Résultat observé</span>{row.clockify}</td>
+        <td data-label="Conclusion">{row.conclusion}</td>
+      </tr>)}</tbody>
+    </table></div>
+    <p class="comparison-evidence-note">Les preuves détaillées, dates d’exécution et contrôles d’intégrité sont conservés par Datagraphe.</p>
+  </div></section>
+
+  <section class="comparison-needs soft" aria-labelledby="needs-title"><div class="shell">
+    <div class="comparison-section-head"><div><span class="eyebrow">Décision d’achat</span><h2 id="needs-title">Choisir selon votre usage</h2></div><p>Nous ne formulons une orientation que lorsque les scénarios apportent une base suffisante.</p></div>
+    <div class="comparison-needs-grid">{buyerContexts.map(context => <article><span class:list={['comparison-context-status',`comparison-context-${context.status}`]}>{context.status === 'supported' ? 'Base suffisante' : 'Avec limites'}</span><h3>{context.title}</h3><p>{context.text}</p></article>)}</div>
+  </div></section>
+
+  <section class="comparison-neutral" aria-labelledby="neutral-title"><div class="shell comparison-two-col">
+    <div><span class="eyebrow">Aucun avantage clair</span><h2 id="neutral-title">Sur ces usages, nous n’avons pas identifié d’avantage important.</h2><p>Dans les scénarios testés, le minuteur, la pause/reprise, la saisie manuelle, la feuille hebdomadaire et la création de clients ou projets ont donné des résultats suffisamment proches.</p><p>Cela ne signifie pas que les logiciels sont identiques : seulement que notre protocole n’a pas révélé de différence décisive sur ces actions précises.</p></div>
+    <aside><h3>Approches différentes observées</h3><ul><li>Jibble conserve une trace d’audit après suppression.</li><li>Clockify retire la ligne supprimée dans le scénario testé.</li><li>Les exports Jibble mettent en avant temps et heures supplémentaires.</li><li>Les exports Clockify mettent en avant projet, client et données économiques.</li></ul></aside>
+  </div></section>
+
+  <section class="comparison-limits" aria-labelledby="limits-title"><div class="shell">
+    <span class="eyebrow">Limites visibles</span><h2 id="limits-title">Ce que nos tests ne permettent pas encore de trancher</h2>
+    <p class="comparison-limits-lead">Ces absences de conclusion font partie du résultat. Elles ne sont ni masquées ni remplacées par des informations marketing.</p>
+    <div class="comparison-limits-grid">{publicLimitations.map((item,index) => <article><span>{String(index+1).padStart(2,'0')}</span><p>{item}</p></article>)}</div>
+    <h3>Aucune recommandation fiable n’est encore possible pour :</h3><ul class="comparison-missing-contexts">{insufficientBuyerContexts.map(item => <li>{item}</li>)}</ul>
+  </div></section>
+
+  <section class="comparison-method soft" aria-labelledby="method-title"><div class="shell comparison-two-col">
+    <div><span class="eyebrow">Méthodologie</span><h2 id="method-title">Comment nous avons comparé Jibble et Clockify</h2><p>Datagraphe exécute des tests indépendants, normalise les observations, ne rapproche que des scénarios suffisamment comparables et réalise des retests ciblés lorsque la preuve est insuffisante.</p><p>Chaque conclusion est datée. Lorsque les données ne suffisent pas, nous ne concluons pas.</p><a class="button secondary" href="/fr/methodologie/">Lire la méthodologie</a></div>
+    <aside class="comparison-difference"><h3>Pourquoi ce comparatif est différent</h3><p>Il ne recompte pas des fonctionnalités annoncées. Il montre des actions exécutées, des résultats observés, un niveau de preuve et les limites qui empêchent parfois de départager les outils.</p><dl><div><dt>Dernière observation</dt><dd>{comparisonFreshness.lastTest}</dd></div><div><dt>Test précédent</dt><dd>Aucun historique comparable publié</dd></div><div><dt>Changement détecté</dt><dd>Non évalué à ce stade</dd></div></dl></aside>
+  </div></section>
+
+  <section class="comparison-cta" aria-labelledby="cta-title"><div class="shell">
+    <div class="disclosure"><strong>Transparence affiliation</strong><p>Certains liens de cette page peuvent être affiliés. Cela ne modifie ni notre protocole de test ni nos conclusions. Les liens ci-dessous renvoient actuellement vers nos dossiers Datagraphe et ne sont pas affiliés.</p></div>
+    <h2 id="cta-title">Consulter les tests individuels</h2><div class="comparison-cta-grid"><a class="button primary" href="/fr/tests/jibble/">Voir Jibble</a><a class="button primary" href="/fr/tests/clockify/">Voir Clockify</a></div>
+    <p><a href="/fr/comparatifs/">Voir tous les comparatifs</a></p>
+  </div></section>
+</BaseLayout>

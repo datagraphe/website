@@ -2,6 +2,10 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure.astro';
+import EvidenceMethod from '@/components/EvidenceMethod.astro';
+import AccessTypeBadge from '@/components/AccessTypeBadge.astro';
+import PublicDatasetSoftwareReport from '@/components/PublicDatasetSoftwareReport.astro';
+import { publicSoftware, usingPublicDataset } from '@/data/public-contract';
 import { localizedPath, localeTags, type Locale } from '@/i18n/config';
 import { t } from '@/i18n';
 import { jibbleEvidence, jibbleReportCopy, jibbleReportData } from '@/i18n/jibble-report';
@@ -13,10 +17,10 @@ const common = t(locale).common;
 const statusClass=(status:string)=>status.toLowerCase().replaceAll('_','-');
 const coveragePercent='55.7%';
 const schema={
-  '@context':'https://schema.org','@type':'Review',name:c.title,datePublished:'2026-08-27',dateModified:'2026-08-27',inLanguage:localeTags[locale],
+  '@context':'https://schema.org','@type':'Article',headline:c.question,datePublished:'2026-08-27',dateModified:'2026-08-27',inLanguage:localeTags[locale],
   author:{'@type':'Organization',name:'Datagraphe',url:'https://datagraphe.com/'},
-  itemReviewed:{'@type':'SoftwareApplication',name:'Jibble',applicationCategory:'BusinessApplication',applicationSubCategory:c.category,operatingSystem:'Web'},
-  reviewRating:{'@type':'Rating',ratingValue:6.8,bestRating:10,worstRating:0},reviewBody:c.verdict
+  about:{'@type':'SoftwareApplication',name:'Jibble',applicationCategory:'BusinessApplication',applicationSubCategory:c.category,operatingSystem:'Web'},
+  mainEntityOfPage:new URL(localizedPath(locale,routePath),Astro.site).href
 };
 ---
 
@@ -26,16 +30,16 @@ const schema={
     <div class="shell">
       <Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.tests,href:localizedPath(locale,'tests')},{label:'Jibble'}]} ariaLabel={`${common.tests} — Jibble`}/>
       <div class="jibble-hero-grid">
-        <div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span></div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}</small></div>
+        <div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span>{locale === 'fr' && <AccessTypeBadge type="essai Pro" detail="sans moyen de paiement"/>}</div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}{locale === 'fr' ? ' · Environnement web fictif' : ''}</small></div>
         <div class="jibble-score" aria-label={`${c.scoreLabel}: 6.8 sur 10`}><span>{c.scoreLabel}</span><strong>6,8<small>/10</small></strong><div><i style={`width:${coveragePercent}`}></i></div><small>{c.scopeLabel}: 55,7 %</small></div>
       </div>
     </div>
   </header>
 
-  <section class="jibble-report-section"><div class="shell test-layout"><article class="jibble-report">
+  {usingPublicDataset && locale === 'fr' ? <PublicDatasetSoftwareReport data={publicSoftware.jibble} software="Jibble"/> : <Fragment><section class="jibble-report-section"><div class="shell test-layout"><article class="jibble-report">
     <section id="verdict" class="jibble-verdict"><span class="eyebrow">{c.verdictLabel}</span><h2>{c.verdictTitle}</h2><p>{c.verdict}</p><p class="jibble-caveat">{c.caveat}</p></section>
 
-    <section id="protocol"><h2>{c.protocolTitle}</h2><ul class="jibble-checks">{c.protocol.map(item=><li>{item}</li>)}</ul><p><a href={localizedPath(locale,'methodologie')}>{common.methodology} →</a></p></section>
+    <section id="protocol"><h2>{c.protocolTitle}</h2><ul class="jibble-checks">{c.protocol.map(item=><li>{item}</li>)}</ul>{locale === 'fr' && <EvidenceMethod/>}<p><a href={localizedPath(locale,'methodologie')}>{common.methodology} →</a></p></section>
 
     <section id="results"><h2>{c.resultsTitle}</h2><div class="jibble-result-grid">{c.resultCards.map(card=><article><span class={`status status-${statusClass(card.status)}`}>{card.status}</span><h3>{card.title}</h3><p>{card.text}</p></article>)}</div></section>
 
@@ -49,7 +53,7 @@ const schema={
 
     <section id="coverage"><h2>{c.coverageTitle}</h2><p>{c.coverageText}</p><div class="jibble-coverage-summary">{c.coverageLabels.map((label,index)=><div><strong>{jibbleReportData.coverage[index]}</strong><span>{label}</span></div>)}</div><div class="jibble-table-wrap"><table><thead><tr>{c.matrixHeaders.map(label=><th>{label}</th>)}</tr></thead><tbody>{jibbleReportData.categories.map(row=><tr><th>{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td><td>{row[3]}</td><td>{row[4]}</td><td>{row[5]}</td></tr>)}</tbody></table></div></section>
 
-    <section id="evidence"><h2>{c.evidenceTitle}</h2><p>{c.evidenceText}</p><div class="jibble-evidence-grid">{jibbleEvidence.map(([file,id])=><figure><a href={`/evidence/jibble/${file}`} target="_blank" rel="noopener noreferrer"><img src={`/evidence/jibble/${file}`} loading="lazy" width="1280" height="720" alt={`${c.evidenceAlt} ${id}`}/></a><figcaption><code>{id}</code></figcaption></figure>)}</div></section>
+    <section id="evidence"><h2>{c.evidenceTitle}</h2><p>{c.evidenceText}</p><div class="jibble-evidence-grid">{jibbleEvidence.map(([file],index)=><figure><a href={`/evidence/jibble/${file}`} target="_blank" rel="noopener noreferrer"><img src={`/evidence/jibble/${file}`} loading="lazy" width="1280" height="720" alt={`${c.evidenceAlt} ${index+1}`}/></a><figcaption>Preuve visuelle datée</figcaption></figure>)}</div></section>
 
     <section id="final" class="jibble-final"><span class="eyebrow">6,8 / 10</span><h2>{c.finalTitle}</h2><p>{c.finalText}</p></section>
 
@@ -57,5 +61,5 @@ const schema={
     <section id="faq"><h2>{c.faqTitle}</h2><div class="faq">{c.faqs.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>
     {locale === 'fr' && <section class="comparison-crosslink"><h2>Jibble face à Clockify</h2><p>Nous avons rapproché les scénarios réellement exécutés dans les deux logiciels, sans désigner de gagnant global.</p><a class="button secondary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif Jibble vs Clockify</a></section>}
     <AffiliateDisclosure />
-  </article><aside class="toc jibble-toc"><strong>{c.toc}</strong>{['verdict','protocol','results','scores','pros-cons','paid','coverage','evidence','final'].map((id,index)=><a href={`#${id}`}>{c.tocItems[index]}</a>)}</aside></div></section>
+  </article><aside class="toc jibble-toc"><strong>{c.toc}</strong>{['verdict','protocol','results','scores','pros-cons','paid','coverage','evidence','final'].map((id,index)=><a href={`#${id}`}>{c.tocItems[index]}</a>)}</aside></div></section></Fragment>}
 </BaseLayout>

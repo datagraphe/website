@@ -1,0 +1,10 @@
+---
+interface Props { short?: boolean }
+const { short = false } = Astro.props;
+---
+<div class="evidence-method">
+  <h3>Comment lire nos résultats</h3>
+  <p><strong>TESTED</strong> décrit la couverture : l’action a été exécutée et observée. <strong>PASS</strong> signifie que le résultat attendu a été obtenu ; <strong>FAIL</strong> qu’il ne l’a pas été ; <strong>INCONCLUSIVE</strong> que les éléments disponibles ne permettent pas de conclure.</p>
+  {!short && <p><strong>VERIFIED</strong> qualifie la preuve, pas la réussite : un résultat vérifié peut être un PASS ou un FAIL. Captures, exports et observations datées sont conservés en privé ; seules les informations nécessaires, parfois anonymisées, sont publiées.</p>}
+  <p><a href="/fr/methodologie/">Lire la méthodologie complète →</a></p>
+</div>

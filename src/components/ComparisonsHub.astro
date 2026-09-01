@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import VerifiedStatus from '@/components/VerifiedStatus.astro';
+import { comparisonFreshness, comparisonScenarios, buyerContexts, publicLimitations } from '@/data/comparisons/jibble-clockify';
+import '@/styles/comparison.css';
+
+const routePath = 'comparatifs';
+const title = 'Comparatifs de logiciels fondés sur des tests — Datagraphe';
+const description = 'Comparez Jibble et Clockify à partir de scénarios réellement exécutés, de résultats vérifiés et de limites documentées.';
+---
+
+<BaseLayout locale="fr" routePath={routePath} title={title} description={description}>
+  <header class="comparison-hub-hero">
+    <div class="shell">
+      <Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'Comparatifs'}]} ariaLabel="Accueil — Comparatifs"/>
+      <span class="eyebrow">Comparatifs de logiciels</span>
+      <h1>Comparer sans raccourci.</h1>
+      <p>Les résultats ci-dessous viennent de scénarios exécutés dans chaque logiciel. Vous pouvez déjà comparer les usages essentiels ici, puis ouvrir le dossier détaillé pour consulter l’ensemble des nuances et limites.</p>
+    </div>
+  </header>
+
+  <section class="comparison-hub-overview" aria-labelledby="published-comparison">
+    <div class="shell">
+      <div class="comparison-section-head"><div><span class="eyebrow">Comparatif publié</span><h2 id="published-comparison">Jibble vs Clockify</h2></div><div class="comparison-hub-date"><VerifiedStatus status="qualified" date={comparisonFreshness.lastTest}/><span>13 scénarios comparables</span></div></div>
+      <div class="comparison-verdict-grid comparison-hub-verdicts">
+        <article>
+          <span class="comparison-hub-card-number" aria-hidden="true">01</span>
+          <span class="comparison-kicker">Suivi du temps</span>
+          <h3>Résultats proches sur les usages essentiels</h3>
+          <p>Minuteur, pause, reprise, saisie manuelle et feuille hebdomadaire ont donné des résultats comparables.</p>
+        </article>
+        <article>
+          <span class="comparison-hub-card-number" aria-hidden="true">02</span>
+          <span class="comparison-kicker">Heures supplémentaires</span>
+          <h3>Avantage observé pour Jibble dans notre réglage</h3>
+          <p>Jibble a affiché 8 h normales et 1 h supplémentaire. Clockify a enregistré 9 h sans cette ventilation quotidienne observée.</p>
+        </article>
+        <article>
+          <span class="comparison-hub-card-number" aria-hidden="true">03</span>
+          <span class="comparison-kicker">Exports</span>
+          <h3>Deux approches valides mais différentes</h3>
+          <p>Jibble met davantage en avant le temps et les heures supplémentaires ; Clockify, les projets, clients et données économiques.</p>
+        </article>
+      </div>
+      <p class="comparison-hub-caveat"><strong>Verdict :</strong> aucun gagnant universel. Le meilleur choix dépend de l’usage, du forfait et des fonctions encore non départagées.</p>
+    </div>
+  </section>
+
+  <section class="comparison-scenarios soft" aria-labelledby="hub-scenarios">
+    <div class="shell">
+      <div class="comparison-section-head"><div><span class="eyebrow">Face-à-face</span><h2 id="hub-scenarios">Ce que nos tests montrent concrètement</h2></div><p>Chaque ligne rapproche le même besoin dans les deux logiciels. Une différence n’est publiée que lorsqu’elle a été observée.</p></div>
+      <div class="comparison-table-wrap"><table>
+        <caption class="sr-only">Comparaison des résultats observés dans Jibble et Clockify</caption>
+        <thead><tr><th scope="col">Scénario</th><th scope="col">Jibble</th><th scope="col">Clockify</th><th scope="col">Conclusion</th></tr></thead>
+        <tbody>{comparisonScenarios.map(row => <tr>
+          <th scope="row"><span>{row.scenario}</span><VerifiedStatus status={row.proof} compact/></th>
+          <td data-label="Jibble">{row.jibble}</td>
+          <td data-label="Clockify">{row.clockify}</td>
+          <td data-label="Conclusion">{row.conclusion}</td>
+        </tr>)}</tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="hub-choose"><div class="shell">
+    <div class="comparison-section-head"><div><span class="eyebrow">Choisir selon votre besoin</span><h2 id="hub-choose">Ce qui peut déjà guider une décision</h2></div><p>Les orientations limitées restent explicitement qualifiées.</p></div>
+    <div class="comparison-needs-grid">{buyerContexts.map(context => <article><span class:list={['comparison-context-status',`comparison-context-${context.status}`]}>{context.status === 'supported' ? 'Base suffisante' : 'Avec limites'}</span><h3>{context.title}</h3><p>{context.text}</p></article>)}</div>
+  </div></section>
+
+  <section class="comparison-hub-limits dark" aria-labelledby="hub-limits"><div class="shell comparison-two-col">
+    <div><span class="eyebrow">Ce qui reste à départager</span><h2 id="hub-limits">Pas de conclusion sans preuve suffisante</h2><p>Les permissions avancées, certains budgets et tarifs, le verrouillage, le GPS, le kiosque et le hors-ligne ne permettent pas encore une recommandation fiable.</p></div>
+    <ul>{publicLimitations.map(item => <li>{item}</li>)}</ul>
+  </div></section>
+
+  <section class="comparison-hub-cta"><div class="shell"><span class="eyebrow">Analyse complète</span><h2>Voir tous les résultats, limites et contextes acheteurs</h2><p>Le dossier détaillé explique la méthode, les écarts observés et les domaines où nous refusons encore de conclure.</p><div class="actions"><a class="button primary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif complet</a><a class="button secondary" href="/fr/methodologie/">Comprendre la méthodologie</a></div></div></section>
+</BaseLayout>

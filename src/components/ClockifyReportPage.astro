@@ -2,6 +2,10 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure.astro';
+import EvidenceMethod from '@/components/EvidenceMethod.astro';
+import AccessTypeBadge from '@/components/AccessTypeBadge.astro';
+import PublicDatasetSoftwareReport from '@/components/PublicDatasetSoftwareReport.astro';
+import { publicSoftware, usingPublicDataset } from '@/data/public-contract';
 import { localizedPath, localeTags, type Locale } from '@/i18n/config';
 import { t } from '@/i18n';
 import { clockifyEvidence, clockifyReportCopy, clockifyReportData } from '@/i18n/clockify-report';
@@ -12,31 +16,31 @@ const c = clockifyReportCopy(locale);
 const common = t(locale).common;
 const statusClass=(status:string)=>status.toLowerCase().replaceAll('_','-');
 const schema={
-  '@context':'https://schema.org','@type':'Review',name:c.title,datePublished:'2026-08-30',dateModified:'2026-08-30',inLanguage:localeTags[locale],
+  '@context':'https://schema.org','@type':'Article',headline:c.question,datePublished:'2026-08-30',dateModified:'2026-08-30',inLanguage:localeTags[locale],
   author:{'@type':'Organization',name:'Datagraphe',url:'https://datagraphe.com/'},
-  itemReviewed:{'@type':'SoftwareApplication',name:'Clockify',applicationCategory:'BusinessApplication',applicationSubCategory:c.category,operatingSystem:'Web'},
-  reviewRating:{'@type':'Rating',ratingValue:clockifyReportData.score,bestRating:10,worstRating:0},reviewBody:c.verdict
+  about:{'@type':'SoftwareApplication',name:'Clockify',applicationCategory:'BusinessApplication',applicationSubCategory:c.category,operatingSystem:'Web'},
+  mainEntityOfPage:new URL(localizedPath(locale,routePath),Astro.site).href
 };
 ---
 
 <BaseLayout locale={locale} routePath={routePath} title={c.title} description={c.description}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)}/>
-  <header class="jibble-hero"><div class="shell"><Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.tests,href:localizedPath(locale,'tests')},{label:'Clockify'}]} ariaLabel={`${common.tests} — Clockify`}/><div class="jibble-hero-grid"><div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span></div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}</small></div><div class="jibble-score" aria-label={`${c.scoreLabel}: 8.1 sur 10`}><span>{c.scoreLabel}</span><strong>8,1<small>/10</small></strong><div><i style="width:56%"></i></div><small>{c.scopeLabel}: {clockifyReportData.coverageRate}</small></div></div></div></header>
+  <header class="jibble-hero"><div class="shell"><Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.tests,href:localizedPath(locale,'tests')},{label:'Clockify'}]} ariaLabel={`${common.tests} — Clockify`}/><div class="jibble-hero-grid"><div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span>{locale === 'fr' && <AccessTypeBadge type="essai Pro" detail="sept jours, sans carte"/>}</div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}{locale === 'fr' ? ' · Environnement web isolé' : ''}</small></div><div class="jibble-score" aria-label={`${c.scoreLabel}: 8.1 sur 10`}><span>{c.scoreLabel}</span><strong>8,1<small>/10</small></strong><div><i style="width:56%"></i></div><small>{c.scopeLabel}: {clockifyReportData.coverageRate}</small></div></div></div></header>
 
-  <section class="jibble-report-section"><div class="shell test-layout"><article class="jibble-report">
+  {usingPublicDataset && locale === 'fr' ? <PublicDatasetSoftwareReport data={publicSoftware.clockify} software="Clockify"/> : <Fragment><section class="jibble-report-section"><div class="shell test-layout"><article class="jibble-report">
     <section id="verdict" class="jibble-verdict"><span class="eyebrow">{c.verdictLabel}</span><h2>{c.verdictTitle}</h2><p>{c.verdict}</p><p class="jibble-caveat">{c.caveat}</p></section>
-    <section id="protocol"><h2>{c.protocolTitle}</h2><ul class="jibble-checks">{c.protocol.map(item=><li>{item}</li>)}</ul><p><a href={localizedPath(locale,'methodologie')}>{common.methodology} →</a></p></section>
+    <section id="protocol"><h2>{c.protocolTitle}</h2><ul class="jibble-checks">{c.protocol.map(item=><li>{item}</li>)}</ul>{locale === 'fr' && <EvidenceMethod/>}<p><a href={localizedPath(locale,'methodologie')}>{common.methodology} →</a></p></section>
     <section id="results"><h2>{c.resultsTitle}</h2><div class="jibble-result-grid">{c.resultCards.map(card=><article><span class={`status status-${statusClass(card.status)}`}>{card.status}</span><h3>{card.title}</h3><p>{card.text}</p></article>)}</div></section>
     <section id="scope" class="jibble-scope-grid"><div><h2>{c.testedTitle}</h2><ul class="jibble-checks">{c.tested.map(item=><li>{item}</li>)}</ul></div><div><h2>{c.limitsTitle}</h2><ul class="jibble-not-list">{c.limits.map(item=><li>{item}</li>)}</ul></div></section>
     <section id="scores"><h2>{c.scoresTitle}</h2><div class="jibble-score-grid">{c.dimensions.map((name,index)=><div><span>{name}</span><strong>{clockifyReportData.scores[index]}/10</strong><i><b style={`width:${clockifyReportData.scores[index]*10}%`}></b></i></div>)}</div></section>
     <section id="pros-cons" class="jibble-scope-grid"><div class="jibble-panel good"><h2>{c.prosTitle}</h2><ul class="jibble-checks">{c.pros.map(item=><li>{item}</li>)}</ul></div><div class="jibble-panel warning"><h2>{c.consTitle}</h2><ul class="jibble-not-list">{c.cons.map(item=><li>{item}</li>)}</ul></div><div class="jibble-panel"><h2>{c.forTitle}</h2><ul>{c.forItems.map(item=><li>{item}</li>)}</ul></div><div class="jibble-panel"><h2>{c.avoidTitle}</h2><ul>{c.avoidItems.map(item=><li>{item}</li>)}</ul></div></section>
     <section id="paid"><h2>{c.paidTitle}</h2><p>{c.paidText}</p><div class="jibble-paid-stats"><div><strong>20</strong><span>Total</span></div><div><strong>9</strong><span>TESTED_PAID</span></div><div><strong>2</strong><span>PARTIAL_PAID</span></div><div><strong>50 %</strong><span>{c.scopeLabel}</span></div></div><h3>{c.findingsTitle}</h3><ol>{c.findings.map(item=><li>{item}</li>)}</ol></section>
     <section id="coverage"><h2>{c.coverageTitle}</h2><p>{c.coverageText}</p><div class="jibble-coverage-summary">{c.coverageLabels.map((label,index)=><div><strong>{clockifyReportData.coverage[index]}</strong><span>{label}</span></div>)}</div></section>
-    <section id="evidence"><h2>{c.evidenceTitle}</h2><p>{c.evidenceText}</p><div class="jibble-evidence-grid">{clockifyEvidence.map(([file,id])=><figure><a href={`/evidence/clockify/${file}`} target="_blank" rel="noopener noreferrer"><img src={`/evidence/clockify/${file}`} loading="lazy" width="1280" height="720" alt={`${c.evidenceAlt} ${id}`}/></a><figcaption><code>{id}</code></figcaption></figure>)}</div></section>
+    <section id="evidence"><h2>{c.evidenceTitle}</h2><p>{c.evidenceText}</p><div class="jibble-evidence-grid">{clockifyEvidence.map(([file],index)=><figure><a href={`/evidence/clockify/${file}`} target="_blank" rel="noopener noreferrer"><img src={`/evidence/clockify/${file}`} loading="lazy" width="1280" height="720" alt={`${c.evidenceAlt} ${index+1}`}/></a><figcaption>Preuve visuelle datée</figcaption></figure>)}</div></section>
     <section id="final" class="jibble-final"><span class="eyebrow">8,1 / 10</span><h2>{c.finalTitle}</h2><p>{c.finalText}</p></section>
     <section id="sources"><h2>{c.sourcesTitle}</h2><p>{c.sourcesText}</p><ul><li><a href="https://clockify.me/pricing" target="_blank" rel="noopener noreferrer">Clockify pricing</a></li><li><a href="https://clockify.me/integrations" target="_blank" rel="noopener noreferrer">Clockify integrations</a></li><li><a href="https://docs.clockify.me/" target="_blank" rel="noopener noreferrer">Clockify API</a></li></ul></section>
     <section id="faq"><h2>{c.faqTitle}</h2><div class="faq">{c.faqs.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>
     {locale === 'fr' && <section class="comparison-crosslink"><h2>Clockify face à Jibble</h2><p>Nous avons rapproché les scénarios réellement exécutés dans les deux logiciels, sans désigner de gagnant global.</p><a class="button secondary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif Jibble vs Clockify</a></section>}
     <AffiliateDisclosure />
-  </article><aside class="toc jibble-toc"><strong>{c.toc}</strong>{['verdict','protocol','results','scores','pros-cons','paid','coverage','evidence','final'].map((id,index)=><a href={`#${id}`}>{c.tocItems[index]}</a>)}</aside></div></section>
+  </article><aside class="toc jibble-toc"><strong>{c.toc}</strong>{['verdict','protocol','results','scores','pros-cons','paid','coverage','evidence','final'].map((id,index)=><a href={`#${id}`}>{c.tocItems[index]}</a>)}</aside></div></section></Fragment>}
 </BaseLayout>

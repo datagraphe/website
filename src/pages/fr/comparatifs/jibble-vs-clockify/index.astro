@@ -2,6 +2,8 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import VerifiedStatus from '@/components/VerifiedStatus.astro';
+import PublicDatasetComparison from '@/components/PublicDatasetComparison.astro';
+import { publicComparison, usingPublicDataset } from '@/data/public-contract';
 import { comparisonFreshness, comparisonScenarios, publicLimitations, buyerContexts, insufficientBuyerContexts } from '@/data/comparisons/jibble-clockify';
 import '@/styles/comparison.css';
 
@@ -22,6 +24,8 @@ const schema = {
 ---
 <BaseLayout locale="fr" routePath={routePath} availableLocales={['fr']} title={title} description={description} ogTitle="Jibble vs Clockify — comparaison issue de tests Datagraphe" ogDescription={description}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)}/>
+
+  {usingPublicDataset ? <PublicDatasetComparison data={publicComparison}/> : <Fragment>
 
   <header class="comparison-hero">
     <div class="shell">
@@ -94,4 +98,5 @@ const schema = {
     <h2 id="cta-title">Consulter les tests individuels</h2><div class="comparison-cta-grid"><a class="button primary" href="/fr/tests/jibble/">Voir Jibble</a><a class="button primary" href="/fr/tests/clockify/">Voir Clockify</a></div>
     <p><a href="/fr/comparatifs/">Voir tous les comparatifs</a></p>
   </div></section>
+  </Fragment>}
 </BaseLayout>

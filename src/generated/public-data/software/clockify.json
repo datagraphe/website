@@ -1,0 +1,1884 @@
+{
+  "public_schema_version": "1.1",
+  "active_locales": [
+    "fr"
+  ],
+  "generated_at": "2026-09-01T19:51:06.810Z",
+  "software": {
+    "software_id": "SW-CLOCKIFY",
+    "slug": "clockify",
+    "name": "Clockify",
+    "vendor": "CAKE.com Inc.",
+    "latest_snapshot_date": "2026-08-30",
+    "primary_market": null,
+    "language_fit": null,
+    "publication_status": "MIGRATED_PUBLIC_BASELINE"
+  },
+  "snapshot_selection": {
+    "snapshot_id": "SNAP-SW-CLOCKIFY-2026-08-30",
+    "rule": "SINGLE_VALIDATED_HISTORICAL_BASELINE",
+    "immutable": true,
+    "validated_status": "VALIDATED_HISTORICAL"
+  },
+  "last_verified_at": "2026-08-30",
+  "test_summary": {
+    "total": 75,
+    "tested": 32,
+    "partial": 20,
+    "not_testable": 15,
+    "blocked": 4,
+    "not_available": 4,
+    "coverage_rate": 56
+  },
+  "features": [
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Assistant de personnalisation",
+      "category": "Onboarding",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Changement de workspace",
+      "category": "Administration",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Alertes projet",
+      "category": "Administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Comptes contrôlés",
+      "category": "Administration",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Enterprise",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Champs personnalisés",
+      "category": "Administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Import CSV",
+      "category": "Administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Facturable",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Basic+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Tags",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Création depuis calendrier",
+      "category": "Calendrier",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Archivage",
+      "category": "Projets",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Taux de coût",
+      "category": "Coûts",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Profit et marge",
+      "category": "Coûts",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Prévu vs réel",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Création dépense",
+      "category": "Dépenses",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Assignments",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Expense detailed",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Export JSON",
+      "category": "Exports",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Unknown",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Outlook Calendar",
+      "category": "Intégrations",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plan variable",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "50+ intégrations",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Webhooks",
+      "category": "API",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Région de données",
+      "category": "Sécurité",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.android",
+      "public_feature_name": "Application Android",
+      "category": "Mobile",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.browser_extension",
+      "public_feature_name": "Extension navigateur",
+      "category": "Extensions",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.desktop",
+      "public_feature_name": "Application desktop",
+      "category": "Desktop",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.ios",
+      "public_feature_name": "Application iOS",
+      "category": "Mobile",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "calendar.view",
+      "public_feature_name": "Vue calendrier",
+      "category": "Calendrier",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "client.create",
+      "public_feature_name": "Création client",
+      "category": "Clients",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "dashboard.team",
+      "public_feature_name": "Vue personnelle et équipe",
+      "category": "Dashboard",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "data.delete",
+      "public_feature_name": "Suppression ou export des données",
+      "category": "Administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "data.export",
+      "public_feature_name": "Export annuel des données",
+      "category": "Administration",
+      "coverage_status": "BLOCKED",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.csv",
+      "public_feature_name": "Export CSV",
+      "category": "Exports",
+      "coverage_status": "BLOCKED",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.pdf",
+      "public_feature_name": "Export PDF",
+      "category": "Exports",
+      "coverage_status": "BLOCKED",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.xlsx",
+      "public_feature_name": "Export XLSX",
+      "category": "Exports",
+      "coverage_status": "BLOCKED",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "gps.location",
+      "public_feature_name": "Suivi de localisation",
+      "category": "GPS",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.api",
+      "public_feature_name": "API officielle",
+      "category": "API",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.google_calendar",
+      "public_feature_name": "Google Calendar",
+      "category": "Intégrations",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plan variable",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.jira",
+      "public_feature_name": "Jira",
+      "category": "Intégrations",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plan variable",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.quickbooks",
+      "public_feature_name": "QuickBooks",
+      "category": "Intégrations",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Standard",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "invoice.create",
+      "public_feature_name": "Création facture",
+      "category": "Facturation",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.create",
+      "public_feature_name": "Création kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Basic+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "public_feature_name": "PIN entrée sortie pause",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.policy_balance",
+      "public_feature_name": "Politique et solde",
+      "category": "Congés",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.request_approve",
+      "public_feature_name": "Demande et validation",
+      "category": "Congés",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "offline.tracking",
+      "public_feature_name": "Mode offline",
+      "category": "Hors ligne",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Applications natives",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "organization.settings",
+      "public_feature_name": "Paramètres généraux",
+      "category": "Administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "overtime.daily",
+      "public_feature_name": "Seuil quotidien 8h",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.assign_member",
+      "public_feature_name": "Affectation membre",
+      "category": "Projets",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.budget_time",
+      "public_feature_name": "Budget estimation",
+      "category": "Projets",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.create",
+      "public_feature_name": "Création projet",
+      "category": "Projets",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.rate",
+      "public_feature_name": "Taux projet et tâche",
+      "category": "Projets",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.task",
+      "public_feature_name": "Tâches",
+      "category": "Projets",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.attendance",
+      "public_feature_name": "Attendance",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.detailed",
+      "public_feature_name": "Detailed",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.summary",
+      "public_feature_name": "Summary",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.weekly",
+      "public_feature_name": "Weekly",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "schedule.create",
+      "public_feature_name": "Scheduling projet",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.audit_log",
+      "public_feature_name": "Audit log",
+      "category": "Sécurité",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Enterprise",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.sso",
+      "public_feature_name": "SSO et sous-domaine",
+      "category": "Sécurité",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Enterprise",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.group_create",
+      "public_feature_name": "Groupes",
+      "category": "Équipes",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_create",
+      "public_feature_name": "Ajout membre",
+      "category": "Membres",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_deactivate",
+      "public_feature_name": "Désactivation membre",
+      "category": "Membres",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_edit",
+      "public_feature_name": "Modification membre",
+      "category": "Membres",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free+paid",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.permissions",
+      "public_feature_name": "Permissions",
+      "category": "Administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Plans variables",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.role_manager",
+      "public_feature_name": "Rôles manager",
+      "category": "Équipes",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.delete",
+      "public_feature_name": "Suppression entrée",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.edit",
+      "public_feature_name": "Modification entrée",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.manual",
+      "public_feature_name": "Entrée manuelle",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.pause",
+      "public_feature_name": "Pause",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Basic+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.resume",
+      "public_feature_name": "Reprise du timer",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "public_feature_name": "Timer démarrer arrêter",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.approval",
+      "public_feature_name": "Approbation feuille",
+      "category": "Timesheet",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.lock",
+      "public_feature_name": "Verrouillage",
+      "category": "Timesheet",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Standard+",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.weekly",
+      "public_feature_name": "Vue hebdomadaire",
+      "category": "Timesheet",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "trial.payment_status",
+      "public_feature_name": "Plans et essai",
+      "category": "Facturation",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free+Basic+Standard+Pro+Enterprise",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "workspace.create",
+      "public_feature_name": "Création du workspace",
+      "category": "Onboarding",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free",
+      "observed_at": "2026-08-30",
+      "public_status": "PUBLIC_SNAPSHOT"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::1",
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Le timer web peut être démarré, arrêté et repris.",
+          "qualifier": "Interface web",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "63fac2317727b8259150ccee54f04eebf434ad73f099671777cec7dac8c47e27"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::10",
+      "canonical_feature_key": "organization.settings",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Le test a utilisé un essai Pro sans carte et la page Abonnements est restée vide.",
+          "qualifier": "Compte de test",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "4da3c8553e90f25da0e736f3e20836b143665d2e73bc0f1db8935e676cb4bd21"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::2",
+      "canonical_feature_key": "time_entry.manual",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une entrée manuelle d’une heure a été créée puis modifiée.",
+          "qualifier": "Interface web",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "1a1906361b8af834e831af1c1e6a03080390b582e9c9c33722158f8745f2525f"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::3",
+      "canonical_feature_key": "timesheet.approval",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une feuille de temps et une dépense ont été soumises puis approuvées.",
+          "qualifier": "Essai Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b6ad5aa983cd4b815dea9d59fd29de66385d915d9abed3fb014d030df0d75e41"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::4",
+      "canonical_feature_key": null,
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Le rapport a affiché montant, coût et profit cohérents.",
+          "qualifier": "Taux configurés; plan Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "578c2719413b5252c45e5a454305903bba33eff40a17e204d619ad2e17664ef9"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::5",
+      "canonical_feature_key": "invoice.create",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une facture brouillon a importé 10,01 h sans être envoyée.",
+          "qualifier": "Plan Standard+ ou essai Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "6f6ea5df1f419e98cda6208c8c4ba96a4d2f273094c578ad4bab71983c2eafc7"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::6",
+      "canonical_feature_key": "leave.policy_balance",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une politique de 10 jours et une demande approuvée ont produit un solde de 9 jours.",
+          "qualifier": "Plan Standard+ ou essai Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "65f50fbf0b97c2a94287d4cd418afd25826c6b2244703a143305fd02552e7886"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::VIDEO-CLK-VID-001",
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Le timer web peut être démarré, arrêté et repris.",
+          "qualifier": "Interface web",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "63fac2317727b8259150ccee54f04eebf434ad73f099671777cec7dac8c47e27"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::VIDEO-CLK-VID-002",
+      "canonical_feature_key": "time_entry.manual",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une entrée manuelle d’une heure a été créée puis modifiée.",
+          "qualifier": "Interface web",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "1a1906361b8af834e831af1c1e6a03080390b582e9c9c33722158f8745f2525f"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::VIDEO-CLK-VID-003",
+      "canonical_feature_key": "timesheet.approval",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une feuille de temps et une dépense ont été soumises puis approuvées.",
+          "qualifier": "Essai Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b6ad5aa983cd4b815dea9d59fd29de66385d915d9abed3fb014d030df0d75e41"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::VIDEO-CLK-VID-004",
+      "canonical_feature_key": null,
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Le rapport a affiché montant, coût et profit cohérents.",
+          "qualifier": "Taux configurés; plan Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "578c2719413b5252c45e5a454305903bba33eff40a17e204d619ad2e17664ef9"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::VIDEO-CLK-VID-005",
+      "canonical_feature_key": "invoice.create",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une facture brouillon a importé 10,01 h sans être envoyée.",
+          "qualifier": "Plan Standard+ ou essai Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "6f6ea5df1f419e98cda6208c8c4ba96a4d2f273094c578ad4bab71983c2eafc7"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-CLOCKIFY::CLM::VIDEO-CLK-VID-006",
+      "canonical_feature_key": "leave.policy_balance",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-30",
+      "localized": {
+        "fr": {
+          "wording": "Une politique de 10 jours et une demande approuvée ont produit un solde de 9 jours.",
+          "qualifier": "Plan Standard+ ou essai Pro",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "65f50fbf0b97c2a94287d4cd418afd25826c6b2244703a143305fd02552e7886"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    {
+      "limitation_id": "clockify:limitation:001",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun seuil déclenché",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "bb94903f2103d7b91c4c91c0bc833fbb2f9c1319432f1b5bec39b71b68086f79"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:002",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Plan Enterprise non activé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "f74584c71b83d964d8108dc93c9acff7643854b3ad3f33a197cacb5a7c1ebc02"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:003",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun champ créé afin de limiter les mutations",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "be4203000d8c22d3afab6e7038bee60d149f21e2294ed4e2d6816cb90f1dd0d7"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:004",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Import non exécuté pour éviter les doublons",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "72da16b611fa0fb22f053e3a8602f498bf5fe2974796285440397771306f1761"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:005",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Interaction calendrier non concluante",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "88a0a3a81abd86f0a39bad1f0fb7db506dbddcff3fbb68b920c6d5a695909b97"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:006",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune affectation de test créée",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "59b0a18a0449157d3cde12d8ac994bb28664d744ebe74339a3020d84b43f67ff"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:007",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune affectation de test",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "07a905d44ea257cf39c33defd5e91a608b42bfca3304262016553e1ad259ecf1"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:008",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Rapport détaillé non exporté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "419cc622df82426507d6843ab54785e4a7b099d5773d8e073bc9083256ed9ecc"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:009",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Format absent du menu observé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "5a147be22ecf479e68d89806adba516feff207921a74d6078e892eb13b2e08cb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:010",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun compte externe connecté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "25ce8f97c200b56601b505482175bab7778a7361d45b2a0a494875c667eaf0eb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:011",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune intégration externe connectée",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "d0971188b4467c135034793ac6fe5951d0609493b910c577dd12e72b8ee1874a"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:012",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun endpoint externe autorisé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "09a1e37a28db47df3e582a0682854fa1b3f02fd140c2359d18c4a0d8950ebea5"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:013",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Changement non exécuté car il affecte le stockage",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "c81d64d7dbfab0b31a414f7816c3731ebe0f1d51f41e58cf288b9ff5514edc73"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:014",
+      "canonical_feature_key": "data.delete",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune suppression destructive",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "32711b29329f779a5e37905dee42fc438f8d08fa2337d9d752e330f4f853f77e"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:015",
+      "canonical_feature_key": "data.export",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Artefact de téléchargement inaccessible",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "c9a562f135e7dbf3ead248ee20c32fb661327acabd5a1e80afd5cbffd3cc3f75"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:016",
+      "canonical_feature_key": "export.csv",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Le navigateur de test ne rend pas le fichier téléchargé accessible",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "1e278f86fdea8cbf6d324a64c00e1a5cd8855cee67f1960220e5c121fb701dc1"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:017",
+      "canonical_feature_key": "export.pdf",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Artefact téléchargé inaccessible",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "13d76e165756d2412171dba20c1ea47c9da57c60a0ee954bde8be93168bc5fcb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:018",
+      "canonical_feature_key": "export.xlsx",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Artefact téléchargé inaccessible",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "13d76e165756d2412171dba20c1ea47c9da57c60a0ee954bde8be93168bc5fcb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:019",
+      "canonical_feature_key": "gps.location",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun appareil mobile réel",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "1c48efa9e7391708c3a641f7cef5f6a2382677bd89e0975c9a5106346a9523bd"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:020",
+      "canonical_feature_key": "integration.api",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune clé API lue, créée ou exposée",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "067e74dfbc5c166c8e715d363a799e73bbd67982135d9d7f267944d823557e4c"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:021",
+      "canonical_feature_key": "integration.google_calendar",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun compte externe connecté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "25ce8f97c200b56601b505482175bab7778a7361d45b2a0a494875c667eaf0eb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:022",
+      "canonical_feature_key": "integration.jira",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun compte externe connecté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "25ce8f97c200b56601b505482175bab7778a7361d45b2a0a494875c667eaf0eb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:023",
+      "canonical_feature_key": "integration.quickbooks",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun compte externe connecté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "25ce8f97c200b56601b505482175bab7778a7361d45b2a0a494875c667eaf0eb"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:024",
+      "canonical_feature_key": "invoice.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun envoi ni paiement exécuté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "c0668225a1141b870615522d433e5bc0bb0289dcde7cc5054fcf83b3d87b7be5"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:025",
+      "canonical_feature_key": "kiosk.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Création d’un terminal kiosque/PIN non réalisable sans appareil ou membre dédié",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "19679ea9e6825739c72e4f7614687e47ab7da8d5e89db7ca4d44a939b75974fd"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:026",
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun appareil kiosque ni membre fictif dédié",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "a46539b9b0f64604e5b2a95b6c4410533bae35a1fdd646492cc88a6961f1831a"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:027",
+      "canonical_feature_key": "organization.settings",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Tous les réglages n’ont pas été modifiés",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "03ee0c1f0718d841ad82adf8a838d0aed05f743b1a7df7970654bad417d493e6"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:028",
+      "canonical_feature_key": "overtime.daily",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Le seuil natif de 8 h n’a pas été validé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "d9595227c8ce5bddc42e8385beea4593968922a114c7d15cfc7feda9706db3ce"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:029",
+      "canonical_feature_key": "project.assign_member",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun membre fictif invité",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "54f597827711224989abcd3fb5ac2ca629e8a7ad4de5cb6de9746385f5e775b6"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:030",
+      "canonical_feature_key": "project.budget_time",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Champ masqué non fiable en automatisation",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "eb88014bb3b6aa78b830619080f831ae3edc14497473eaa3113da7680e7519c9"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:031",
+      "canonical_feature_key": "report.attendance",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Capacité du jour à 0; le seuil de 8 h n’est pas démontré",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7e407088de50a70912291b5e4ba41e933c78a9c1e1eda6dc3ddf90de6d9244df"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:032",
+      "canonical_feature_key": "schedule.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Affectation non créée sans membre fictif invité",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "383d0567403ba497d9dd6e361a3cbb09e54c5ebc220a4d4826cc1340df782add"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:033",
+      "canonical_feature_key": "security.audit_log",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Plan Enterprise non activé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "f74584c71b83d964d8108dc93c9acff7643854b3ad3f33a197cacb5a7c1ebc02"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:034",
+      "canonical_feature_key": "security.sso",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun fournisseur SSO; plan Enterprise non activé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "a1ad1a16497cd4898b25eb51ac45a1a7114960a71229cc5ce1e86379b2a223b6"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:035",
+      "canonical_feature_key": "team.group_create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun membre réel ajouté",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "d0230de354fd28a7bbf52ca69be358b771a6be1c11bda844fd4746eedd17a867"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:036",
+      "canonical_feature_key": "team.member_create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Invitations externes interdites",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "58a6481fe9f2f509fa1d1e98142d0a5cbf1e40e95283e09dc3d64350a5e3f40c"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:037",
+      "canonical_feature_key": "team.member_deactivate",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Risque d'accès",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "80a5e88948c3b6b6f234ea2b5a91cec9b445b87fead6861f9eca121851cb53c5"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:038",
+      "canonical_feature_key": "team.member_edit",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Modification d’un autre membre impossible sans invitation",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "51fa95966126e6b04ab6da6dfdcf171b5c265447aad46ab5ec7f80c5aa6e30e8"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:039",
+      "canonical_feature_key": "team.permissions",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Pas de second utilisateur réel autorisé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "caa5492d17612fae55ef86c64d56de7151a22727273798a2d8ccde05fec50cf0"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:040",
+      "canonical_feature_key": "team.role_manager",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Second utilisateur requis",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "702d7f38b53c3a843c0cfaaae400548ef579c8ee2c6d8855cb7d99f808d34bee"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:041",
+      "canonical_feature_key": "time_entry.delete",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Suppression non exécutée pour conserver la traçabilité",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b6ccb7ddb951564a0f90b808151b57594c300c049044e22ad7f8e3231a22307b"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:042",
+      "canonical_feature_key": "timesheet.weekly",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "La saisie directe de 30 min n’a pas persisté et reste inconclusive",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "903aaf2463e43375715a8c96a10c9a3a1a629dc76e4ffd63c7622ac2414607df"
+        }
+      }
+    },
+    {
+      "limitation_id": "clockify:limitation:043",
+      "canonical_feature_key": "trial.payment_status",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-30",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun bouton Upgrade utilisé",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "6afaa599f48e80cdb34ae91a9e3b5c1fa11a74100700a266ff55a2658286c34c"
+        }
+      }
+    }
+  ],
+  "buyer_contexts": [
+    {
+      "context_key": "independants-consultants",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-30",
+      "fact_basis": [
+        "time_tracking.timer_cycle",
+        "organization.settings",
+        "time_entry.manual",
+        "timesheet.approval"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Indépendants et consultants facturant au temps",
+          "reason": "Le suivi, les rapports et la facturation brouillon ont été observés.",
+          "limitations": "Aucun paiement réel ni envoi de facture n’a été testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "22ff2c492319a6af97a04e6cff1c73dc22f37b416917590e4c9d526e43d5a9bf"
+        }
+      }
+    },
+    {
+      "context_key": "agences-services",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-30",
+      "fact_basis": [
+        "time_tracking.timer_cycle",
+        "organization.settings",
+        "time_entry.manual",
+        "timesheet.approval"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Agences et services professionnels",
+          "reason": "Les clients, projets, coûts et rapports ont été testés dans un espace isolé.",
+          "limitations": "Les affectations réelles et les intégrations restent à valider.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "679d1f28e5a99ec837328a103eb3f37c2673e5d1ac1ef3674fd7ca607806f4f6"
+        }
+      }
+    },
+    {
+      "context_key": "tpe-pme-projets",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-30",
+      "fact_basis": [
+        "time_tracking.timer_cycle",
+        "organization.settings",
+        "time_entry.manual",
+        "timesheet.approval"
+      ],
+      "localized": {
+        "fr": {
+          "label": "TPE et PME avec projets, approbations et coûts",
+          "reason": "Le workflow web de projet, d’approbation et de coût a été observé.",
+          "limitations": "Plusieurs fonctions requièrent Standard ou Pro.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7fb240047705060b94138f772044b997bda18f516ac83ffe4c3cce1e14cbbfb0"
+        }
+      }
+    },
+    {
+      "context_key": "remplacement-tableurs",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-30",
+      "fact_basis": [
+        "time_tracking.timer_cycle",
+        "organization.settings",
+        "time_entry.manual",
+        "timesheet.approval"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Équipes qui veulent remplacer plusieurs tableurs",
+          "reason": "Le produit relie temps, projets, coûts et rapports dans le périmètre testé.",
+          "limitations": "La structure exacte des exports doit être vérifiée avant migration.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7d2331e887515cb667e21097d9036ba3715ced72886842c609cccbe0c6e80656"
+        }
+      }
+    },
+    {
+      "context_key": "terrain-gps-kiosque",
+      "status": "INSUFFICIENT_DATA",
+      "observed_at": "2026-08-30",
+      "fact_basis": [
+        "field.gps",
+        "kiosk.create",
+        "offline.tracking"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Usage terrain avec GPS ou kiosque",
+          "reason": "Aucune recommandation terrain implicite n’est autorisée.",
+          "limitations": "GPS, mobile, kiosque et hors-ligne n’ont pas été validés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "cd5c8e3635784cb0cf2015e8aa248fbff515072dd0a9d46923095519c0a9d5de"
+        }
+      }
+    }
+  ],
+  "plans": [
+    {
+      "plan_name": "basic",
+      "observed_at": "2026-08-30",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "enterprise_if_any",
+      "observed_at": "2026-08-30",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "free",
+      "observed_at": "2026-08-30",
+      "available": true,
+      "trial_available": true,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "plan_4",
+      "observed_at": "2026-08-30",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "pro",
+      "observed_at": "2026-08-30",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "standard",
+      "observed_at": "2026-08-30",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    }
+  ],
+  "public_events": [],
+  "build_meta": {
+    "records_read": 147,
+    "claims_exported": 13,
+    "claims_rejected": 5,
+    "limitations_exported": 43,
+    "buyer_contexts_exported": 5,
+    "events_exported": 0,
+    "security_rejections": 5
+  },
+  "public_data_hash": "f6c9f5f7735de35fdeea300705a6e2850005998e04d0c379da4dd137b8f95177"
+}

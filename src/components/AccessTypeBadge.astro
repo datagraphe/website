@@ -1,0 +1,5 @@
+---
+interface Props { type: string; detail?: string }
+const { type, detail } = Astro.props;
+---
+<span class="status" aria-label={`Type d’accès : ${type}${detail ? `. ${detail}` : ''}`}>Accès : {type}</span>

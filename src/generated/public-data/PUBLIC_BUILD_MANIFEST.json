@@ -1,0 +1,41 @@
+{
+  "manifest_version": "1.0",
+  "public_data_schema": "1.1",
+  "target_data_source": "public-dataset",
+  "datasets": {
+    "software/jibble.json": {
+      "public_data_hash": "4c9dde41cf3beaa44450ad5c4fcd2a2ebc52ba158bc5a8c314fc4a67f85c6528",
+      "snapshot_ids": [
+        "SNAP-SW-JIBBLE-2026-08-27"
+      ],
+      "last_verified_at": "2026-08-27",
+      "bytes": 166264
+    },
+    "software/clockify.json": {
+      "public_data_hash": "f6c9f5f7735de35fdeea300705a6e2850005998e04d0c379da4dd137b8f95177",
+      "snapshot_ids": [
+        "SNAP-SW-CLOCKIFY-2026-08-30"
+      ],
+      "last_verified_at": "2026-08-30",
+      "bytes": 62572
+    },
+    "software/toggl-track.json": {
+      "public_data_hash": "7a2e0fdf0aabaa4facfb8b0aba6a3df622f402556591a131b98c7a18aacad527",
+      "snapshot_ids": [
+        "SNAP-SW-TOGGL-TRACK-2026-08-31-FINAL-P1"
+      ],
+      "last_verified_at": "2026-08-31",
+      "bytes": 64446
+    },
+    "comparisons/jibble-vs-clockify.json": {
+      "public_data_hash": "85c783917e5287426e3f2b613f933853685768d7dccad74ce99d76774e68ecac",
+      "snapshot_ids": [
+        "SNAP-SW-JIBBLE-2026-08-27",
+        "SNAP-SW-CLOCKIFY-2026-08-30"
+      ],
+      "last_verified_at": "2026-08-31",
+      "bytes": 21775
+    }
+  },
+  "manifest_hash": "fb15182e9c32c12a28414fede5b7989caf0fefbb8b9824ea456d5c6971e5119b"
+}

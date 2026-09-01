@@ -1,0 +1,4562 @@
+{
+  "public_schema_version": "1.1",
+  "active_locales": [
+    "fr"
+  ],
+  "generated_at": "2026-09-01T19:51:06.772Z",
+  "software": {
+    "software_id": "SW-JIBBLE",
+    "slug": "jibble",
+    "name": "Jibble",
+    "vendor": "Jibble",
+    "latest_snapshot_date": "2026-08-27",
+    "primary_market": null,
+    "language_fit": null,
+    "publication_status": "MIGRATED_PUBLIC_BASELINE"
+  },
+  "snapshot_selection": {
+    "snapshot_id": "SNAP-SW-JIBBLE-2026-08-27",
+    "rule": "SINGLE_VALIDATED_HISTORICAL_BASELINE",
+    "immutable": true,
+    "validated_status": "VALIDATED_HISTORICAL"
+  },
+  "last_verified_at": "2026-08-27",
+  "test_summary": {
+    "total": 194,
+    "tested": 58,
+    "partial": 100,
+    "not_testable": 32,
+    "blocked": 3,
+    "not_available": 1,
+    "coverage_rate": 55.7
+  },
+  "features": [
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Création du compte",
+      "category": "Compte et onboarding",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Onboarding guidé",
+      "category": "Compte et onboarding",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Aide contextuelle",
+      "category": "Compte et onboarding",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Consentement données et suivi",
+      "category": "Compte et onboarding",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Essai gratuit 14 jours",
+      "category": "Compte et onboarding",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Navigation latérale",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Tableau de bord mensuel",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Widgets personnalisables",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Filtres emplacement/groupe/planning",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Widget présence",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Widget heures travaillées",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Widget pauses",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Widget heures supplémentaires",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Paramètres individuels",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Organisation des équipes",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Pointage sur activité",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essential pour activité obligatoire",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Pointage sur projet",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essential pour projet obligatoire",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Changement d’activité/projet",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essential pour obligation",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Règles de pointage",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Restrictions de pointage",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Pointage automatique",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essential",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Rappel de pointage",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Capture d’écran bureau",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Vue quotidienne",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Vue mensuelle",
+      "category": "Feuilles de temps",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Totaux d’heures",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Totaux de pauses",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Écarts",
+      "category": "Feuilles de temps",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Commentaires",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Historique des modifications",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Feuille individuelle",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Feuille d’équipe",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Heures normales",
+      "category": "Heures supplémentaires",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Heures supplémentaires doubles",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Heures supplémentaires hebdomadaires",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Heures supplémentaires jour de repos",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Heures supplémentaires jours fériés",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Arrondis",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Limites quotidiennes/hebdomadaires",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Alertes d’écart",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Planning flexible",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Rotations",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Jours ouvrés",
+      "category": "Planning",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Jours fériés",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Pauses planifiées",
+      "category": "Planning",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Affectation planning",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Affectation équipe",
+      "category": "Planning",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essential / Growth",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Association client-projet",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Affectation activité",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Temps par projet",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Temps par activité",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Temps par membre",
+      "category": "Activités, projets et clients",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Rapport projet",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Coordonnées du pointage",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Géorepérage",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Zones autorisées",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Restriction par géofence",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Localisation en direct",
+      "category": "Localisation",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Pro",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Multi-sites",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Historique localisation",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Appareil partagé",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Identification salarié",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plusieurs salariés",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Paramètres kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "NFC",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Reconnaissance faciale kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Sécurité kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Application web",
+      "category": "Applications",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Visibilité équipe",
+      "category": "Congés et absences",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Interaction feuilles de temps",
+      "category": "Congés et absences",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Vacances/jours fériés",
+      "category": "Congés et absences",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Rapport projet",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Rapport équipe",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Graphiques",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Tableaux",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Personnalisation rapport",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Sauvegarde rapport",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Liste feuilles de temps",
+      "category": "Exports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Liste entrées de temps",
+      "category": "Exports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Formats heure/durée",
+      "category": "Exports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Fichiers exportés",
+      "category": "Exports",
+      "coverage_status": "BLOCKED",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Slack",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Microsoft Teams",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Zapier",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Xero",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Deel",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Asana",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Todoist",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Trello",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Airtable",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "BambooHR",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "ClickUp",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Evernote",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Freshdesk",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Google Sheets",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "HubSpot",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Microsoft Office 365",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Monday.com",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Notion",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Pipedrive",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Procore",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Razorpay",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Salesforce",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Square",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Stripe",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Teamwork",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Upwork",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Wave",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Zendesk",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Zoho Books",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Zoho CRM",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Authentification",
+      "category": "Sécurité et administration",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Historique des changements",
+      "category": "Sécurité et administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Confidentialité",
+      "category": "Sécurité et administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Contrôle administrateur",
+      "category": "Sécurité et administration",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plan Free/NewFree",
+      "category": "Plans et tarifs",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plan Essential",
+      "category": "Plans et tarifs",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plan Premium",
+      "category": "Plans et tarifs",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plan Ultimate",
+      "category": "Plans et tarifs",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plan Growth",
+      "category": "Plans et tarifs",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Plan Pro",
+      "category": "Plans et tarifs",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Changement de plan pendant essai",
+      "category": "Plans et tarifs",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": null,
+      "public_feature_name": "Retour au plan gratuit",
+      "category": "Plans et tarifs",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.android",
+      "public_feature_name": "Application Android",
+      "category": "Applications",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.browser_extension",
+      "public_feature_name": "Extension Chrome",
+      "category": "Applications",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.browser_extension",
+      "public_feature_name": "Extension Google Chrome",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.desktop",
+      "public_feature_name": "Application desktop",
+      "category": "Applications",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.ios",
+      "public_feature_name": "Application iOS",
+      "category": "Applications",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "calendar.view",
+      "public_feature_name": "Calendrier",
+      "category": "Congés et absences",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "client.create",
+      "public_feature_name": "Création client",
+      "category": "Activités, projets et clients",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "dashboard.team",
+      "public_feature_name": "Tableau de bord quotidien",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "dashboard.team",
+      "public_feature_name": "Tableau de bord hebdomadaire",
+      "category": "Navigation et tableau de bord",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "data.delete",
+      "public_feature_name": "Suppression des données",
+      "category": "Sécurité et administration",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "data.export",
+      "public_feature_name": "Export des données",
+      "category": "Sécurité et administration",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.csv",
+      "public_feature_name": "Export CSV",
+      "category": "Exports",
+      "coverage_status": "BLOCKED",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.pdf",
+      "public_feature_name": "Export PDF",
+      "category": "Exports",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.xlsx",
+      "public_feature_name": "Export XLS/XLSX",
+      "category": "Exports",
+      "coverage_status": "BLOCKED",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "gps.location",
+      "public_feature_name": "Localisation au pointage",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "gps.location",
+      "public_feature_name": "GPS",
+      "category": "Localisation",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.api",
+      "public_feature_name": "Clés API",
+      "category": "Sécurité et administration",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.google_calendar",
+      "public_feature_name": "Google Agenda",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.jira",
+      "public_feature_name": "Jira Software Cloud",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.quickbooks",
+      "public_feature_name": "QuickBooks Online",
+      "category": "Intégrations",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "invoice.create",
+      "public_feature_name": "Factures",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.create",
+      "public_feature_name": "Création kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "public_feature_name": "Entrée kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "public_feature_name": "Sortie kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "public_feature_name": "Pause kiosque",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "public_feature_name": "Code PIN",
+      "category": "Kiosque",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.policy_balance",
+      "public_feature_name": "Types d’absence",
+      "category": "Congés et absences",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.policy_balance",
+      "public_feature_name": "Soldes",
+      "category": "Congés et absences",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.policy_balance",
+      "public_feature_name": "Règles de congé",
+      "category": "Congés et absences",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Growth pour affectation avancée",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.request_approve",
+      "public_feature_name": "Demande de congé",
+      "category": "Congés et absences",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.request_approve",
+      "public_feature_name": "Validation de congé",
+      "category": "Congés et absences",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "offline.tracking",
+      "public_feature_name": "Mode hors ligne",
+      "category": "Applications",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "organization.settings",
+      "public_feature_name": "Profil organisation",
+      "category": "Compte et onboarding",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "organization.settings",
+      "public_feature_name": "Paramètres organisation",
+      "category": "Sécurité et administration",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "overtime.daily",
+      "public_feature_name": "Heures supplémentaires quotidiennes",
+      "category": "Heures supplémentaires",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "overtime.daily",
+      "public_feature_name": "Seuils",
+      "category": "Heures supplémentaires",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.assign_member",
+      "public_feature_name": "Affectation projet",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.budget_time",
+      "public_feature_name": "Budget temps",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.create",
+      "public_feature_name": "Création projet",
+      "category": "Activités, projets et clients",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.rate",
+      "public_feature_name": "Coûts et taux",
+      "category": "Activités, projets et clients",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.task",
+      "public_feature_name": "Création activité",
+      "category": "Activités, projets et clients",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.attendance",
+      "public_feature_name": "Rapport présence/fréquentation",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Growth",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.detailed",
+      "public_feature_name": "Rapport activité",
+      "category": "Rapports",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.detailed",
+      "public_feature_name": "Rapport salarié",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.summary",
+      "public_feature_name": "Rapport temps suivi",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.weekly",
+      "public_feature_name": "Filtres de période",
+      "category": "Rapports",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "schedule.create",
+      "public_feature_name": "Planning fixe",
+      "category": "Planning",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "schedule.create",
+      "public_feature_name": "Planning hebdomadaire",
+      "category": "Planning",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.audit_log",
+      "public_feature_name": "Journal d’audit",
+      "category": "Sécurité et administration",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.sso",
+      "public_feature_name": "SSO",
+      "category": "Sécurité et administration",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.group_create",
+      "public_feature_name": "Groupes",
+      "category": "Personnes et organisation",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essential",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_create",
+      "public_feature_name": "Ajout d’un membre",
+      "category": "Personnes et organisation",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_deactivate",
+      "public_feature_name": "Archivage d’un membre",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_deactivate",
+      "public_feature_name": "Statut actif/inactif",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_edit",
+      "public_feature_name": "Modification d’un membre",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.permissions",
+      "public_feature_name": "Permissions",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.role_manager",
+      "public_feature_name": "Rôles",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.role_manager",
+      "public_feature_name": "Managers",
+      "category": "Personnes et organisation",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.delete",
+      "public_feature_name": "Suppression/correction",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.edit",
+      "public_feature_name": "Modification d’un pointage",
+      "category": "Pointage",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.manual",
+      "public_feature_name": "Pointage manuel",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.manual",
+      "public_feature_name": "Ajout d’un pointage manquant",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.pause",
+      "public_feature_name": "Pause",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.resume",
+      "public_feature_name": "Reprise après pause",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "public_feature_name": "Pointage web entrée",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "public_feature_name": "Pointage web sortie",
+      "category": "Pointage",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.approval",
+      "public_feature_name": "Approbations",
+      "category": "Feuilles de temps",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essential",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.lock",
+      "public_feature_name": "Verrouillage des feuilles",
+      "category": "Feuilles de temps",
+      "coverage_status": "PARTIAL",
+      "test_result": "NOT_RECORDED",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.weekly",
+      "public_feature_name": "Vue hebdomadaire",
+      "category": "Feuilles de temps",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "trial.payment_status",
+      "public_feature_name": "Absence de moyen de paiement",
+      "category": "Plans et tarifs",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "workspace.create",
+      "public_feature_name": "Création de l’organisation",
+      "category": "Compte et onboarding",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Free / essai, niveau exact non vérifié",
+      "observed_at": "2026-08-27",
+      "public_status": "PUBLIC_SNAPSHOT"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "SW-JIBBLE::CLM::10",
+      "canonical_feature_key": "leave.policy_balance",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "Sous Growth ou Pro, une politique de congé peut être affectée à un groupe.",
+          "qualifier": "Accumulation et report non testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "cb3161f787c82c33347830665a939c098fb62ab16c5422f715315162574eedee"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::4",
+      "canonical_feature_key": "team.group_create",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "La création de groupes est déverrouillée à partir du plan Essential ; un groupe Équipe terrain a été créé sous essai Pro.",
+          "qualifier": "Niveau minimum indiqué par Jibble au moment du test.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "f4a74840d2016d4eba059cfe3ee011be5ad1d0dc824ebdff4e6913335ac1c1da"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::6",
+      "canonical_feature_key": null,
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "La règle Essential peut rendre l’activité obligatoire : Jibble a bloqué la sauvegarde sans activité.",
+          "qualifier": "Testé sous essai Pro qui inclut Essential.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "abc011c9333cb539fca30645222788af0eafb9edf5ee68d82478bdb6cef132ad"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::7",
+      "canonical_feature_key": null,
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "La règle Essential peut rendre le projet obligatoire : Jibble a bloqué la sauvegarde sans projet.",
+          "qualifier": "Testé sous essai Pro qui inclut Essential.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "f1e5820e2e1256bb250ecca1f056be049d9513768dcd598eb6555c6de3df8b16"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::9",
+      "canonical_feature_key": "report.attendance",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "Sous Growth ou Pro, le rapport de fréquentation peut être filtré et exporté en XLSX.",
+          "qualifier": "Testé sous essai Pro ; filtre Victor et semaine du 24 au 30 août.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "cd0483e91b6f6c226349ef5c1171811f9b0f3911205cb05eeb5e755aae292663"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::VIDEO-VID-003",
+      "canonical_feature_key": "team.group_create",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "Les groupes sont déverrouillés à partir d’Essential ; nous avons créé Équipe terrain pendant l’essai Pro.",
+          "qualifier": "Distinguer création et affectation.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7255aeec1268982defb4349f6753a3237f17553097278f4b8054e6eec3beb6f2"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::VIDEO-VID-004",
+      "canonical_feature_key": null,
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "Jibble peut obliger à choisir une activité et un projet avant d’enregistrer le pointage.",
+          "qualifier": "Fonctions Essential testées sous Pro.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "3f961abfe84706aa24643d3de85c2189a9e7e940c50ca41a9dd6d04e419e596f"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::VIDEO-VID-006",
+      "canonical_feature_key": "report.attendance",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "Le rapport de fréquentation Growth a généré un fichier XLSX de 13,67 Ko.",
+          "qualifier": "Le téléchargement local a été bloqué par le navigateur.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "824e96976f08b6d62d6ea73299a2247293b196d2741d4e89a5363d9d2a468bb6"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-JIBBLE::CLM::VIDEO-VID-007",
+      "canonical_feature_key": "leave.policy_balance",
+      "status": "VERIFIED",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-27",
+      "localized": {
+        "fr": {
+          "wording": "La politique de congé a pu être affectée au groupe Équipe terrain sous Growth/Pro.",
+          "qualifier": "Accumulation et report non testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "94279d59929811b890097b6ec6aabbc9fe1d61905d6a13824935862dd362b2de"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    {
+      "limitation_id": "jibble:limitation:001",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:002",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:003",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:004",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:005",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:006",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:007",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:008",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:009",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:010",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:011",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:012",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:013",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:014",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:015",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:016",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:017",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:018",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:019",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:020",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:021",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:022",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:023",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:024",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:025",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:026",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:027",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:028",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:029",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:030",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:031",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:032",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:033",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:034",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:035",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:036",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:037",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:038",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Menu visible avec badge Pro ; non testable sans localisation réelle.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "a0bccd57306f36235af1066a6ef743e51a425309e06a5f77c1187c9e815edbe4"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:039",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:040",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:041",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:042",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:043",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:044",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:045",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:046",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:047",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:048",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:049",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:050",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:051",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:052",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:053",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:054",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:055",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:056",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Dialogue d’export ouvert ; téléchargement généré vers S3 puis bloqué par Codex (ERR_BLOCKED_BY_CLIENT).",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "e82b9883bf9848b30210ae21e5b1a235946c155a8fc2944b6dc54f7fd36b1e27"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:057",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:058",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:059",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:060",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:061",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:062",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:063",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:064",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:065",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:066",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:067",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:068",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:069",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:070",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:071",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:072",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:073",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:074",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:075",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:076",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:077",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:078",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:079",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:080",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:081",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:082",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:083",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:084",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:085",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:086",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:087",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:088",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:089",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:090",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:091",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:092",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:093",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:094",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:095",
+      "canonical_feature_key": null,
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:096",
+      "canonical_feature_key": "application.android",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:097",
+      "canonical_feature_key": "application.browser_extension",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:098",
+      "canonical_feature_key": "application.browser_extension",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:099",
+      "canonical_feature_key": "application.desktop",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:100",
+      "canonical_feature_key": "application.ios",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:101",
+      "canonical_feature_key": "dashboard.team",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:102",
+      "canonical_feature_key": "data.delete",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:103",
+      "canonical_feature_key": "data.export",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:104",
+      "canonical_feature_key": "export.csv",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Dialogue d’export ouvert ; téléchargement généré vers S3 puis bloqué par Codex (ERR_BLOCKED_BY_CLIENT).",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "e82b9883bf9848b30210ae21e5b1a235946c155a8fc2944b6dc54f7fd36b1e27"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:105",
+      "canonical_feature_key": "export.pdf",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:106",
+      "canonical_feature_key": "export.xlsx",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Dialogue d’export ouvert ; téléchargement généré vers S3 puis bloqué par Codex (ERR_BLOCKED_BY_CLIENT).",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "e82b9883bf9848b30210ae21e5b1a235946c155a8fc2944b6dc54f7fd36b1e27"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:107",
+      "canonical_feature_key": "gps.location",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:108",
+      "canonical_feature_key": "gps.location",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:109",
+      "canonical_feature_key": "integration.api",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:110",
+      "canonical_feature_key": "integration.google_calendar",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:111",
+      "canonical_feature_key": "integration.jira",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:112",
+      "canonical_feature_key": "integration.quickbooks",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Intégration visible dans le catalogue ; aucune connexion externe autorisée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b179c8cd58f4da8b4bc80ccb5d5c322196f1ea039442c1b0bb51c0e9b94bf6e5"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:113",
+      "canonical_feature_key": "invoice.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:114",
+      "canonical_feature_key": "kiosk.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:115",
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:116",
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:117",
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:118",
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:119",
+      "canonical_feature_key": "leave.policy_balance",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:120",
+      "canonical_feature_key": "leave.request_approve",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:121",
+      "canonical_feature_key": "leave.request_approve",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:122",
+      "canonical_feature_key": "offline.tracking",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:123",
+      "canonical_feature_key": "overtime.daily",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:124",
+      "canonical_feature_key": "project.assign_member",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:125",
+      "canonical_feature_key": "project.budget_time",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:126",
+      "canonical_feature_key": "project.rate",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:127",
+      "canonical_feature_key": "report.attendance",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Carte visible avec badge Growth ; non ouverte.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "d4a0fb9306f644e342eb56fec35014ee7850714775f460e77ce9868129aab0f1"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:128",
+      "canonical_feature_key": "report.detailed",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:129",
+      "canonical_feature_key": "security.audit_log",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:130",
+      "canonical_feature_key": "security.sso",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Non manipulé dans cet environnement : application/appareil/localisation réelle, autorisation externe ou action sensible requis.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "61fd62a6d6451dc73ebe739dfc8cc2d842968bb5cdaa8210bd27c7b585103f9f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:131",
+      "canonical_feature_key": "team.group_create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Écran verrouillé : « Les groupes sont une fonctionnalité Essentiel ».",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "a54b4c553d9faa8adbb1fa7d6e3e3e23918bc3625f05d4139105e72e80af970f"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:132",
+      "canonical_feature_key": "team.member_deactivate",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:133",
+      "canonical_feature_key": "team.member_deactivate",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:134",
+      "canonical_feature_key": "team.member_edit",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:135",
+      "canonical_feature_key": "team.permissions",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:136",
+      "canonical_feature_key": "team.role_manager",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:137",
+      "canonical_feature_key": "team.role_manager",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:138",
+      "canonical_feature_key": "time_entry.delete",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:139",
+      "canonical_feature_key": "time_entry.edit",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:140",
+      "canonical_feature_key": "timesheet.approval",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Écran verrouillé : « Upgrade to Essentiel for Approvals ».",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7043d32d75c84d831a3435814d0b48addb951a4cd92aebc2486c159f36263881"
+        }
+      }
+    },
+    {
+      "limitation_id": "jibble:limitation:141",
+      "canonical_feature_key": "timesheet.lock",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-27",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Fonction visible ou comportement partiellement exploré ; résultat complet non établi.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8fa4e5a0be8234a69e5ebe15b538158780c8d4a126f64927f3567146f5ffede6"
+        }
+      }
+    }
+  ],
+  "buyer_contexts": [
+    {
+      "context_key": "tpe-pme-agences-consultants",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-27",
+      "fact_basis": [
+        "leave.policy_balance",
+        "team.group_create",
+        "report.attendance",
+        "team.group_create"
+      ],
+      "localized": {
+        "fr": {
+          "label": "TPE, PME, agences et consultants",
+          "reason": "Le suivi du temps et les usages essentiels observés peuvent convenir à ce contexte.",
+          "limitations": "Vérifier le plan, les règles internes et les fonctions terrain avant déploiement.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "9a4aaf6b339c73c4b5d0fb726608b5209f7034b0597160810251bae216ac94a0"
+        }
+      }
+    },
+    {
+      "context_key": "remplacement-excel",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-27",
+      "fact_basis": [
+        "leave.policy_balance",
+        "team.group_create",
+        "report.attendance",
+        "team.group_create"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Équipes qui remplacent Excel par un suivi simple",
+          "reason": "Les scénarios de suivi, de correction et de consolidation hebdomadaire ont été observés.",
+          "limitations": "La structure exacte des exports doit être auditée selon vos besoins.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "ba64720123e3b560628759b447ddc22fbf682dfe40935d48e6b211924cfa1a9e"
+        }
+      }
+    },
+    {
+      "context_key": "planning-fixe",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-27",
+      "fact_basis": [
+        "leave.policy_balance",
+        "team.group_create",
+        "report.attendance",
+        "team.group_create"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Organisations avec planning fixe, pauses et consolidation hebdomadaire",
+          "reason": "Le protocole a couvert le cycle de pointage et la consolidation hebdomadaire.",
+          "limitations": "La validation gratuite des feuilles et les règles avancées de planning n’ont pas été établies.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "0a7f938ed5e685963cf97c7d2a6b5600e482a74e89b08008f6091199ac3b1fdb"
+        }
+      }
+    },
+    {
+      "context_key": "terrain-gps-kiosque",
+      "status": "INSUFFICIENT_DATA",
+      "observed_at": "2026-08-27",
+      "fact_basis": [
+        "field.gps",
+        "kiosk.create",
+        "offline.tracking"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Déploiement terrain, GPS ou kiosque",
+          "reason": "Aucune recommandation terrain implicite n’est autorisée.",
+          "limitations": "Le GPS, le kiosque et le hors-ligne doivent être testés avant déploiement.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "a5fcf64a52cecfa415015e2940286114acbbf9167ff368079c216ed4b0d0964e"
+        }
+      }
+    }
+  ],
+  "plans": [
+    {
+      "plan_name": "essential",
+      "observed_at": "2026-08-27",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "free",
+      "observed_at": "2026-08-27",
+      "available": true,
+      "trial_available": true,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "growth",
+      "observed_at": "2026-08-27",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    },
+    {
+      "plan_name": "pro",
+      "observed_at": "2026-08-27",
+      "available": true,
+      "trial_available": null,
+      "payment_required": null,
+      "billing_period": null
+    }
+  ],
+  "public_events": [],
+  "build_meta": {
+    "records_read": 370,
+    "claims_exported": 9,
+    "claims_rejected": 18,
+    "limitations_exported": 141,
+    "buyer_contexts_exported": 4,
+    "events_exported": 0,
+    "security_rejections": 18
+  },
+  "public_data_hash": "4c9dde41cf3beaa44450ad5c4fcd2a2ebc52ba158bc5a8c314fc4a67f85c6528"
+}

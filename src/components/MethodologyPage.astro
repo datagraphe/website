@@ -4,6 +4,9 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
 import { localizedPath, type Locale } from '@/i18n/config';
 import { t } from '@/i18n';
 import { methodologyCopy } from '@/i18n/methodology';
+import MethodFlow from '@/components/MethodFlow.astro';
+import TestStatusLegend from '@/components/TestStatusLegend.astro';
+import EvidenceMethod from '@/components/EvidenceMethod.astro';
 
 interface Props { locale: Locale; routePath: string }
 const { locale, routePath } = Astro.props;
@@ -28,6 +31,8 @@ const statusClass = (code:string) => code.toLowerCase().replaceAll('_','-');
     </div>
   </header>
 
+  {locale === 'fr' && <section aria-labelledby="cycle-datagraphe"><div class="shell"><span class="eyebrow">Cycle Datagraphe</span><h2 id="cycle-datagraphe">De la fonction recensée à l’observation publiée</h2><p>Notre méthode suit huit étapes. Elle distingue ce que le logiciel annonce, ce que nous tentons, ce que nous observons et ce que la preuve autorise réellement à publier.</p><MethodFlow/></div></section>}
+
   <section class="methodology-why">
     <div class="shell split-section">
       <div><span class="eyebrow">Datagraphe</span><h2>{copy.why.heading}</h2>{copy.why.paragraphs.map(p=><p>{p}</p>)}<ul class="check-list">{copy.why.questions.map(item=><li>{item}</li>)}</ul></div>
@@ -46,6 +51,12 @@ const statusClass = (code:string) => code.toLowerCase().replaceAll('_','-');
       <div class="methodology-status-grid">{copy.statuses.map(status=><article class={`methodology-status-card ${statusClass(status.code)}`}><span class={`status status-${statusClass(status.code)}`}>{status.code}</span><p>{status.text}</p>{status.example&&<small>{status.example}</small>}</article>)}</div>
     </div>
   </section>
+
+  {locale === 'fr' && <section class="soft"><div class="shell"><div class="section-head"><div><span class="eyebrow">Vocabulaire de preuve</span><h2>Fonction, scénario, résultat et preuve ne désignent pas la même chose</h2></div></div><div class="foundation-principles"><article><h3>Une fonction n’est pas un scénario</h3><p>« Export CSV » est une fonction. Créer un rapport fictif, déclencher son export, ouvrir le fichier, vérifier ses colonnes puis recommencer après rechargement constitue un scénario.</p></article><article><h3>VERIFIED n’est pas synonyme de PASS</h3><p>VERIFIED signifie que la preuve est suffisante pour qualifier le résultat. Elle peut confirmer un PASS attendu ou un FAIL observé. INCONCLUSIVE reste préférable à une conclusion fragile.</p></article><article><h3>La persistance doit être contrôlée</h3><p>Action → enregistrement → changement de page ou rechargement → vérification. Une valeur seulement visible avant rechargement ne suffit pas.</p></article><article><h3>Nous recherchons les faux positifs</h3><p>Une interface peut donner l’impression qu’une action a réussi. Nous vérifions le résultat durable et conservons aussi les échecs lorsqu’ils sont correctement démontrés.</p></article></div><div style="margin-top:28px"><TestStatusLegend/></div><EvidenceMethod/></div></section>}
+
+  {locale === 'fr' && <section><div class="shell two-panel"><article class="methodology-panel"><span class="eyebrow">Accès au logiciel</span><h2>Le contexte d’accès est toujours précisé</h2><ul class="check-list"><li>Forfait gratuit</li><li>Essai gratuit</li><li>Forfait payé par Datagraphe</li><li>Accès fourni par l’éditeur</li></ul><p>Un accès éditeur ne donne aucun contrôle sur le protocole, la formulation, la note ou le verdict.</p></article><article class="methodology-panel"><span class="eyebrow">Temps et versions</span><h2>Une observation est datée, pas éternelle</h2><p>Nos dossiers décrivent un produit, un environnement et un forfait à une date donnée. Des retests ciblés peuvent produire un nouvel état historique ; nous ne prétendons pas surveiller chaque logiciel en continu.</p><p>Une amélioration de notre protocole n’est pas présentée comme une évolution du produit testé.</p></article></div></section>}
+
+  {locale === 'fr' && <section class="soft"><div class="shell two-panel"><article class="methodology-panel"><span class="eyebrow">Intelligence artificielle</span><h2>L’IA assiste le travail, elle ne remplace pas la preuve</h2><p>Elle peut aider à inventorier, structurer des scénarios, analyser des résultats et préparer une synthèse. Elle ne transforme jamais une documentation, une inférence ou une simple visibilité d’interface en test exécuté.</p></article><article class="methodology-panel"><span class="eyebrow">Confidentialité des preuves</span><h2>Les originaux restent privés</h2><p>Captures, exports et journaux complets sont conservés dans un espace privé. Nous publions seulement les informations nécessaires, anonymisées lorsque cela protège les données fictives, les comptes de test ou le fonctionnement interne.</p></article></div></section>}
 
   <section class="dark">
     <div class="shell coverage-grid"><div><span class="eyebrow">TESTED / PASS / FAIL</span><h2>{copy.coverage.heading}</h2>{copy.coverage.paragraphs.map(p=><p>{p}</p>)}</div><div class="coverage-example">{copy.coverage.labels.map((label,index)=><div><span>{label}</span><strong class={index>2?'coverage-code':''}>{copy.coverage.example[index]}</strong></div>)}</div></div>

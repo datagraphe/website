@@ -1,0 +1,12 @@
+---
+import VerifiedStatus from '@/components/VerifiedStatus.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+interface Props { data:any }
+const {data}=Astro.props;const status=(s:string)=>s.toLowerCase().replaceAll('_','-');
+---
+<div data-source="public-dataset" data-schema="1.1">
+  <header class="comparison-hero"><div class="shell"><Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'Comparatifs',href:'/fr/comparatifs/'},{label:'Jibble vs Clockify'}]} ariaLabel="Accueil — Comparatifs — Jibble vs Clockify"/><p class="eyebrow">Comparatif fondé sur des tests</p><h1>Jibble vs Clockify : nous avons testé les deux logiciels</h1><p class="comparison-lead">18 décisions certifiées issues du contrat public Datagraphe. Aucun vainqueur global n’est désigné.</p><VerifiedStatus status="qualified" date={data.last_verified_at}/></div></header>
+  <section class="comparison-scenarios" id="scenarios"><div class="shell"><h2>Les 18 décisions comparatives</h2><div class="comparison-table-wrap"><table><caption class="sr-only">Décisions comparatives Jibble et Clockify</caption><thead><tr><th>Scénario</th><th>Jibble</th><th>Clockify</th><th>Décision et réserve</th></tr></thead><tbody>{data.dimensions.map((row:any)=><tr><th scope="row">{row.localized.fr.scenario_label}<br/><small>{row.certification_status}</small></th><td>{row.results.jibble}</td><td>{row.results.clockify}</td><td><strong>{row.decision}</strong><p>{row.localized.fr.wording}</p>{row.localized.fr.qualifier&&<small>Réserve : {row.localized.fr.qualifier}</small>}</td></tr>)}</tbody></table></div></div></section>
+  <section class="comparison-needs soft" id="buyers"><div class="shell"><h2>Choisir selon votre usage</h2><div class="comparison-needs-grid">{data.buyer_contexts.map((context:any)=><article><span class={`status status-${status(context.status)}`}>{context.status}</span><h3>{context.localized.fr.label}</h3><p>{context.localized.fr.reason}</p>{context.localized.fr.limitations&&<small>Limites : {context.localized.fr.limitations}</small>}</article>)}</div></div></section>
+  <section class="comparison-cta"><div class="shell"><h2>Consulter les tests individuels</h2><div class="comparison-cta-grid"><a class="button primary" href="/fr/tests/jibble/">Voir Jibble</a><a class="button primary" href="/fr/tests/clockify/">Voir Clockify</a></div><p><a href="/fr/comparatifs/">Voir tous les comparatifs</a> · <a href="/fr/methodologie/">Méthodologie</a></p></div></section>
+</div>

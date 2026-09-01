@@ -1,0 +1,1818 @@
+{
+  "public_schema_version": "1.1",
+  "active_locales": [
+    "fr"
+  ],
+  "generated_at": "2026-09-01T19:51:06.838Z",
+  "software": {
+    "software_id": "SW-TOGGL-TRACK",
+    "slug": "toggl-track",
+    "name": "Toggl Track",
+    "vendor": "Toggl",
+    "latest_snapshot_date": "2026-08-31",
+    "primary_market": null,
+    "language_fit": null,
+    "publication_status": "PUBLISH_WITH_LIMITATIONS"
+  },
+  "snapshot_selection": {
+    "snapshot_id": "SNAP-SW-TOGGL-TRACK-2026-08-31-FINAL-P1",
+    "rule": "EXPLICIT_PUBLICATION_GATE",
+    "immutable": true,
+    "validated_status": "VALIDATED_FINAL_P1"
+  },
+  "last_verified_at": "2026-08-31",
+  "test_summary": {
+    "total": 61,
+    "tested": 26,
+    "partial": 19,
+    "not_testable": 7,
+    "blocked": 0,
+    "not_available": 9,
+    "coverage_rate": 58.2
+  },
+  "features": [
+    {
+      "canonical_feature_key": "alerts.reminders",
+      "public_feature_name": "Alertes et rappels",
+      "category": "WORKSPACE",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "application.catalog",
+      "public_feature_name": "Applications complémentaires",
+      "category": "TECHNICAL",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "billing.currency",
+      "public_feature_name": "Devise par défaut",
+      "category": "ECONOMICS",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "billing.license_overview",
+      "public_feature_name": "Vue licences et facturation",
+      "category": "ECONOMICS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "calendar.view",
+      "public_feature_name": "Vue calendrier des entrées",
+      "category": "TIME_TRACKING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "client.create",
+      "public_feature_name": "client.create",
+      "category": "PROJECTS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "custom_fields.configure",
+      "public_feature_name": "Champs personnalisés",
+      "category": "WORKSPACE",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "dashboard.team",
+      "public_feature_name": "dashboard.team",
+      "category": "REPORTING",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.csv",
+      "public_feature_name": "export.csv",
+      "category": "EXPORT",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.pdf",
+      "public_feature_name": "export.pdf",
+      "category": "EXPORT",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "export.xlsx",
+      "public_feature_name": "export.xlsx",
+      "category": "EXPORT",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "gps.location",
+      "public_feature_name": "gps.location",
+      "category": "FIELD",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.api",
+      "public_feature_name": "integration.api",
+      "category": "TECHNICAL",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.catalog",
+      "public_feature_name": "Catalogue d’intégrations",
+      "category": "TECHNICAL",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "integration.google_calendar",
+      "public_feature_name": "integration.google_calendar",
+      "category": "TECHNICAL",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "invoice.create",
+      "public_feature_name": "invoice.create",
+      "category": "ECONOMICS",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.create",
+      "public_feature_name": "kiosk.create",
+      "category": "FIELD",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "public_feature_name": "kiosk.pin_cycle",
+      "category": "FIELD",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.policy_balance",
+      "public_feature_name": "leave.policy_balance",
+      "category": "LEAVE",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "leave.request_approve",
+      "public_feature_name": "leave.request_approve",
+      "category": "LEAVE",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "offline.tracking",
+      "public_feature_name": "offline.tracking",
+      "category": "FIELD",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "organization.settings",
+      "public_feature_name": "organization.settings",
+      "category": "ONBOARDING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "overtime.daily",
+      "public_feature_name": "overtime.daily",
+      "category": "OVERTIME",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "plans.catalog",
+      "public_feature_name": "Catalogue des plans",
+      "category": "ECONOMICS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.assign_member",
+      "public_feature_name": "project.assign_member",
+      "category": "PROJECTS",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.billable",
+      "public_feature_name": "Statut facturable du projet",
+      "category": "ECONOMICS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.budget_time",
+      "public_feature_name": "project.budget_time",
+      "category": "PROJECTS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.create",
+      "public_feature_name": "project.create",
+      "category": "PROJECTS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.fixed_fee",
+      "public_feature_name": "Frais fixes du projet",
+      "category": "ECONOMICS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.milestones_attachments",
+      "public_feature_name": "Jalons et pièces jointes",
+      "category": "PROJECTS",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.rate",
+      "public_feature_name": "project.rate",
+      "category": "ECONOMICS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.recurring",
+      "public_feature_name": "Projet récurrent",
+      "category": "PROJECTS",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "project.task",
+      "public_feature_name": "project.task",
+      "category": "PROJECTS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.attendance",
+      "public_feature_name": "report.attendance",
+      "category": "REPORTING",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.detailed",
+      "public_feature_name": "report.detailed",
+      "category": "REPORTING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.summary",
+      "public_feature_name": "report.summary",
+      "category": "REPORTING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "report.weekly",
+      "public_feature_name": "report.weekly",
+      "category": "REPORTING",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "required_fields.configure",
+      "public_feature_name": "Champs requis",
+      "category": "WORKSPACE",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "schedule.create",
+      "public_feature_name": "schedule.create",
+      "category": "PLANNING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.audit_log",
+      "public_feature_name": "security.audit_log",
+      "category": "TECHNICAL",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.sso",
+      "public_feature_name": "security.sso",
+      "category": "TECHNICAL",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "security.two_factor_enforcement",
+      "public_feature_name": "Exigence 2FA organisationnelle",
+      "category": "SECURITY",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "tag.create",
+      "public_feature_name": "Création et gestion des étiquettes",
+      "category": "WORKSPACE",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "targets.utilization_margin",
+      "public_feature_name": "Objectifs d’utilisation et de marge",
+      "category": "REPORTING",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "task.status",
+      "public_feature_name": "Statuts des tâches",
+      "category": "TASKS",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.group_create",
+      "public_feature_name": "team.group_create",
+      "category": "TEAM",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.member_create",
+      "public_feature_name": "team.member_create",
+      "category": "TEAM",
+      "coverage_status": "NOT_TESTABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.permissions",
+      "public_feature_name": "team.permissions",
+      "category": "TEAM",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "team.role_manager",
+      "public_feature_name": "team.role_manager",
+      "category": "TEAM",
+      "coverage_status": "PARTIAL",
+      "test_result": "INCONCLUSIVE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.delete",
+      "public_feature_name": "time_entry.delete",
+      "category": "TIME_TRACKING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.edit",
+      "public_feature_name": "time_entry.edit",
+      "category": "TIME_TRACKING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_entry.manual",
+      "public_feature_name": "time_entry.manual",
+      "category": "TIME_TRACKING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.pause",
+      "public_feature_name": "time_tracking.pause",
+      "category": "TIME_TRACKING",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.resume",
+      "public_feature_name": "time_tracking.resume",
+      "category": "TIME_TRACKING",
+      "coverage_status": "NOT_AVAILABLE",
+      "test_result": "NOT_APPLICABLE",
+      "verification_level": "OBSERVED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "public_feature_name": "time_tracking.timer_cycle",
+      "category": "TIME_TRACKING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.approval",
+      "public_feature_name": "timesheet.approval",
+      "category": "TIMESHEETS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.lock",
+      "public_feature_name": "timesheet.lock",
+      "category": "TIMESHEETS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "timesheet.weekly",
+      "public_feature_name": "timesheet.weekly",
+      "category": "TIMESHEETS",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "trial.payment_status",
+      "public_feature_name": "trial.payment_status",
+      "category": "ECONOMICS",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "workspace.ai_controls",
+      "public_feature_name": "Contrôle des fonctions IA",
+      "category": "WORKSPACE",
+      "coverage_status": "PARTIAL",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; audit Stage 3B sans nouveau test",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    },
+    {
+      "canonical_feature_key": "workspace.create",
+      "public_feature_name": "workspace.create",
+      "category": "ONBOARDING",
+      "coverage_status": "TESTED",
+      "test_result": "PASS",
+      "verification_level": "VERIFIED",
+      "plan_observed": "Essai Focus Premium; module Congés exclu",
+      "observed_at": "2026-08-31",
+      "public_status": "PUBLIC_SNAPSHOT"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-001",
+      "canonical_feature_key": "workspace.create",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Espace de travail isolé créé puis renommé et vérifié après rechargement dans l’environnement d’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Claim limité au périmètre et à la date du test.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "3eb8c703ea3bb23f83790df363f22675516a5114d87a410d3d471ed1e93da60e"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-002",
+      "canonical_feature_key": "time_tracking.timer_cycle",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Minuteur démarré puis arrêté; entrée de 15 secondes persistante.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7c7fd7980ff4349deb315c8637e27b34b69d41eca5700b0d2e67e9aad5ebab91"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-003",
+      "canonical_feature_key": "time_entry.manual",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Entrée manuelle d’une heure créée.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "376b1d716840a3760b398f95b29ec125a8dd0f283c75650eea5862377f632183"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-004",
+      "canonical_feature_key": "time_entry.edit",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Description modifiée et persistante.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "1a79366632b1d72bbee8bb7451db19fcff9012ee9c55263b651871e7e503ac35"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-005",
+      "canonical_feature_key": "client.create",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Clients Alpha, Beta et Gamma créés; Alpha affecté au projet.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "c9e1cc9162744856ee535ddd1eb7ed8826c3f23ef5b7dceaed9da5aa797cd8eb"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-006",
+      "canonical_feature_key": "project.create",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Projet Refonte site web créé.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "3a947257cc67235c22e7f6a548078275f32321b0f951bafd240f1d2a5ac7d980"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-007",
+      "canonical_feature_key": "project.task",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Quatre tâches fictives créées et persistantes.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "03fa828dd910b322c2aee7e08bd4f8529e735274515558305d1c664b0b265681"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-008",
+      "canonical_feature_key": "project.rate",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Tarif fictif du projet de 100 USD/h configuré et reflété dans le rapport dans l’environnement d’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Claim limité au périmètre et à la date du test.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "0a5514a4ea53a6150b48431904537f1a6668f4369a8978c1924ee5607987b12a"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-009",
+      "canonical_feature_key": "project.budget_time",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Estimation de 40 h persistante après rechargement dans l’environnement d’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Claim limité au périmètre et à la date du test.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "c68ffc50029737e3630b33a607916d49ed07aa6d488518b5de765d6ece095119"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-012",
+      "canonical_feature_key": "schedule.create",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Chronologie de capacité accessible avec 40 h disponibles dans l’environnement d’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Claim limité au périmètre et à la date du test.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "93b9c25187f4a412baedce53c27f16c5f6d0f8557b81b61882c06ab7a36624eb"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-013",
+      "canonical_feature_key": "trial.payment_status",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Essai Premium 30 jours activé sans carte; facturation affiche 0 licence et 0 coût dans l’environnement d’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Claim limité au périmètre et à la date du test.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "dec8d7adfaf41fd6444c06f560554a14f43b6125269cf5d3a5b2c85b5649a926"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-014",
+      "canonical_feature_key": "security.audit_log",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Journal d’audit consulté après création clients, projet et tâches.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "3e087d8e37c3d778f19e928d91cb513ef0fbb9749483744a30f8bec8215e15f1"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-CLM-015",
+      "canonical_feature_key": "time_entry.delete",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Entrée fictive de 15 minutes supprimée et absence vérifiée après rechargement.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "903326f1061e6a8631e6be55e3360f8dc3df14c7990725e7043d2a33a2846fcc"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-P1-CLM-001",
+      "canonical_feature_key": "team.group_create",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Un groupe et l’affectation d’un second membre ont persisté après rechargement dans l’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Un seul groupe et un seul second membre testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "2a284131db6f790f036595cba26a75bd0e5e940f5fc2f90405389ce05978f7a4"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-P1-CLM-002",
+      "canonical_feature_key": "timesheet.approval",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Une feuille fictive a été soumise par un membre puis approuvée par le propriétaire dans l’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Workflow isolé, une période hebdomadaire.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "f5aa2a2f15ecd12259d93826bda2d0c67970d8fd70ec0ff2e62e85d3fce23747"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-P1-CLM-003",
+      "canonical_feature_key": "timesheet.lock",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Après approbation, les champs de l’entrée testée étaient désactivés et la mutation contrôlée a été refusée, y compris après rechargement.",
+          "qualifier": "Observation limitée au workflow et au plan d’essai testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "a565fa042bda5cf84a9fa3ed1ca7c3c0e216fd88cf10652a1b4e472ad8132e6c"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-P1-CLM-004",
+      "canonical_feature_key": "export.csv",
+      "status": "SAFE",
+      "safe_to_publish": "SAFE",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Le rapport résumé testé a produit un CSV lisible dont les colonnes et valeurs fictives ont été vérifiées.",
+          "qualifier": "",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "2ee8200adc4903f30bc830dcb20adeed704e597073252c0ad5061f1f1ea89ac2"
+        }
+      }
+    },
+    {
+      "claim_id": "SW-TOGGL-TRACK::TGL-P1-CLM-005",
+      "canonical_feature_key": "project.fixed_fee",
+      "status": "SAFE_WITH_QUALIFIER",
+      "safe_to_publish": "SAFE_WITH_QUALIFIER",
+      "tested_at": "2026-08-31",
+      "localized": {
+        "fr": {
+          "wording": "Un forfait fictif de 1 234 USD a persisté après rechargement dans l’essai Focus Premium testé le 31 août 2026.",
+          "qualifier": "Aucune facture ni paiement testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "5ee211b0525164379b5dcbd42980b1001dd0674eac6cc11eee27e88f73d8519f"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    {
+      "limitation_id": "toggl-track:limitation:001",
+      "canonical_feature_key": "alerts.reminders",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Boutons Nouvelle alerte et Nouveau rappel observés; aucun envoi testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "9add660dbd5ba49e7fc02182f27ce977c49961a113c53261928db1511558c039"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:002",
+      "canonical_feature_key": "application.catalog",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Boutons de téléchargement observés; aucune application installée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "73f4ba98427c1fb7913a0b65cc56fcf790dc95befada0c6a4840780df5ecc42e"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:003",
+      "canonical_feature_key": "custom_fields.configure",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Jusqu’à 50 champs par type affichés; aucun champ créé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "4fbd7e070f8cd1543859dc570322579b298802d333a65ba9079f7e196b063506"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:004",
+      "canonical_feature_key": "export.csv",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Validated in isolated Focus Premium trial on 2026-08-31; no production billing or external integration tested.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8facee6a716c7f76a610455a44e748016503f12bd9b9effd99adfc6541542377"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:005",
+      "canonical_feature_key": "export.pdf",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Commande PDF visible; fichier non récupéré et non inspecté.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "81da8bf002ed0f495064b9413be40372eb62bb601e65dcde76e2cb54cee2574a"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:006",
+      "canonical_feature_key": "export.xlsx",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Commande XLSX visible; fichier non récupéré et non inspecté.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "dfcf32e9a533a59e41b63e8d561e6c211308691d21eff3fa36271221aff230e8"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:007",
+      "canonical_feature_key": "gps.location",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune capture GPS native observée dans l’application web testée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "66e6eab9199268845c630c768240d0d3a0833836c9ddcf223da9169cd8250575"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:008",
+      "canonical_feature_key": "integration.api",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun scénario API exécuté; aucun secret ou jeton créé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "767432e21b0a1b3855185d1a970b55b6cc1fad8f8898c1f571b9063b3e747b9e"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:009",
+      "canonical_feature_key": "integration.google_calendar",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Connexion Google/Outlook refusée pendant l’onboarding conformément au protocole.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "3680401067deeefdd3f7d37d75294c599554d92ef8f575ce95db5ed3f67ac654"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:010",
+      "canonical_feature_key": "invoice.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune fonction de facture brouillon observée dans Toggl Focus.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "0490690b1e78966262104f8b0943274392a65f2ab3431685898ff3ad9aefaf84"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:011",
+      "canonical_feature_key": "kiosk.create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun kiosque observé dans l’environnement Toggl Focus.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "e0f5a722a5e5922e9c118068f3f22c68bcfd373b8ce688d14d770f25ab230b96"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:012",
+      "canonical_feature_key": "kiosk.pin_cycle",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun flux kiosque/PIN observé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "480e8fae6c6b82583a1dbe9f2157f5fd952d73c75910f58d80c5ed4b5fab4806"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:013",
+      "canonical_feature_key": "leave.policy_balance",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Module Congés séparé à 2 USD/utilisateur/mois; essai additionnel non activé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b1054edae07d7db8dc07bb3288006ae932b42589e95833e435a31fbe587dda2c"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:014",
+      "canonical_feature_key": "leave.request_approve",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune politique ni demande créée car module payant additionnel non activé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "05697c6f92cd27f931212d76dac9fb1e78161b3ed97b486808a88a648c17fbf1"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:015",
+      "canonical_feature_key": "offline.tracking",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Applications locales non installées; mode hors ligne non testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "d1c330dca03bc6ca2bb852d9c90a5433fe7b4b8ea2ce918d918861bb8dd80bee"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:016",
+      "canonical_feature_key": "overtime.daily",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Entrée de 9 h créée; aucun calcul natif d’une heure supplémentaire observé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8d66c81cd337f8015ff091a016625507ada122906859d6e7304ea0d9ff2b66b7"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:017",
+      "canonical_feature_key": "project.assign_member",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun membre externe invité; propriétaire seulement.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "74f0461be86ccb3e5aea10a2848da2864f010cd775fb2f34c35d9a79bd228e3d"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:018",
+      "canonical_feature_key": "project.fixed_fee",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Validated in isolated Focus Premium trial on 2026-08-31; no production billing or external integration tested.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8facee6a716c7f76a610455a44e748016503f12bd9b9effd99adfc6541542377"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:019",
+      "canonical_feature_key": "project.milestones_attachments",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Commandes observées; aucun fichier ni jalon ajouté.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "e75a2d6fd67ef6c38289bcf2ebd23f76aefd2aaec526252602084d88e4edbb91"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:020",
+      "canonical_feature_key": "project.recurring",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Dialogue de projet récurrent observé puis fermé sans activation.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8688e17b6c00d9ded2e504a1acf93480fccc586be3d275d70df8f33c950d599a"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:021",
+      "canonical_feature_key": "report.attendance",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucun rapport de présence distinct observé dans Toggl Focus.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7696b0fbf775699712b3d1ed649587959fd73b6fd92ed7b614682181abd798c1"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:022",
+      "canonical_feature_key": "required_fields.configure",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Contrôles observés; aucune règle activée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "6bf986191517e5cadef15070c1cf740d26aa3624cc090253c22faea924034f3f"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:023",
+      "canonical_feature_key": "security.sso",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune configuration SSO accessible dans le plan testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "3f45e9062d92a9c3163f0b74f02cb09526146ebb25778c589dbe3488c248ea42"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:024",
+      "canonical_feature_key": "team.group_create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Validated in isolated Focus Premium trial on 2026-08-31; no production billing or external integration tested.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8facee6a716c7f76a610455a44e748016503f12bd9b9effd99adfc6541542377"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:025",
+      "canonical_feature_key": "team.member_create",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune invitation externe réelle autorisée par le protocole.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "7262e1c16b02c7a20457f5909a24fdedfb9be7c08b580b5c321935c2379e027e"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:026",
+      "canonical_feature_key": "team.role_manager",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Rôles visibles sans affectation d’un utilisateur externe.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "03cffab2fd97cefb8918af7f7a886cb2ee6f2c5d8917068b7babe73c2647570a"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:027",
+      "canonical_feature_key": "time_tracking.pause",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune commande de pause native distincte observée dans le cycle testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "0d50613de23b6f9cf5e150f3ef33f8d3087e2a848ed47aa24932efcc1287fff0"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:028",
+      "canonical_feature_key": "time_tracking.resume",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Aucune reprise native distincte observée après pause.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "b824d013aa2af7e803bb177709db0079b4bb912e0935fb0caf1d22a3e234ee3c"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:029",
+      "canonical_feature_key": "timesheet.approval",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Validated in isolated Focus Premium trial on 2026-08-31; no production billing or external integration tested.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8facee6a716c7f76a610455a44e748016503f12bd9b9effd99adfc6541542377"
+        }
+      }
+    },
+    {
+      "limitation_id": "toggl-track:limitation:030",
+      "canonical_feature_key": "timesheet.lock",
+      "limitation_type": "OBSERVED_LIMITATION",
+      "observed_at": "2026-08-31",
+      "importance": "DOCUMENTED",
+      "localized": {
+        "fr": {
+          "wording": "Validated in isolated Focus Premium trial on 2026-08-31; no production billing or external integration tested.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8facee6a716c7f76a610455a44e748016503f12bd9b9effd99adfc6541542377"
+        }
+      }
+    }
+  ],
+  "buyer_contexts": [
+    {
+      "context_key": "agence",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Agence",
+          "reason": "La collaboration et l’approbation ont été testées dans un espace isolé à deux membres.",
+          "limitations": "Un seul groupe, un seul membre et un seul workflow hebdomadaire ont été testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "65f252aafe3a2b9d9217c3f15f1ddba72077c6e86bd68c0abe55c039223d7cae"
+        }
+      }
+    },
+    {
+      "context_key": "consultant",
+      "status": "SUPPORTED",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Consultant",
+          "reason": "L’export CSV et le forfait projet ont été testés.",
+          "limitations": "Aucune facturation réelle ni aucun paiement n’a été testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "97030ea39ee3ee32a3d8588eda36cdfb76923f368823b9db08bd420a539c0f3d"
+        }
+      }
+    },
+    {
+      "context_key": "facturation au temps",
+      "status": "SUPPORTED",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Facturation au temps",
+          "reason": "Des valeurs fictives connues ont été exportées dans un CSV validé.",
+          "limitations": "Aucune intégration comptable n’a été testée.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "e515954b268f5ee2785561896cf1c2088ed7a5135340d900cd8dcd77e139245d"
+        }
+      }
+    },
+    {
+      "context_key": "indépendant",
+      "status": "SUPPORTED",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Indépendant",
+          "reason": "Le suivi du temps, la saisie manuelle et les rapports ont été testés.",
+          "limitations": "Les fonctions d’équipe n’étaient pas nécessaires dans ce scénario.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "4d33fdb09c5a35856a7597ad5b93885250fc2aedb80f1d4cbbeebebfb20e3aea"
+        }
+      }
+    },
+    {
+      "context_key": "petite équipe",
+      "status": "SUPPORTED_WITH_LIMITATIONS",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Petite équipe",
+          "reason": "Le groupe, la soumission, l’approbation et le verrouillage ont été testés avec limites.",
+          "limitations": "Seulement deux membres et un workflow ont été testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "76b3e6d03ea3084bdba199fcfb4e5bdd768b5edd5707e6504db5c62571719482"
+        }
+      }
+    },
+    {
+      "context_key": "suivi budgétaire",
+      "status": "SUPPORTED",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Suivi budgétaire",
+          "reason": "Un forfait fictif de projet a persisté après rechargement.",
+          "limitations": "Aucune facture réelle ni aucun paiement n’a été testé.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8430fba497633de4ef9fc1b7ea9754ec683c1980298c7af77d6b61ba6d1247b8"
+        }
+      }
+    },
+    {
+      "context_key": "suivi du temps simple",
+      "status": "SUPPORTED",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Suivi simple du temps",
+          "reason": "Le cycle du minuteur, la saisie et l’édition ont été validés.",
+          "limitations": "Les actions pause et reprise distinctes ne sont pas disponibles.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "ee971dbf85d9372a801ea681c3da40e508763cb9af3720dc3847cd5aae1420c0"
+        }
+      }
+    },
+    {
+      "context_key": "travail par projet",
+      "status": "SUPPORTED",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Travail par projet",
+          "reason": "Le projet, les tâches, le client, le budget et le tarif ont été testés.",
+          "limitations": "Les jalons et pièces jointes ont seulement été observés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "8b08e2c73ef4113bf6f185fef120bdfc7069f6cb568e0337f8e8cd364974e104"
+        }
+      }
+    },
+    {
+      "context_key": "équipe terrain",
+      "status": "INSUFFICIENT_DATA",
+      "observed_at": "2026-08-31",
+      "fact_basis": [
+        "workspace.create",
+        "time_tracking.timer_cycle",
+        "time_entry.manual",
+        "time_entry.edit",
+        "client.create",
+        "project.create",
+        "project.task",
+        "project.rate",
+        "project.budget_time",
+        "schedule.create",
+        "trial.payment_status",
+        "security.audit_log",
+        "time_entry.delete",
+        "team.group_create",
+        "timesheet.approval",
+        "timesheet.lock",
+        "export.csv",
+        "project.fixed_fee"
+      ],
+      "localized": {
+        "fr": {
+          "label": "Équipe terrain",
+          "reason": "Aucune recommandation terrain n’est autorisée.",
+          "limitations": "GPS, kiosque, mobile et hors-ligne n’ont pas été testés.",
+          "content_version": 1,
+          "review_status": "APPROVED",
+          "content_hash": "2675b1e8b9b3b83fde51f911b4aac71ccd3e2b2efe64e52fc38337541a414ba5"
+        }
+      }
+    }
+  ],
+  "plans": [
+    {
+      "plan_name": "Démarrage",
+      "observed_at": "2026-08-31",
+      "available": true,
+      "trial_available": false,
+      "payment_required": true,
+      "billing_period": "annuel par licence/mois"
+    },
+    {
+      "plan_name": "Entreprise",
+      "observed_at": "2026-08-31",
+      "available": true,
+      "trial_available": false,
+      "payment_required": true,
+      "billing_period": null
+    },
+    {
+      "plan_name": "Gratuit",
+      "observed_at": "2026-08-31",
+      "available": true,
+      "trial_available": true,
+      "payment_required": false,
+      "billing_period": null
+    },
+    {
+      "plan_name": "Module Congés",
+      "observed_at": "2026-08-31",
+      "available": true,
+      "trial_available": true,
+      "payment_required": true,
+      "billing_period": "utilisateur/mois annuel"
+    },
+    {
+      "plan_name": "Premium",
+      "observed_at": "2026-08-31",
+      "available": true,
+      "trial_available": true,
+      "payment_required": true,
+      "billing_period": "annuel par licence/mois"
+    }
+  ],
+  "public_events": [],
+  "build_meta": {
+    "records_read": 125,
+    "claims_exported": 18,
+    "claims_rejected": 2,
+    "limitations_exported": 30,
+    "buyer_contexts_exported": 9,
+    "events_exported": 0,
+    "security_rejections": 2
+  },
+  "public_data_hash": "7a2e0fdf0aabaa4facfb8b0aba6a3df622f402556591a131b98c7a18aacad527"
+}

@@ -1,0 +1,15 @@
+---
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
+const items = [
+  ['TESTED','Action exécutée et résultat observé.'],
+  ['PARTIAL','Une partie seulement du scénario a été vérifiée.'],
+  ['NOT_TESTABLE','Conditions nécessaires absentes du test.'],
+  ['BLOCKED','Scénario empêché par une limite rencontrée.'],
+  ['NOT_AVAILABLE','Fonction non disponible dans l’environnement.'],
+];
+const className = (value:string) => value.toLowerCase().replaceAll('_','-');
+---
+<div class:list={['foundation-status-legend', {compact}]} aria-label="Légende des statuts de couverture">
+  {items.map(([code,text]) => <div><span class={`status status-${className(code)}`}>{code}</span><p>{text}</p></div>)}
+</div>

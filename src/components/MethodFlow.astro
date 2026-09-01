@@ -1,0 +1,15 @@
+---
+const steps = [
+  ['Inventorier','Recenser les fonctions à examiner.'],
+  ['Définir','Écrire un scénario et un résultat attendu.'],
+  ['Exécuter','Réaliser l’action dans le logiciel.'],
+  ['Observer','Noter le résultat réellement obtenu.'],
+  ['Conserver','Préserver les éléments de preuve utiles.'],
+  ['Valider','Contrôler la preuve et la persistance.'],
+  ['Publier','Ne retenir que les conclusions étayées.'],
+  ['Retester','Actualiser une observation lorsque nécessaire.'],
+];
+---
+<ol class="foundation-flow" aria-label="Cycle de test Datagraphe">
+  {steps.map(([title,text], index) => <li><span>{String(index + 1).padStart(2,'0')}</span><div><strong>{title}</strong><p>{text}</p></div></li>)}
+</ol>

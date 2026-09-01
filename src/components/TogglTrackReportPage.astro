@@ -3,6 +3,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import VerifiedStatus from '@/components/VerifiedStatus.astro';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure.astro';
+import EvidenceMethod from '@/components/EvidenceMethod.astro';
+import AccessTypeBadge from '@/components/AccessTypeBadge.astro';
+import PublicDatasetSoftwareReport from '@/components/PublicDatasetSoftwareReport.astro';
+import { publicSoftware, usingPublicDataset } from '@/data/public-contract';
 import { togglTrackReport as report } from '@/data/toggl-track-report';
 import '@/styles/toggl-report.css';
 
@@ -32,7 +36,7 @@ const schema = {
       <Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'Tests',href:'/fr/tests/'},{label:'Toggl Track'}]} ariaLabel="Accueil — Tests — Toggl Track"/>
       <div class="toggl-hero-grid">
         <div>
-          <div class="toggl-tags"><span class="status status-tested">TOGGL TRACK</span><span class="status">TEST LOGICIEL</span></div>
+          <div class="toggl-tags"><span class="status status-tested">TOGGL TRACK</span><span class="status">TEST LOGICIEL</span><AccessTypeBadge type="essai Premium" detail="sans carte"/></div>
           <h1>Toggl Track mérite-t-il votre temps&nbsp;?</h1>
           <p>{report.verdict.title}</p>
           <div class="toggl-context"><strong>Testé le {report.testedOn}</strong><span>Test réalisé dans un environnement d’essai Premium sans carte.</span><small>Cette mention décrit uniquement l’environnement observé le jour du test et ne garantit pas les conditions commerciales actuelles.</small></div>
@@ -55,12 +59,12 @@ const schema = {
     </div>
   </section>
 
-  <section class="toggl-report-section"><div class="shell toggl-layout"><article class="toggl-report">
+  {usingPublicDataset ? <PublicDatasetSoftwareReport data={publicSoftware['toggl-track']} software="Toggl Track"/> : <Fragment><section class="toggl-report-section"><div class="shell toggl-layout"><article class="toggl-report">
     <section id="verdict" class="toggl-verdict"><span class="eyebrow">Verdict en 30 secondes</span><h2>{report.verdict.title}</h2><p>{report.verdict.text}</p><p class="toggl-qualification">Ce verdict concerne le périmètre web testé le 31 août 2026. Il ne constitue pas une recommandation pour les usages terrain.</p></section>
 
-    <section id="tested"><span class="eyebrow">Scénario → résultat → preuve</span><h2>Ce que nous avons réellement testé</h2><p>Chaque résultat ci-dessous repose sur une action exécutée et une preuve conservée. Le niveau de preuve est affiché séparément du résultat.</p><div class="toggl-scenario-grid">{report.testedScenarios.map(([name,result,evidence])=><article><div class="toggl-result-line"><span class="status status-tested">PASS</span><VerifiedStatus status="verified" compact date="31 août 2026"/></div><h3>{name}</h3><p>{result}</p><small>Preuve&nbsp;: {evidence}</small></article>)}</div></section>
+    <section id="tested"><span class="eyebrow">Scénario → résultat → preuve</span><h2>Ce que nous avons réellement testé</h2><p>Chaque résultat ci-dessous repose sur une action exécutée et une preuve conservée. Le niveau de preuve est affiché séparément du résultat.</p><EvidenceMethod short/><div class="toggl-scenario-grid">{report.testedScenarios.map(([name,result,evidence])=><article><div class="toggl-result-line"><span class="status status-tested">PASS</span><VerifiedStatus status="verified" compact date="31 août 2026"/></div><h3>{name}</h3><p>{result}</p><small>Preuve&nbsp;: {evidence}</small></article>)}</div></section>
 
-    <section id="csv" class="toggl-focus-block"><div><span class="eyebrow">Export CSV</span><h2>Un fichier réellement récupéré et contrôlé</h2><p>Le rapport résumé a produit un fichier CSV local. Nous l’avons ouvert, avons inspecté ses dix colonnes et sa ligne de données fictives, puis calculé son SHA-256. Cette validation ne s’étend ni au format XLSX ni au PDF.</p></div><div class="toggl-proof-pair"><span class="status status-tested">PASS</span><VerifiedStatus status="verified" date="31 août 2026"/></div></section>
+    <section id="csv" class="toggl-focus-block"><div><span class="eyebrow">Export CSV</span><h2>Un fichier réellement récupéré et contrôlé</h2><p>Le rapport résumé a produit un fichier CSV local. Nous l’avons ouvert, inspecté ses dix colonnes et sa ligne de données fictives, puis contrôlé son intégrité. Cette validation ne s’étend ni au format XLSX ni au PDF.</p></div><div class="toggl-proof-pair"><span class="status status-tested">PASS</span><VerifiedStatus status="verified" date="31 août 2026"/></div></section>
 
     <section id="collaboration"><h2>Groupes, approbations et verrouillage</h2><div class="toggl-three-grid"><article><span class="status status-tested">TESTED / PASS</span><h3>Groupe</h3><p>Un groupe fictif a été créé, un second membre y a été affecté et l’ensemble est resté présent après rechargement.</p><VerifiedStatus status="verified" compact/></article><article><span class="status status-tested">TESTED / PASS</span><h3>Approbation</h3><p>Un second membre a soumis une feuille fictive ; le propriétaire l’a approuvée ; l’état approuvé a persisté.</p><VerifiedStatus status="verified" compact/></article><article><span class="status status-tested">TESTED / PASS</span><h3>Verrouillage</h3><p>Après approbation, les champs étaient désactivés et une mutation contrôlée a été refusée, y compris après rechargement.</p><VerifiedStatus status="verified" compact/></article></div><p class="toggl-qualification">Périmètre : un espace isolé, deux comptes autorisés, un groupe et une période hebdomadaire. Tous les rôles et permissions possibles n’ont pas été testés.</p></section>
 
@@ -72,10 +76,10 @@ const schema = {
 
     <section id="buyers"><span class="eyebrow">Pour qui nos tests sont pertinents</span><h2>Contextes acheteurs, avec niveau de confiance</h2><div class="toggl-buyer-grid">{report.buyerContexts.map(([name,status,text])=><article><span class={`status status-${statusClass(status)}`}>{status}</span><h3>{name}</h3><p>{text}</p>{status==='INSUFFICIENT_DATA' ? <VerifiedStatus status="unverified" compact/> : <VerifiedStatus status={status==='SUPPORTED'?'verified':'qualified'} compact/>}</article>)}</div></section>
 
-    <section id="evidence"><h2>Preuves conservées</h2><p>Les captures originales restent dans le corpus interne Datagraphe afin de ne pas publier de données fictives de test. Les résultats publics restent limités aux claims SAFE ou SAFE_WITH_QUALIFIER.</p><div class="toggl-evidence-grid">{report.evidence.map(([id,caption])=><article><strong>{caption}</strong><code>{id}</code><span>Capture contrôlée et conservée en interne.</span></article>)}</div></section>
+    <section id="evidence"><h2>Preuves conservées</h2><p>Les captures originales restent dans le corpus interne Datagraphe afin de ne pas publier de données fictives de test. Les conclusions publiques restent limitées aux résultats suffisamment étayés, avec leurs réserves lorsque nécessaire.</p><div class="toggl-evidence-grid">{report.evidence.map(([,caption])=><article><strong>{caption}</strong><span>Capture contrôlée et conservée en interne.</span></article>)}</div></section>
 
     <section id="limits-summary" class="toggl-final"><span class="eyebrow">Conclusion limitée au corpus</span><h2>Des preuves utiles, pas une promesse universelle</h2><p>Toggl Track dispose d’un socle vérifié pour le suivi du temps, les projets, les approbations et certains contrôles économiques. Les usages terrain, mobiles et plusieurs intégrations exigent encore des tests dédiés avant toute recommandation.</p><div class="actions"><a class="button secondary" href="/fr/tests/">Voir tous les tests</a><a class="button secondary" href="/fr/methodologie/">Comprendre notre méthodologie</a><a class="button secondary" href="/fr/comparatifs/">Voir les comparatifs publiés</a></div><p class="toggl-preparing">Nos comparatifs avec Toggl Track sont en préparation. Aucun classement ni gagnant n’est publié à ce stade.</p></section>
 
     <AffiliateDisclosure />
-  </article><aside class="toc toggl-toc"><strong>Dans ce dossier</strong>{[['verdict','Verdict'],['tested','Scénarios testés'],['csv','Export CSV'],['collaboration','Équipe et approbations'],['fixed-fee','Forfait projet'],['verification','Méthode'],['strengths','Avantages et limites'],['buyers','Contextes acheteurs'],['evidence','Preuves']].map(([id,label])=><a href={`#${id}`}>{label}</a>)}</aside></div></section>
+  </article><aside class="toc toggl-toc"><strong>Dans ce dossier</strong>{[['verdict','Verdict'],['tested','Scénarios testés'],['csv','Export CSV'],['collaboration','Équipe et approbations'],['fixed-fee','Forfait projet'],['verification','Méthode'],['strengths','Avantages et limites'],['buyers','Contextes acheteurs'],['evidence','Preuves']].map(([id,label])=><a href={`#${id}`}>{label}</a>)}</aside></div></section></Fragment>}
 </BaseLayout>

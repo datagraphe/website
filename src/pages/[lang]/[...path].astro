@@ -10,6 +10,11 @@ import MethodologyPage from '@/components/MethodologyPage.astro';
 import ServicesLandingPage from '@/components/ServicesLandingPage.astro';
 import JibbleReportPage from '@/components/JibbleReportPage.astro';
 import ClockifyReportPage from '@/components/ClockifyReportPage.astro';
+import MethodFlow from '@/components/MethodFlow.astro';
+import TestStatusLegend from '@/components/TestStatusLegend.astro';
+import ComparisonsHub from '@/components/ComparisonsHub.astro';
+import PublicDatasetCatalog from '@/components/PublicDatasetCatalog.astro';
+import { usingPublicDataset } from '@/data/public-contract';
 import { locales, localizedPath, type Locale } from '@/i18n/config';
 import { routes, type RouteDefinition } from '@/i18n/routes';
 import { t } from '@/i18n';
@@ -45,6 +50,7 @@ const serviceRoutes = ['services/integration-logiciels','services/tests-regressi
 {route.kind === 'home' && <BaseLayout locale={locale} routePath="" title={content.home.title} description={content.home.description}>
   <section class="hero"><div class="shell hero-grid"><div><span class="eyebrow">{content.home.eyebrow}</span><h1>{content.home.heading}</h1><p>{content.home.lead}</p><p class="brand-signature">{content.home.signature}</p><div class="actions"><a class="button primary" href={localizedPath(locale,'tests')}>{content.home.testsCta}</a><a class="button secondary" href={localizedPath(locale,'methodologie')}>{content.home.methodologyCta}</a></div></div><div class="hero-visual" aria-hidden="true"><div class="software-sheet"><div class="dot"></div><div class="line"></div><div class="line short"></div><div class="line"></div></div><div class="software-sheet"><div class="dot"></div><div class="line short"></div><div class="line"></div><div class="line"></div></div><div class="lens"></div><div class="check"></div></div></div></section>
   <section><div class="shell"><div class="section-head"><div><span class="eyebrow">{content.home.methodEyebrow}</span><h2>{content.home.methodHeading}</h2></div><p>{content.home.methodLead}</p></div><div class="method-grid">{content.home.methods.map((method,index)=><MethodologyCard number={String(index+1).padStart(2,'0')} title={method.title}><p>{method.text}</p></MethodologyCard>)}</div></div></section>
+  {locale === 'fr' && <section class="home-proof"><div class="shell home-proof-panel"><span class="eyebrow">Fondation de nos dossiers</span><h2>Scénarios réellement exécutés. Résultats vérifiés.</h2><p>Limites documentées et observations datées : Datagraphe publie uniquement ce que son protocole permet d’étayer. Une fonction visible ou annoncée n’est jamais présentée comme testée.</p><MethodFlow/><div style="margin-top:24px"><TestStatusLegend compact/></div></div></section>}
   <section class="services-band"><div class="shell"><div class="section-head"><div><span class="eyebrow">{content.home.servicesEyebrow}</span><h2>{content.home.servicesHeading}</h2></div><p>{content.home.servicesLead}</p></div><div class="services-grid">{serviceKeys.map((key,index)=>{const item=content.pages[key];return <ServiceCard number={String(index+1).padStart(2,'0')} title={item.heading} text={item.lead||item.description} href={localizedPath(locale,serviceRoutes[index])} cta={common.readMore}/>})}</div><div class="actions"><a class="button primary" href={localizedPath(locale,'services')}>{common.services}</a></div></div></section>
   <section class="soft"><div class="shell test-feature"><div><span class="eyebrow">{catalog.homeEyebrow}</span><h2>{catalog.homeHeading}</h2><p>{catalog.homeText}</p><div class="actions"><a class="button primary" href={localizedPath(locale,'tests')}>{catalog.homeCta}</a></div></div><div class="catalog-home-card">{featuredSoftware.map((software)=>{const category=categoryById.get(software.category);return category && <SoftwareTestCard software={software} category={category} locale={locale} copy={catalog}/>})}</div></div></section>
   <section><div class="shell"><div class="section-head"><div><span class="eyebrow">{content.home.fieldEyebrow}</span><h2>{content.home.fieldHeading}</h2></div><p>{content.home.fieldText}</p></div></div></section>
@@ -54,7 +60,7 @@ const serviceRoutes = ['services/integration-logiciels','services/tests-regressi
 
 {route.kind === 'catalog' && <BaseLayout locale={locale} routePath={routePath} title={catalog.title} description={catalog.description}>
   <header class="page-hero catalog-hero"><div class="shell"><Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:catalog.heading}]} ariaLabel={`${common.home} — ${catalog.heading}`}/><span class="eyebrow">{catalog.eyebrow}</span><h1>{catalog.heading}</h1><p>{catalog.lead}</p><span class="catalog-intro-number">{testedSoftware.length} {testedSoftware.length===1?catalog.oneSoftware:catalog.manySoftware}</span></div></header>
-  <section class="catalog-section"><div class="shell"><SoftwareCatalog locale={locale}/></div></section>
+  <section class="catalog-section"><div class="shell">{usingPublicDataset && locale === 'fr' ? <PublicDatasetCatalog/> : <SoftwareCatalog locale={locale}/>}</div></section>
   <section class="catalog-proof"><div class="shell catalog-proof-inner"><div><span class="eyebrow">Datagraphe</span><h2>{catalog.methodologyTitle}</h2><p>{catalog.methodologyText}</p></div><div class="actions"><a class="button primary" href={localizedPath(locale,'methodologie')}>{catalog.methodologyCta}</a><a class="button secondary" href={localizedPath(locale,'services')}>{catalog.servicesCta}</a></div></div></section>
 </BaseLayout>}
 
@@ -62,7 +68,9 @@ const serviceRoutes = ['services/integration-logiciels','services/tests-regressi
 
 {route.kind === 'standard' && route.key === 'services' && <ServicesLandingPage locale={locale} routePath={routePath}/>} 
 
-{route.kind === 'standard' && !['methodologie','services'].includes(route.key) && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
+{route.kind === 'standard' && route.key === 'comparatifs' && locale === 'fr' && <ComparisonsHub/>}
+
+{route.kind === 'standard' && !['methodologie','services'].includes(route.key) && !(route.key === 'comparatifs' && locale === 'fr') && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
   <header class="page-hero"><div class="shell"><Breadcrumb items={crumbItems} ariaLabel={`${common.home} — ${page.heading}`}/>{page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}<h1>{page.heading}</h1>{page.lead && <p>{page.lead}</p>}</div></header>
   <section><article class="content">{page.sections.map(section=><section class="localized-content-section"><h2>{section.heading}</h2>{section.paragraphs?.map(paragraph=><p>{paragraph}</p>)}{section.items && <ul>{section.items.map(item=><li>{item}</li>)}</ul>}</section>)}
     {route.key === 'comparatifs' && locale === 'fr' && <div class="verdict-box"><h2>Jibble vs Clockify</h2><p>Un comparatif fondé sur des scénarios réellement exécutés, avec résultats et limites documentés.</p><a class="button primary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif</a></div>}

@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import '@/styles/about.css';
+
+interface Props { routePath: string }
+const { routePath } = Astro.props;
+---
+
+<BaseLayout
+  locale="fr"
+  routePath={routePath}
+  title="À propos de Datagraphe — Tests logiciels fondés sur des preuves"
+  description="Datagraphe teste les logiciels dans des scénarios concrets, vérifie les résultats et documente leurs limites pour aider les petites entreprises à choisir."
+>
+  <header class="about-hero">
+    <div class="shell about-hero-grid">
+      <div class="about-hero-copy">
+        <Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'À propos'}]} ariaLabel="Accueil — À propos"/>
+        <span class="eyebrow">À propos de Datagraphe</span>
+        <h1>Les logiciels promettent beaucoup.<br/>Nous vérifions ce qu’ils font vraiment.</h1>
+        <p class="about-lead">Datagraphe teste les logiciels dans des scénarios concrets, conserve les preuves et documente leurs limites pour aider les petites entreprises à choisir avec moins d’incertitude.</p>
+        <div class="about-proofline" aria-label="Nos principes de vérification">
+          <span>Scénarios exécutés</span><span>Résultats vérifiés</span><span>Limites documentées</span><span>Observations datées</span>
+        </div>
+        <div class="actions"><a class="button primary" href="/fr/tests/">Voir les logiciels testés</a><a class="button secondary" href="/fr/methodologie/">Découvrir notre méthode</a></div>
+      </div>
+      <aside class="about-hero-proof" aria-label="Du scénario au verdict">
+        <span class="about-proof-kicker">Notre point de départ</span>
+        <strong>Une action réelle,<br/>pas une promesse.</strong>
+        <ol><li><span>01</span>Définir le scénario</li><li><span>02</span>Exécuter l’action</li><li><span>03</span>Observer le résultat</li><li><span>04</span>Qualifier la preuve</li></ol>
+      </aside>
+    </div>
+  </header>
+
+  <section class="about-why" aria-labelledby="about-why-title">
+    <div class="shell about-why-grid">
+      <div><span class="eyebrow">Pourquoi Datagraphe</span><h2 id="about-why-title">Choisir un logiciel ne devrait pas commencer par une liste de fonctionnalités.</h2></div>
+      <div class="about-why-copy"><p>Les sites des éditeurs expliquent ce que leurs logiciels sont censés faire. Les avis racontent l’expérience de leurs utilisateurs.</p><p class="about-third-layer">Datagraphe ajoute une troisième couche&nbsp;: <strong>nous essayons réellement de faire les choses.</strong></p><ul><li>Créer un projet.</li><li>Modifier une feuille de temps.</li><li>Exporter un fichier.</li><li>Configurer un budget.</li><li>Soumettre une approbation.</li></ul><p class="about-observe">Puis nous observons ce qui se passe.</p></div>
+    </div>
+  </section>
+
+  <section class="about-engine" aria-labelledby="about-engine-title">
+    <div class="shell">
+      <div class="about-engine-head"><div><span class="eyebrow">Le moteur Datagraphe</span><h2 id="about-engine-title">Un test ne commence pas par une opinion.<br/>Il commence par une action.</h2></div><p>Notre moteur structure les scénarios, conserve les observations et aide à rendre les tests reproductibles.</p></div>
+      <ol class="about-engine-flow" aria-label="Étapes du moteur de test"><li><span>01</span><strong>Scénario</strong></li><li><span>02</span><strong>Action</strong></li><li><span>03</span><strong>Résultat</strong></li><li><span>04</span><strong>Preuve</strong></li><li><span>05</span><strong>Verdict</strong></li></ol>
+      <div class="about-engine-note"><p>L’intelligence artificielle accélère certaines étapes&nbsp;; elle ne transforme jamais une fonctionnalité non testée en résultat vérifié.</p><a href="/fr/methodologie/">Comment nous testons <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="about-limits soft" aria-labelledby="about-limits-title">
+    <div class="shell"><div class="about-section-intro"><span class="eyebrow">Transparence des limites</span><h2 id="about-limits-title">Nous publions aussi ce que nous ne savons pas.</h2></div>
+      <div class="about-status-grid">
+        <article><span class="about-status about-status-tested">Testé</span><h3>Le scénario est allé au bout.</h3><p>Nous avons exécuté le scénario et observé le résultat.</p></article>
+        <article><span class="about-status about-status-partial">Partiel</span><h3>Une partie reste à confirmer.</h3><p>Une partie du parcours seulement a pu être vérifiée.</p></article>
+        <article><span class="about-status about-status-untestable">Non testable</span><h3>Le contexte ne permet pas de conclure.</h3><p>L’environnement disponible ne permettait pas un test suffisamment fiable.</p></article>
+        <article><span class="about-status about-status-failed">Échec observé</span><h3>Le résultat attendu n’est pas apparu.</h3><p>Le scénario a été exécuté, mais le comportement attendu n’a pas été constaté.</p></article>
+      </div>
+      <blockquote>Une zone grise correctement signalée vaut mieux qu’une certitude inventée.</blockquote>
+    </div>
+  </section>
+
+  <section class="about-catalog" aria-labelledby="about-catalog-title">
+    <div class="shell about-catalog-grid"><div><span class="about-index">01 — Catalogue</span><h2 id="about-catalog-title">Pas besoin de 10&nbsp;000 fiches pour être utile.</h2></div><div><p>Nous préférons un catalogue plus réduit de logiciels réellement manipulés à des milliers de pages construites à partir des mêmes argumentaires commerciaux.</p><p>Chaque dossier Datagraphe doit apporter quelque chose que l’on ne trouve pas simplement sur la page produit de l’éditeur.</p><a class="about-text-link" href="/fr/tests/">Explorer les logiciels testés <span aria-hidden="true">→</span></a></div></div>
+  </section>
+
+  <section class="about-time" aria-labelledby="about-time-title">
+    <div class="shell"><div class="about-time-intro"><span class="eyebrow">Observations datées</span><h2 id="about-time-title">Un logiciel n’est jamais figé.<br/>Nos tests non plus.</h2><p>Les fonctionnalités apparaissent, disparaissent, changent de plan ou de comportement. Datagraphe conserve ses observations datées afin que les futurs re-tests puissent distinguer ce qui a réellement changé.</p></div>
+      <div class="about-time-grid"><article><span>Aujourd’hui</span><p>«&nbsp;Que fait réellement ce logiciel&nbsp;?&nbsp;»</p></article><article><span>Demain</span><p>«&nbsp;Qu’est-ce qui a changé depuis notre dernier test&nbsp;?&nbsp;»</p></article></div>
+      <p class="about-time-caveat">Nous construisons cette mémoire test après test&nbsp;: elle ne signifie pas que chaque logiciel est déjà suivi en continu.</p>
+    </div>
+  </section>
+
+  <section class="about-audience soft" aria-labelledby="about-audience-title">
+    <div class="shell about-audience-grid"><div><span class="eyebrow">Pour qui</span><h2 id="about-audience-title">Pour ceux qui achètent des logiciels avec leur propre argent.</h2></div><div><p>Datagraphe s’adresse aux indépendants, dirigeants de TPE, responsables de PME, agences et équipes qui veulent savoir rapidement si un outil mérite réellement leur temps.</p><div class="about-audience-lines"><strong>Pas une note sortie de nulle part.</strong><strong>Pas une simple reprise du discours éditeur.</strong><strong>Des scénarios, des résultats et les limites qui comptent.</strong></div></div></div>
+  </section>
+
+  <section class="about-models" aria-label="Indépendance et services">
+    <div class="shell about-models-grid">
+      <article class="about-model-card about-model-independence"><span class="about-index">02 — Indépendance</span><h2>Notre modèle économique est commercial.<br/>Nos résultats ne le sont pas.</h2><p>Certains liens Datagraphe peuvent être affiliés. Un éditeur peut également fournir un accès de test.</p><p>Dans les deux cas, il ne choisit ni les scénarios, ni les résultats, ni les limites publiées, ni le verdict.</p><a class="button secondary" href="/fr/transparence/">Voir notre politique de transparence</a></article>
+      <article class="about-model-card about-model-services"><span class="about-index">03 — Services</span><h2>Le moteur ne sert pas uniquement à nos tests éditoriaux.</h2><p>Le même socle peut être utilisé pour automatiser des tests de régression, surveiller des parcours fonctionnels, contrôler des migrations ou connecter des logiciels entre eux.</p><a class="button secondary" href="/fr/services/">Découvrir Datagraphe Services</a></article>
+    </div>
+  </section>
+
+  <section class="about-final" aria-labelledby="about-final-title">
+    <div class="shell"><span class="eyebrow">Avant de décider</span><h2 id="about-final-title">Avant de choisir un logiciel,<br/>regardez ce qui se passe quand on l’utilise vraiment.</h2><div class="actions"><a class="button primary" href="/fr/tests/">Explorer les tests</a><a class="button about-button-light" href="/fr/comparatifs/">Voir les comparatifs</a></div></div>
+  </section>
+</BaseLayout>

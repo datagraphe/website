@@ -13,6 +13,7 @@ import ClockifyReportPage from '@/components/ClockifyReportPage.astro';
 import MethodFlow from '@/components/MethodFlow.astro';
 import TestStatusLegend from '@/components/TestStatusLegend.astro';
 import ComparisonsHub from '@/components/ComparisonsHub.astro';
+import AboutMarketingPage from '@/components/AboutMarketingPage.astro';
 import PublicDatasetCatalog from '@/components/PublicDatasetCatalog.astro';
 import { usingPublicDataset } from '@/data/public-contract';
 import { locales, localizedPath, type Locale } from '@/i18n/config';
@@ -70,7 +71,9 @@ const serviceRoutes = ['services/integration-logiciels','services/tests-regressi
 
 {route.kind === 'standard' && route.key === 'comparatifs' && locale === 'fr' && <ComparisonsHub/>}
 
-{route.kind === 'standard' && !['methodologie','services'].includes(route.key) && !(route.key === 'comparatifs' && locale === 'fr') && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
+{route.kind === 'standard' && route.key === 'about' && locale === 'fr' && <AboutMarketingPage routePath={routePath}/>}
+
+{route.kind === 'standard' && !['methodologie','services'].includes(route.key) && !(route.key === 'comparatifs' && locale === 'fr') && !(route.key === 'about' && locale === 'fr') && page && <BaseLayout locale={locale} routePath={routePath} title={page.title} description={page.description} noindex={!route.indexable}>
   <header class="page-hero"><div class="shell"><Breadcrumb items={crumbItems} ariaLabel={`${common.home} — ${page.heading}`}/>{page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}<h1>{page.heading}</h1>{page.lead && <p>{page.lead}</p>}</div></header>
   <section><article class="content">{page.sections.map(section=><section class="localized-content-section"><h2>{section.heading}</h2>{section.paragraphs?.map(paragraph=><p>{paragraph}</p>)}{section.items && <ul>{section.items.map(item=><li>{item}</li>)}</ul>}</section>)}
     {route.key === 'comparatifs' && locale === 'fr' && <div class="verdict-box"><h2>Jibble vs Clockify</h2><p>Un comparatif fondé sur des scénarios réellement exécutés, avec résultats et limites documentés.</p><a class="button primary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif</a></div>}

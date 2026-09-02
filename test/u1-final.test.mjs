@@ -49,6 +49,7 @@ test('COOKIE_AUDIT_AND_NOTIFICATION_COPY', () => {
   const account = read('src/scripts/account-pages.ts');
   assert.match(cookie, /datagraphe_follow_intent_v1/);
   assert.match(cookie, /aucun cookie publicitaire/i);
-  assert.match(account, /L’envoi des alertes sera activé prochainement/);
+  assert.match(account, /Les alertes email sont disponibles pour les nouveaux tests et les changements logiciels vérifiés/);
+  assert.doesNotMatch(account, /L’envoi des alertes sera activé prochainement/);
   assert.doesNotMatch(account, /email métier|\bU1\b|\bU2\b/);
 });

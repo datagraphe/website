@@ -7,7 +7,7 @@ const { mode } = Astro.props;
 const copy = {
   overview: ['Mon compte', 'Votre espace Datagraphe'],
   follows: ['Mes suivis', 'Ce que vous suivez'],
-  preferences: ['Préférences', 'Choisir mes futures alertes']
+  preferences: ['Préférences', 'Notifications email']
 }[mode];
 ---
 <BaseLayout locale="fr" routePath={mode === 'overview' ? 'mon-compte' : `mon-compte/${mode === 'follows' ? 'suivis' : 'preferences'}`} title={`${copy[0]} — Datagraphe`} description="Espace personnel Datagraphe." noindex availableLocales={['fr']}>

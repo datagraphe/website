@@ -1,6 +1,6 @@
 # Multilingual SEO audit
 
-Generated: 2026-09-02T12:47:31.420Z
+Generated: 2026-09-02T19:32:59.202Z
 
 - TOTAL_URLS: 87
 - FR_URLS: 23

@@ -71,8 +71,8 @@ export async function initAccountPage() {
       }));
     } else if (mode === 'preferences') {
       const preferences = me.preferences;
-      content.innerHTML = `<form class="preferences-form" data-preferences-form><p class="account-notice">Choisissez les sujets pour lesquels vous souhaitez être notifié. L’envoi des alertes sera activé prochainement.</p>${[
-        ['email_enabled','Emails activés'],['new_tests','Nouveaux tests'],['verified_changes','Changements vérifiés'],['new_comparisons','Nouveaux comparatifs'],['datagraphe_news','Actualité Datagraphe']
+      content.innerHTML = `<form class="preferences-form" data-preferences-form><p class="account-notice">Les alertes email sont disponibles pour les nouveaux tests et les changements logiciels vérifiés. Vous pouvez les désactiver à tout moment sans supprimer vos suivis.</p>${[
+        ['email_enabled','Emails activés'],['new_tests','Nouveaux tests'],['verified_changes','Changements vérifiés']
       ].map(([key, label]) => `<label><span>${label}</span><input type="checkbox" name="${key}" ${Number(preferences[key]) ? 'checked' : ''}/></label>`).join('')}<button class="button primary" type="submit">Enregistrer</button><p role="status" data-preferences-status></p></form>`;
       const form = content.querySelector<HTMLFormElement>('[data-preferences-form]');
       form?.addEventListener('submit', async (event) => {

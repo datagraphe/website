@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+interface Props { mode: 'signin'|'signup' }
+const { mode } = Astro.props;
+const signup = mode === 'signup';
+---
+<BaseLayout locale="fr" routePath={signup ? 'inscription' : 'connexion'} title={signup ? 'Créer un compte Datagraphe' : 'Se connecter à Datagraphe'} description="Accédez à vos suivis Datagraphe." noindex availableLocales={['fr']}>
+  <section class="auth-page" data-auth-page={mode}>
+    <div class="shell auth-grid"><div><span class="eyebrow">Mes suivis</span><h1>{signup ? 'Créer mon espace Datagraphe' : 'Retrouver mes suivis'}</h1><p>{signup ? 'Créez un compte pour suivre les logiciels, catégories et comparatifs qui vous intéressent.' : 'Connectez-vous pour gérer vos logiciels et comparatifs suivis.'}</p><p class="auth-privacy">Votre compte reste distinct des observations produit Datagraphe. Gérez vos suivis et vos préférences depuis un espace personnel sécurisé.</p></div><div class="auth-card"><p data-auth-status>Chargement de l’authentification…</p><div data-clerk-auth-mount></div><p class="auth-switch">{signup ? 'Vous avez déjà un compte ?' : 'Vous n’avez pas encore de compte ?'} <a href={signup ? '/fr/connexion/' : '/fr/inscription/'} data-auth-switch>{signup ? 'Se connecter' : 'S’inscrire'}</a></p></div></div>
+  </section>
+</BaseLayout>
+<script>
+  import { initAuthPage } from '@/scripts/auth-pages';
+  initAuthPage();
+</script>

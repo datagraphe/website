@@ -1,0 +1,33 @@
+---
+import { USER_ROUTES, withQuery } from '@/lib/user-routes.mjs';
+
+const signupHref = withQuery(USER_ROUTES.signUp, { returnTo: USER_ROUTES.follows });
+---
+<section class="home-account-cta" data-home-follows>
+  <div class="shell home-account-panel">
+    <div>
+      <span class="eyebrow">Mes suivis</span>
+      <h2>Gardez vos logiciels importants à portée de main.</h2>
+      <p>Retrouvez les logiciels, catégories et comparatifs que vous avez choisis de suivre.</p>
+    </div>
+    <div class="home-account-actions">
+      <a class="button primary" href={signupHref} data-home-follows-signed-out>Créer mes suivis</a>
+      <a class="button primary" href={USER_ROUTES.follows} data-home-follows-signed-in hidden>Voir mes suivis</a>
+    </div>
+  </div>
+</section>
+<script>
+  import { getClerk } from '@/scripts/clerk-client';
+
+  const root = document.querySelector<HTMLElement>('[data-home-follows]');
+  if (root) {
+    getClerk().then((clerk) => {
+      const signedOut = root.querySelector<HTMLElement>('[data-home-follows-signed-out]');
+      const signedIn = root.querySelector<HTMLElement>('[data-home-follows-signed-in]');
+      if (clerk?.user) {
+        signedOut?.setAttribute('hidden', '');
+        signedIn?.removeAttribute('hidden');
+      }
+    }).catch(() => undefined);
+  }
+</script>

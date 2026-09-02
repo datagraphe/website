@@ -1,0 +1,8 @@
+[
+  { "type": "DATAGRAPHE", "key": "news", "label": "Datagraphe", "group": "Datagraphe" },
+  { "type": "SOFTWARE", "key": "jibble", "label": "Jibble", "group": "Logiciels" },
+  { "type": "SOFTWARE", "key": "clockify", "label": "Clockify", "group": "Logiciels" },
+  { "type": "SOFTWARE", "key": "toggl-track", "label": "Toggl Track", "group": "Logiciels" },
+  { "type": "CATEGORY", "key": "time-tracking", "label": "Gestion du temps & présence", "group": "Catégories" },
+  { "type": "COMPARISON", "key": "jibble-vs-clockify", "label": "Jibble vs Clockify", "group": "Comparatifs" }
+]

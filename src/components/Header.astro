@@ -1,6 +1,7 @@
 ---
 import { locales, localeNames, localizedPath, type Locale } from '@/i18n/config';
 import { t } from '@/i18n';
+import AccountNav from '@/components/AccountNav.astro';
 interface Props { locale: Locale; routePath: string; availableLocales?: readonly Locale[] }
 const { locale, routePath, availableLocales = locales } = Astro.props;
 const tr = t(locale).common;
@@ -20,6 +21,7 @@ const links = [['tests',tr.tests],['comparatifs',tr.comparisons],['methodologie'
         {availableLocales.map(code => <option value={localizedPath(code,routePath)} data-locale={code} selected={code===locale}>{localeNames[code]}</option>)}
       </select>
     </div>}
+    {locale === 'fr' && <AccountNav/>}
   </nav>
 </div></header>
 <script is:inline>

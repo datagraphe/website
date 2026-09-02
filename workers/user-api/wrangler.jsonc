@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "datagraphe-user-api",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-09-02",
+  "d1_databases": [
+    {
+      "binding": "USER_DB",
+      "database_name": "datagraphe-users",
+      "database_id": "00000000-0000-0000-0000-000000000001",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "AUTHORIZED_PARTIES": "https://datagraphe.com,http://127.0.0.1:4321,http://localhost:4321,http://127.0.0.1:4324,http://localhost:4324"
+  }
+}

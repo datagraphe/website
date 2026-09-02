@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FollowButton from '@/components/FollowButton.astro';
+import { USER_ROUTES, withQuery } from '@/lib/user-routes.mjs';
+interface Props { mode: 'overview'|'follows'|'preferences' }
+const { mode } = Astro.props;
+const copy = {
+  overview: ['Mon compte', 'Votre espace Datagraphe'],
+  follows: ['Mes suivis', 'Ce que vous suivez'],
+  preferences: ['Préférences', 'Choisir mes futures alertes']
+}[mode];
+---
+<BaseLayout locale="fr" routePath={mode === 'overview' ? 'mon-compte' : `mon-compte/${mode === 'follows' ? 'suivis' : 'preferences'}`} title={`${copy[0]} — Datagraphe`} description="Espace personnel Datagraphe." noindex availableLocales={['fr']}>
+  <section class="account-page" data-account-page={mode}>
+    <div class="shell"><div class="account-head"><div><span class="eyebrow">Espace personnel</span><h1>{copy[1]}</h1></div><nav aria-label="Navigation du compte"><a href={USER_ROUTES.account} aria-current={mode === 'overview' ? 'page' : undefined}>Vue d’ensemble</a><a href={USER_ROUTES.follows} aria-current={mode === 'follows' ? 'page' : undefined}>Mes suivis</a><a href={USER_ROUTES.preferences} aria-current={mode === 'preferences' ? 'page' : undefined}>Préférences</a></nav></div><div class="account-panel"><div data-account-loading aria-live="polite">Chargement sécurisé…</div><div data-account-signed-out hidden><h2>Connexion requise</h2><p>Aucune donnée personnelle n’est incluse dans cette page statique.</p><a class="button primary" href={withQuery(USER_ROUTES.signIn, { returnTo: Astro.url.pathname })}>Se connecter</a></div><div data-account-content hidden></div>{mode === 'preferences' && <section class="global-follow-control" data-global-follow hidden><h2>Suivre l’actualité Datagraphe</h2><p>Recevez dans votre espace les nouveaux tests et comparatifs Datagraphe.</p><FollowButton type="DATAGRAPHE" targetKey="news" label="Suivre" unfollowLabel="Ne plus suivre" description="Ce suivi est distinct de vos préférences de notification."/></section>}</div></div>
+  </section>
+</BaseLayout>
+<script>
+  import { initAccountPage } from '@/scripts/account-pages';
+  initAccountPage();
+</script>

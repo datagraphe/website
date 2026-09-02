@@ -9,6 +9,11 @@ export default defineConfig({
     define: {
       'import.meta.env.DATA_SOURCE': JSON.stringify(process.env.DATA_SOURCE ?? 'public-dataset'),
     },
+    server: {
+      proxy: {
+        '/api/user': { target: 'http://127.0.0.1:8787', changeOrigin: false },
+      },
+    },
   },
   i18n: {
     defaultLocale: 'fr',

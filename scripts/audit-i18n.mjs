@@ -29,7 +29,7 @@ const toPath = (file) => {
 };
 const htmlByPath = new Map();
 for (const file of localized) htmlByPath.set(toPath(file), await readFile(file, 'utf8'));
-const frenchOnlyPaths = new Set(['/fr/comparatifs/jibble-vs-clockify/', '/fr/tests/toggl-track/']);
+const frenchOnlyPaths = new Set(['/fr/comparatifs/jibble-vs-clockify/', '/fr/tests/toggl-track/', '/fr/connexion/', '/fr/inscription/', '/fr/mon-compte/', '/fr/mon-compte/suivis/', '/fr/mon-compte/preferences/']);
 
 let missingHreflang = 0;
 let brokenHreflang = 0;

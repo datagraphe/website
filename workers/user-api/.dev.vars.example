@@ -1,0 +1,4 @@
+CLERK_PUBLISHABLE_KEY=pk_test_replace_in_local_dev_only
+CLERK_SECRET_KEY=sk_test_replace_in_local_dev_only
+# Optional networkless verification key. Keep this secret and never commit .dev.vars.
+CLERK_JWT_KEY=

@@ -1,0 +1,12 @@
+---
+interface Props { type: 'DATAGRAPHE'|'SOFTWARE'|'CATEGORY'|'COMPARISON'; targetKey: string; label: string; unfollowLabel?: string; description?: string }
+const { type, targetKey, label, unfollowLabel = 'Ne plus suivre', description = 'Ajoutez cet élément à vos suivis Datagraphe.' } = Astro.props;
+---
+<div class="follow-control">
+  <button class="button follow-button" type="button" data-follow-button data-follow-type={type} data-follow-key={targetKey} data-follow-label={label} data-unfollow-label={unfollowLabel} aria-pressed="false" disabled>{label}</button>
+  <p>{description}</p>
+</div>
+<script>
+  import { initFollowButtons } from '@/scripts/follow-buttons';
+  initFollowButtons();
+</script>

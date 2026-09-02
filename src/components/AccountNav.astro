@@ -1,0 +1,11 @@
+<div class="account-nav" data-account-nav>
+  <a href="/fr/connexion/" data-auth-signed-out>Se connecter</a>
+  <div class="account-nav-signed-in" data-auth-signed-in hidden>
+    <a href="/fr/mon-compte/suivis/">Mes suivis</a>
+    <div data-clerk-user-button></div>
+  </div>
+</div>
+<script>
+  import { initHeaderAuth } from '@/scripts/header-auth';
+  initHeaderAuth();
+</script>

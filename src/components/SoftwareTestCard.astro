@@ -31,4 +31,5 @@ const updatedDate = formatDate(software.updated_date);
     {software.score !== null && <div><dt>{copy.scoreLabel}</dt><dd>{software.score}/10</dd></div>}
   </dl>}
   <a class="software-card-link" href={localizedPath(locale,softwareTestPath(software))}>{copy.viewTest}<span aria-hidden="true">→</span></a>
+  {locale === 'fr' && <button class="software-card-compare" type="button" data-compare-toggle data-software={software.slug} aria-pressed="false">Comparer</button>}
 </article>

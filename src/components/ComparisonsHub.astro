@@ -1,77 +1,128 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
-import VerifiedStatus from '@/components/VerifiedStatus.astro';
-import { comparisonFreshness, comparisonScenarios, buyerContexts, publicLimitations } from '@/data/comparisons/jibble-clockify';
-import '@/styles/comparison.css';
+import FollowButton from '@/components/FollowButton.astro';
+import { dynamicComparatorContract } from '@/data/dynamic-comparator';
+import '@/styles/dynamic-comparator.css';
 
 const routePath = 'comparatifs';
-const title = 'Comparatifs de logiciels fondés sur des tests — Datagraphe';
-const description = 'Comparez Jibble et Clockify à partir de scénarios réellement exécutés, de résultats vérifiés et de limites documentées.';
+const title = 'Comparateur de logiciels testés — Datagraphe';
+const description = 'Comparez deux ou trois logiciels à partir de scénarios certifiés, de résultats observés et de limites documentées.';
+const software = dynamicComparatorContract.software;
+const filterFamilies = [{key:'all',label:'Tout'},{key:'time',label:'Temps'},{key:'team',label:'Équipe'},{key:'projects',label:'Projets'},{key:'reports',label:'Rapports'},{key:'exports',label:'Exports'},{key:'planning',label:'Planning'},{key:'others',label:'Autres'}];
 ---
 
 <BaseLayout locale="fr" routePath={routePath} title={title} description={description}>
-  <header class="comparison-hub-hero">
-    <div class="shell">
-      <Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'Comparatifs'}]} ariaLabel="Accueil — Comparatifs"/>
-      <span class="eyebrow">Comparatifs de logiciels</span>
-      <h1>Comparer sans raccourci.</h1>
-      <p>Les résultats ci-dessous viennent de scénarios exécutés dans chaque logiciel. Vous pouvez déjà comparer les usages essentiels ici, puis ouvrir le dossier détaillé pour consulter l’ensemble des nuances et limites.</p>
-    </div>
-  </header>
+  <header class="dynamic-comparator-hero"><div class="shell">
+    <Breadcrumb items={[{label:'Accueil',href:'/fr/'},{label:'Comparatifs'}]} ariaLabel="Accueil — Comparatifs"/>
+    <span class="eyebrow">Comparateur Datagraphe</span><h1>Quels logiciels voulez-vous comparer&nbsp;?</h1>
+    <p>Choisissez deux ou trois logiciels d’une même catégorie. Seules les différences réellement observées et certifiées sont affichées.</p>
+  </div></header>
 
-  <section class="comparison-hub-overview" aria-labelledby="published-comparison">
-    <div class="shell">
-      <div class="comparison-section-head"><div><span class="eyebrow">Comparatif publié</span><h2 id="published-comparison">Jibble vs Clockify</h2></div><div class="comparison-hub-date"><VerifiedStatus status="qualified" date={comparisonFreshness.lastTest}/><span>13 scénarios comparables</span></div></div>
-      <div class="comparison-verdict-grid comparison-hub-verdicts">
-        <article>
-          <span class="comparison-hub-card-number" aria-hidden="true">01</span>
-          <span class="comparison-kicker">Suivi du temps</span>
-          <h3>Résultats proches sur les usages essentiels</h3>
-          <p>Minuteur, pause, reprise, saisie manuelle et feuille hebdomadaire ont donné des résultats comparables.</p>
-        </article>
-        <article>
-          <span class="comparison-hub-card-number" aria-hidden="true">02</span>
-          <span class="comparison-kicker">Heures supplémentaires</span>
-          <h3>Avantage observé pour Jibble dans notre réglage</h3>
-          <p>Jibble a affiché 8 h normales et 1 h supplémentaire. Clockify a enregistré 9 h sans cette ventilation quotidienne observée.</p>
-        </article>
-        <article>
-          <span class="comparison-hub-card-number" aria-hidden="true">03</span>
-          <span class="comparison-kicker">Exports</span>
-          <h3>Deux approches valides mais différentes</h3>
-          <p>Jibble met davantage en avant le temps et les heures supplémentaires ; Clockify, les projets, clients et données économiques.</p>
-        </article>
+  <main class="dynamic-comparator" data-dynamic-comparator><div class="shell">
+    <section class="comparator-builder" aria-labelledby="comparison-builder-title">
+      <div class="comparator-builder-head"><div><span class="eyebrow">Votre sélection</span><h2 id="comparison-builder-title">Comparer des logiciels testés</h2></div><p>2 logiciels minimum · 3 maximum</p></div>
+      <form data-comparator-form>
+        <label>Logiciel 1<select data-comparator-select required><option value="">Choisir un logiciel</option>{software.map((item)=><option value={item.slug}>{item.name}</option>)}</select></label>
+        <span class="comparator-versus" aria-hidden="true">vs</span>
+        <label>Logiciel 2<select data-comparator-select required><option value="">Choisir un logiciel</option>{software.map((item)=><option value={item.slug}>{item.name}</option>)}</select></label>
+        <span class="comparator-versus comparator-third-control" aria-hidden="true" hidden>vs</span>
+        <label class="comparator-third-control" hidden>Logiciel 3<select data-comparator-select><option value="">Choisir un logiciel</option>{software.map((item)=><option value={item.slug}>{item.name}</option>)}</select></label>
+        <button class="button secondary comparator-add-third" type="button" data-add-third>+ Ajouter un 3e logiciel</button>
+        <button class="button primary" type="submit">Comparer</button>
+      </form>
+      <p class="comparator-form-error" data-comparator-error role="alert" hidden></p>
+    </section>
+
+    <section class="comparator-empty" data-comparator-empty aria-live="polite">
+      <div class="comparator-empty-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <h2>Sélectionnez deux logiciels</h2><p>Le comparateur rapprochera uniquement les scénarios dont la comparabilité a été certifiée par Datagraphe.</p>
+    </section>
+
+    <section class="comparator-results" data-comparator-results hidden aria-live="polite">
+      <div class="comparator-result-head"><div><span class="eyebrow">Comparaison dynamique</span><h2 data-comparison-title></h2><p data-comparison-summary></p></div><div class="comparator-dates" data-comparison-dates></div></div>
+      <p class="comparator-freshness" data-freshness-warning hidden>Les dates d’observation sont éloignées&nbsp;: interprétez les écarts avec prudence.</p>
+
+      <div class="comparator-software-cards">
+        {software.map((item) => <article data-comparator-software-card={item.slug} hidden>
+          <span class="comparison-kicker">{item.name}</span><h3>{item.coverage.toFixed(1).replace('.',',')}&nbsp;% de couverture</h3>
+          <p>Test observé le <time datetime={item.observed_at}>{item.observed_at}</time>.</p>
+          <div class="actions"><a class="button secondary" href={item.test_path}>Lire le test</a><FollowButton type="SOFTWARE" targetKey={item.slug} label={`Suivre ${item.name}`} description={`Test ${item.name}`}/></div>
+        </article>)}
       </div>
-      <p class="comparison-hub-caveat"><strong>Verdict :</strong> aucun gagnant universel. Le meilleur choix dépend de l’usage, du forfait et des fonctions encore non départagées.</p>
-    </div>
-  </section>
 
-  <section class="comparison-scenarios soft" aria-labelledby="hub-scenarios">
-    <div class="shell">
-      <div class="comparison-section-head"><div><span class="eyebrow">Face-à-face</span><h2 id="hub-scenarios">Ce que nos tests montrent concrètement</h2></div><p>Chaque ligne rapproche le même besoin dans les deux logiciels. Une différence n’est publiée que lorsqu’elle a été observée.</p></div>
-      <div class="comparison-table-wrap"><table>
-        <caption class="sr-only">Comparaison des résultats observés dans Jibble et Clockify</caption>
-        <thead><tr><th scope="col">Scénario</th><th scope="col">Jibble</th><th scope="col">Clockify</th><th scope="col">Conclusion</th></tr></thead>
-        <tbody>{comparisonScenarios.map(row => <tr>
-          <th scope="row"><span>{row.scenario}</span><VerifiedStatus status={row.proof} compact/></th>
-          <td data-label="Jibble">{row.jibble}</td>
-          <td data-label="Clockify">{row.clockify}</td>
-          <td data-label="Conclusion">{row.conclusion}</td>
-        </tr>)}</tbody>
-      </table></div>
-    </div>
-  </section>
+      <div class="comparator-certified" data-certified-section>
+        <div class="comparison-section-head"><div><span class="eyebrow">Dimensions certifiées</span><h2>Ce que les tests permettent de comparer</h2></div><p>Le résultat fonctionnel et le niveau de preuve sont affichés séparément.</p></div>
+        <div class="comparator-filters" data-comparator-filters aria-label="Filtrer les dimensions">
+          {filterFamilies.map((family,index)=><button type="button" data-family={family.key} aria-pressed={index===0}>{family.label}</button>)}
+        </div>
+        <div class="comparator-dimension-list" data-dimension-list></div>
+      </div>
 
-  <section aria-labelledby="hub-choose"><div class="shell">
-    <div class="comparison-section-head"><div><span class="eyebrow">Choisir selon votre besoin</span><h2 id="hub-choose">Ce qui peut déjà guider une décision</h2></div><p>Les orientations limitées restent explicitement qualifiées.</p></div>
-    <div class="comparison-needs-grid">{buyerContexts.map(context => <article><span class:list={['comparison-context-status',`comparison-context-${context.status}`]}>{context.status === 'supported' ? 'Base suffisante' : 'Avec limites'}</span><h3>{context.title}</h3><p>{context.text}</p></article>)}</div>
-  </div></section>
+      <section class="comparator-insufficient" data-insufficient-section hidden>
+        <span class="eyebrow">Données insuffisantes</span><h2>Pourquoi certaines lignes sont absentes&nbsp;?</h2>
+        <p>Une fonction présente dans plusieurs logiciels ne devient pas automatiquement comparable. Datagraphe exige une certification pair-à-pair avant toute conclusion.</p><div data-insufficient-list></div>
+      </section>
 
-  <section class="comparison-hub-limits dark" aria-labelledby="hub-limits"><div class="shell comparison-two-col">
-    <div><span class="eyebrow">Ce qui reste à départager</span><h2 id="hub-limits">Pas de conclusion sans preuve suffisante</h2><p>Les permissions avancées, certains budgets et tarifs, le verrouillage, le GPS, le kiosque et le hors-ligne ne permettent pas encore une recommandation fiable.</p></div>
-    <ul>{publicLimitations.map(item => <li>{item}</li>)}</ul>
-  </div></section>
+      <section class="comparator-buyers" data-buyer-section hidden><span class="eyebrow">Selon votre contexte</span><h2>Ce que la comparaison peut déjà éclairer</h2><div data-buyer-list></div></section>
+      <div class="comparator-editorial" data-editorial-link hidden><p>Un dossier éditorial indépendant approfondit cette paire, sans dépendre de l’état du comparateur.</p><a class="button primary" data-editorial-anchor>Lire le comparatif complet</a></div>
+    </section>
+  </div></main>
 
-  <section class="comparison-hub-cta"><div class="shell"><span class="eyebrow">Analyse complète</span><h2>Voir tous les résultats, limites et contextes acheteurs</h2><p>Le dossier détaillé explique la méthode, les écarts observés et les domaines où nous refusons encore de conclure.</p><div class="actions"><a class="button primary" href="/fr/comparatifs/jibble-vs-clockify/">Lire le comparatif complet</a><a class="button secondary" href="/fr/methodologie/">Comprendre la méthodologie</a></div></div></section>
+  <script is:inline type="application/json" id="dynamic-comparator-contract" set:html={JSON.stringify(dynamicComparatorContract)} />
+  <script>
+    // @ts-nocheck
+    import { buildComparisonSelection } from '@/lib/comparison-selection.mjs';
+    const root = document.querySelector('[data-dynamic-comparator]');
+    const contract = JSON.parse(document.querySelector('#dynamic-comparator-contract')?.textContent || '{}');
+    if (root && contract.software) {
+      const form = root.querySelector('[data-comparator-form]');
+      const selects = [...root.querySelectorAll('[data-comparator-select]')];
+      const error = root.querySelector('[data-comparator-error]');
+      const empty = root.querySelector('[data-comparator-empty]');
+      const results = root.querySelector('[data-comparator-results]');
+      const thirdControls = root.querySelectorAll('.comparator-third-control');
+      const addThird = root.querySelector('[data-add-third]');
+      const names = Object.fromEntries(contract.software.map((item) => [item.slug, item.name]));
+      let currentDimensions = [];
+      const node = (tag, className, text) => { const element=document.createElement(tag); if(className)element.className=className; if(text!==undefined)element.textContent=text; return element; };
+      const showThird = (show=true) => { thirdControls.forEach((item)=>item.hidden=!show); addThird.hidden=show; if(!show)selects[2].value=''; };
+      addThird.addEventListener('click',()=>showThird(true));
+
+      function renderDimensions(family='all') {
+        const list=root.querySelector('[data-dimension-list]'); list.replaceChildren();
+        currentDimensions.filter((item)=>family==='all'||item.family===family).forEach((item)=>{
+          const card=node('article','comparator-dimension-card'); card.dataset.family=item.family;
+          const top=node('div','comparator-dimension-top'); top.append(node('span','comparison-kicker',item.localized.fr.scenario_label),node('span',`evidence-badge evidence-${item.evidence_level.toLowerCase()}`,item.evidence_level==='VERIFIED'?'Preuve vérifiée':'Preuve avec réserve')); card.append(top,node('h3','',item.localized.fr.wording));
+          const resultGrid=node('div','comparator-result-grid');
+          Object.entries(item.results).forEach(([slug,value])=>{const result=node('div','');result.append(node('strong','',names[slug]||slug),node('span',`public-result result-${String(value).toLowerCase().replaceAll('_','-')}`,String(value).replaceAll('_',' ')));resultGrid.append(result)});
+          card.append(resultGrid,node('p','comparator-qualifier',item.localized.fr.qualifier)); list.append(card);
+        });
+        if(!list.children.length)list.append(node('p','comparator-no-dimension','Aucune dimension certifiée ne correspond à ce filtre.'));
+      }
+
+      function render(raw, updateInputs=true) {
+        const state=buildComparisonSelection(raw,contract);const slugs=state.slugs||[];
+        error.hidden=state.valid;error.textContent=state.errors?.length?'Sélection invalide. Choisissez deux ou trois logiciels publiés de la même catégorie, sans doublon.':'';
+        if(updateInputs){selects.forEach((select,index)=>select.value=slugs[index]||'');showThird(slugs.length===3)}
+        empty.hidden=state.active;results.hidden=!state.active;if(!state.active)return;
+        root.querySelector('[data-comparison-title]').textContent=state.selected.map((item)=>item.name).join(' vs ');
+        root.querySelector('[data-comparison-summary]').textContent=state.dimensions.length?`${state.dimensions.length} dimensions certifiées sont comparables pour cette sélection.`:'Aucune dimension ne dispose encore de la certification nécessaire pour cette sélection.';
+        const dates=root.querySelector('[data-comparison-dates]');dates.replaceChildren();state.selected.forEach((item)=>{const line=node('p','');line.append(node('strong','',item.name),document.createTextNode(` · observé le ${item.observed_at}`));dates.append(line)});
+        root.querySelector('[data-freshness-warning]').hidden=!state.freshnessWarning;
+        root.querySelectorAll('[data-comparator-software-card]').forEach((card)=>card.hidden=!slugs.includes(card.dataset.comparatorSoftwareCard));
+        currentDimensions=state.dimensions;renderDimensions();root.querySelector('[data-certified-section]').hidden=!state.dimensions.length;
+        const insufficient=root.querySelector('[data-insufficient-section]'),insufficientList=root.querySelector('[data-insufficient-list]');insufficientList.replaceChildren();
+        state.insufficient.forEach((item)=>{const card=node('article','');card.append(node('h3','',item.software.map((slug)=>names[slug]).join(' vs ')),node('p','',item.reason),node('small','',`${item.candidate_count} dimensions communes repérées, sans conclusion publiée.`));insufficientList.append(card)});insufficient.hidden=!state.insufficient.length;
+        const buyer=root.querySelector('[data-buyer-section]'),buyerList=root.querySelector('[data-buyer-list]');buyerList.replaceChildren();
+        (state.buyerContexts||[]).filter((item)=>item.status!=='INSUFFICIENT_DATA').forEach((item)=>{const card=node('article','');card.append(node('span','comparison-context-status',item.status.replaceAll('_',' ')),node('h3','',item.localized.fr.label),node('p','',item.localized.fr.reason));buyerList.append(card)});buyer.hidden=!buyerList.children.length;
+        const editorial=root.querySelector('[data-editorial-link]');editorial.hidden=!state.editorialPath;if(state.editorialPath)root.querySelector('[data-editorial-anchor]').href=state.editorialPath;
+        window.dispatchEvent(new CustomEvent('datagraphe:comparison_view',{detail:{software:slugs,count:slugs.length}}));
+      }
+      root.querySelectorAll('[data-family]').forEach((button)=>button.addEventListener('click',()=>{root.querySelectorAll('[data-family]').forEach((item)=>item.setAttribute('aria-pressed',String(item===button)));renderDimensions(button.dataset.family);window.dispatchEvent(new CustomEvent('datagraphe:comparison_filter',{detail:{family:button.dataset.family}}))}));
+      form.addEventListener('submit',(event)=>{event.preventDefault();const slugs=selects.map((select)=>select.value).filter(Boolean);const state=buildComparisonSelection(slugs,contract);if(!state.valid||slugs.length<2){render(slugs,false);error.hidden=false;error.textContent=slugs.length<2?'Choisissez au moins deux logiciels.':'Sélection invalide.';return}const url=new URL(location.href);url.searchParams.set('software',slugs.join(','));history.pushState({},'',url);render(slugs,false)});
+      selects.forEach((select)=>select.addEventListener('change',()=>{const selected=selects.map((item)=>item.value).filter(Boolean);selects.forEach((item)=>[...item.options].forEach((option)=>{option.disabled=Boolean(option.value&&selected.includes(option.value)&&item.value!==option.value)}))}));
+      window.addEventListener('popstate',()=>render(new URL(location.href).searchParams.get('software')||''));render(new URL(location.href).searchParams.get('software')||'');
+    }
+  </script>
 </BaseLayout>

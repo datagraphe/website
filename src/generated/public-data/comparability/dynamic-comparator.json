@@ -1,0 +1,767 @@
+{
+  "public_schema_version": "1.2",
+  "derived_from_public_schema": "1.1",
+  "locale": "fr",
+  "runtime_d1_dependency": "NONE",
+  "selection_rules": {
+    "min": 2,
+    "max": 3,
+    "same_category_only": true,
+    "pairwise_certification_required": true
+  },
+  "software": [
+    {
+      "slug": "clockify",
+      "name": "Clockify",
+      "category": "time-tracking-attendance",
+      "published": true,
+      "test_path": "/fr/tests/clockify/",
+      "observed_at": "2026-08-30",
+      "coverage": 56,
+      "public_status": "MIGRATED_PUBLIC_BASELINE",
+      "affiliate_url": null
+    },
+    {
+      "slug": "jibble",
+      "name": "Jibble",
+      "category": "time-tracking-attendance",
+      "published": true,
+      "test_path": "/fr/tests/jibble/",
+      "observed_at": "2026-08-27",
+      "coverage": 55.7,
+      "public_status": "MIGRATED_PUBLIC_BASELINE",
+      "affiliate_url": null
+    },
+    {
+      "slug": "toggl-track",
+      "name": "Toggl Track",
+      "category": "time-tracking-attendance",
+      "published": true,
+      "test_path": "/fr/tests/toggl-track/",
+      "observed_at": "2026-08-31",
+      "coverage": 58.2,
+      "public_status": "PUBLISH_WITH_LIMITATIONS",
+      "affiliate_url": null
+    }
+  ],
+  "pairs": {
+    "clockify--jibble": {
+      "software": [
+        "clockify",
+        "jibble"
+      ],
+      "certification": "PAIRWISE_CERTIFIED",
+      "last_verified_at": "2026-08-31",
+      "publication_gate": "PUBLISH_WITH_LIMITATIONS",
+      "editorial_path": "/fr/comparatifs/jibble-vs-clockify/",
+      "dimensions": [
+        {
+          "canonical_feature_key": "client.create",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Création de clients",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "c01c09a6ce678677f6850e0c0873904bb99010e5d2c7d8e80e4fed2b0d390e78"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "export.csv",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "NOT_RECORDED",
+            "clockify": "INCONCLUSIVE"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Les deux exports sont exploitables; Jibble structure le temps et les heures supplémentaires, Clockify le projet et les colonnes économiques.",
+              "scenario_label": "Export CSV",
+              "qualifier": "Limiter la phrase au scénario Datagraphe.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "1296cae31568f6e1f1dcdb0d9dd224bab7f95115e4d6514973163a98436402ef"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "export.xlsx",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "NOT_RECORDED",
+            "clockify": "INCONCLUSIVE"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Les deux classeurs sont valides, avec des structures adaptées à leurs rapports respectifs.",
+              "scenario_label": "Export XLSX",
+              "qualifier": "Limiter la phrase au scénario Datagraphe.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "aa9f271c663a14794ed434a9646a4d4beede104cb19517b517c60d01f88136ae"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "leave.policy_balance",
+          "family": null,
+          "certification_status": "CERTIFIED_PARTIAL",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "QUALIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Différence observée avec réserve obligatoire : Jibble a affecté une politique à un groupe; Clockify a créé 10 jours et observé un solde de 9 jours.",
+              "scenario_label": "Politiques et soldes de congé",
+              "qualifier": "Scénarios utiles mais profondeur et calcul du solde différents.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "fb460f4dd3162732d503e8742c7262256bff5d9a93b25beec5298743f5078518"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "overtime.daily",
+          "family": null,
+          "certification_status": "CERTIFIED_PARTIAL",
+          "decision": "JIBBLE_ADVANTAGE",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "INCONCLUSIVE"
+          },
+          "evidence_level": "QUALIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Pour la ventilation quotidienne testée, Jibble a fourni un résultat plus complet; cette conclusion est limitée aux réglages et au scénario de 9 h observés.",
+              "scenario_label": "Heures supplémentaires quotidiennes",
+              "qualifier": "Réserve publique obligatoire: Clockify n’a pas produit de ventilation native 8 h + 1 h.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "d6b4184012d6223d1418534d2a957c692534006d57ee425c8be7ed66fc5559fa"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "project.create",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Création de projets",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "34b0ff5b0a371e7df4258b131a585709dbaa64cca46d10471e2910b496a9d3fd"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "report.detailed",
+          "family": null,
+          "certification_status": "CERTIFIED_PARTIAL",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "QUALIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Différence observée avec réserve obligatoire : Preuves des deux côtés, mais Jibble combine activité/salarié alors que Clockify examine Detailed et verrouillage.",
+              "scenario_label": "Rapport détaillé",
+              "qualifier": "Réserve obligatoire sur les dimensions et colonnes.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "1a95fa5554824f1229dd0c33a78cad97b5b20f19061b6f00b869b3f24f9252d7"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "report.summary",
+          "family": null,
+          "certification_status": "CERTIFIED_PARTIAL",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "QUALIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Différence observée avec réserve obligatoire : Les deux rapports consolident le temps, mais filtres, montants et granularités diffèrent.",
+              "scenario_label": "Rapport récapitulatif",
+              "qualifier": "Comparer présence des totaux et filtrage, pas la parité des colonnes.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "6a09e6cb837cf95b7f93cc80187a3364711603ed49ab44ec1ac642035930ef05"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "schedule.create",
+          "family": null,
+          "certification_status": "CERTIFIED_PARTIAL",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "QUALIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Différence observée avec réserve obligatoire : Jibble a configuré un planning fixe; Clockify a consulté le scheduling projet sans affectation.",
+              "scenario_label": "Planning",
+              "qualifier": "Comparer la portée observée avec réserve explicite.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "d62b8668aa178a9ff5a27e31a057db16ab7ce008fe2d0d491702297a6010f377"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "team.group_create",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Création de groupes",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "8ba8ce4ccb974ff17df1a64a2f30059154afb59df301b060098ccd8cccfa60ac"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "time_entry.delete",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "NOT_RECORDED",
+            "clockify": "INCONCLUSIVE"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Les deux suppressions ont réussi après rechargement; Jibble conserve une trace d’audit, Clockify retire la ligne.",
+              "scenario_label": "Suppression des temps",
+              "qualifier": "Limiter la phrase au scénario Datagraphe.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "fce8c77bfe458be902cfcc4f5505a650404bf64056cb5eaf40bde7c9a31070ee"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "time_entry.edit",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "DIFFERENT_APPROACH",
+          "results": {
+            "jibble": "NOT_RECORDED",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Les deux logiciels ont répondu au besoin testé avec des approches différentes : Les deux produits permettent la modification, mais Jibble a exigé une justification et exposé un historique d’audit dans le retest.",
+              "scenario_label": "Modification des temps",
+              "qualifier": "Limiter la phrase au scénario Datagraphe.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "3bad33a7e48b40a3b7790c3ec0f019e5a2a23d0c4534d2fa93cc09d1e702b162"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "time_entry.manual",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Saisie manuelle",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "bb1fe89513ee6d605cddea345a1eebe15868ebe12377e366a999187204301fdc"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "time_tracking.pause",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Pause du minuteur",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "a58df24983b003ad200ed4b1623051ce4a42a418e2584a4044be90fa4e3e95d8"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "time_tracking.resume",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Reprise du minuteur",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "51502718c51bb4d7bacead4c97dceb56dcb8048e2398c720bbab5806e2cf11c6"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "time_tracking.timer_cycle",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Cycle du minuteur",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "964f01d9e1ec4fcd1a1d46c56bd897f215a290827cae09b4752c6181e681a736"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "timesheet.weekly",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Feuille de temps hebdomadaire",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "f357c3ce6b59e9086553c06889fe0c9327ff5a498a045edb3253b5b39d033ab8"
+            }
+          }
+        },
+        {
+          "canonical_feature_key": "workspace.create",
+          "family": null,
+          "certification_status": "CERTIFIED_COMPARABLE",
+          "decision": "EQUIVALENT",
+          "results": {
+            "jibble": "PASS",
+            "clockify": "PASS"
+          },
+          "evidence_level": "VERIFIED",
+          "localized": {
+            "fr": {
+              "wording": "Dans le scénario testé, les données Datagraphe ne montrent pas de différence suffisamment importante entre Jibble et Clockify.",
+              "scenario_label": "Création de l’espace de travail",
+              "qualifier": "Conclusion limitée au protocole Datagraphe observé.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "53452acc305a311b44f07d6954829f7c52bac30721f31a1882949bb8294a6ad2"
+            }
+          }
+        }
+      ],
+      "buyer_contexts": [
+        {
+          "context_key": "independant",
+          "status": "SUPPORTED_WITH_LIMITATIONS",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "time_tracking.timer_cycle",
+            "time_entry.manual",
+            "timesheet.weekly",
+            "export.csv"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Indépendant",
+              "reason": "Les fonctions de base sont documentées, mais prix et statut d’offre restent insuffisants.",
+              "limitations": "trial.payment_status",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "798d3ef09c1318bd68c5155addb0644993cd13d9ff951e2e3b06f7a037f2b1c1"
+            }
+          }
+        },
+        {
+          "context_key": "petite-equipe",
+          "status": "INSUFFICIENT_DATA",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "team.group_create",
+            "timesheet.weekly"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Petite équipe",
+              "reason": "Les permissions et l’ajout/affectation des membres peuvent changer la décision.",
+              "limitations": "team.member_create|team.permissions|project.assign_member",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "28aa05c49abf193e09d4682b6a1eefe37e9e0998068536ad671d2f6520f9e283"
+            }
+          }
+        },
+        {
+          "context_key": "agence-travail-par-projet",
+          "status": "INSUFFICIENT_DATA",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "client.create",
+            "project.create",
+            "export.csv"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Agence / travail par projet",
+              "reason": "Tarifs, budgets et affectations ne sont pas suffisamment comparables.",
+              "limitations": "project.assign_member|project.rate|project.budget_time",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "1a8a7edbf20908d7b75eeb177a633c030834a526a7981b6456ef7328138ad5fa"
+            }
+          }
+        },
+        {
+          "context_key": "suivi-basique-du-temps",
+          "status": "SUPPORTED",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "time_tracking.timer_cycle",
+            "time_tracking.pause",
+            "time_tracking.resume",
+            "time_entry.manual"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Suivi basique du temps",
+              "reason": "Aucune différence majeure observée dans le scénario basique.",
+              "limitations": "",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "a4db75c46d5cf050c150c7a08e6bd7c726bb4b793a1ec55075bb84ff77b3becb"
+            }
+          }
+        },
+        {
+          "context_key": "correction-manuelle-des-temps",
+          "status": "SUPPORTED",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "time_entry.manual",
+            "time_entry.edit",
+            "time_entry.delete"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Correction manuelle des temps",
+              "reason": "Les deux workflows sont documentés; l’approche d’audit diffère.",
+              "limitations": "",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "51b5898c6b2d1b75b95e7cc00a279aa3d6c8993f753ff11174714187c464d91e"
+            }
+          }
+        },
+        {
+          "context_key": "suivi-des-heures-supplementaires",
+          "status": "SUPPORTED_WITH_LIMITATIONS",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "overtime.daily",
+            "export.csv"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Suivi des heures supplémentaires",
+              "reason": "Avantage conditionnel à Jibble dans le scénario testé uniquement.",
+              "limitations": "Réglages/plan Clockify non épuisés.",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "8907ca184e559d99e2f2db22a85f9613cb0e4740e44eb09cedeeb95b3b112c29"
+            }
+          }
+        },
+        {
+          "context_key": "exports",
+          "status": "SUPPORTED",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "export.csv",
+            "export.xlsx"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Exports",
+              "reason": "Les deux produits exportent; les structures diffèrent.",
+              "limitations": "export.pdf",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "595b20f51803bf27ba92e5ff02bed7dcc9d02e819763095a5d913cd3561663a2"
+            }
+          }
+        },
+        {
+          "context_key": "equipes-groupes",
+          "status": "SUPPORTED_WITH_LIMITATIONS",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "team.group_create"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Équipes / groupes",
+              "reason": "Le groupe est comparable, pas la gouvernance complète.",
+              "limitations": "team.member_create|team.permissions|team.role_manager",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "dab43f57e45739d62a8df7d1e2696739fd1c188333db75c29fc22bda986995e3"
+            }
+          }
+        },
+        {
+          "context_key": "gestion-de-projet",
+          "status": "SUPPORTED_WITH_LIMITATIONS",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "client.create",
+            "project.create"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Gestion de projet",
+              "reason": "Création comparable; pilotage économique et affectations non tranchés.",
+              "limitations": "project.task|project.assign_member|project.rate|project.budget_time",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "68328d8bfef54542e4b3873dbf956404cd008c5cb88871863d9a6a63b9a69c58"
+            }
+          }
+        },
+        {
+          "context_key": "validation-verrouillage-des-temps",
+          "status": "INSUFFICIENT_DATA",
+          "observed_at": "2026-08-31",
+          "fact_basis": [
+            "timesheet.approval"
+          ],
+          "localized": {
+            "fr": {
+              "label": "Validation / verrouillage des temps",
+              "reason": "Un retest sur période terminée est nécessaire.",
+              "limitations": "timesheet.lock",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "53311cfb2d5d01b27935ccbacaffe151c79cd85ca6031109abb8e902b4a7f49b"
+            }
+          }
+        },
+        {
+          "context_key": "terrain",
+          "status": "INSUFFICIENT_DATA",
+          "observed_at": "2026-08-31",
+          "fact_basis": [],
+          "localized": {
+            "fr": {
+              "label": "Terrain",
+              "reason": "Appareils, consentement et scénarios terrain manquent.",
+              "limitations": "kiosk.create|kiosk.pin_cycle|gps.location|offline.tracking",
+              "content_version": 1,
+              "review_status": "APPROVED",
+              "content_hash": "d872c05990789c876a74f3e9d87dfbfb4d09ca67d401888f29d5b323260440c6"
+            }
+          }
+        }
+      ]
+    },
+    "clockify--toggl-track": {
+      "software": [
+        "clockify",
+        "toggl-track"
+      ],
+      "certification": "INSUFFICIENT_DATA",
+      "last_verified_at": null,
+      "publication_gate": "NOT_PUBLISHABLE",
+      "editorial_path": null,
+      "dimensions": [],
+      "candidate_dimensions_without_pairwise_certification": [
+        "calendar.view",
+        "client.create",
+        "dashboard.team",
+        "export.csv",
+        "export.pdf",
+        "export.xlsx",
+        "gps.location",
+        "integration.api",
+        "integration.google_calendar",
+        "invoice.create",
+        "kiosk.create",
+        "kiosk.pin_cycle",
+        "leave.policy_balance",
+        "leave.request_approve",
+        "offline.tracking",
+        "organization.settings",
+        "overtime.daily",
+        "project.assign_member",
+        "project.budget_time",
+        "project.create",
+        "project.rate",
+        "project.task",
+        "report.attendance",
+        "report.detailed",
+        "report.summary",
+        "report.weekly",
+        "schedule.create",
+        "security.audit_log",
+        "security.sso",
+        "team.group_create",
+        "team.member_create",
+        "team.permissions",
+        "team.role_manager",
+        "time_entry.delete",
+        "time_entry.edit",
+        "time_entry.manual",
+        "time_tracking.pause",
+        "time_tracking.resume",
+        "time_tracking.timer_cycle",
+        "timesheet.approval",
+        "timesheet.lock",
+        "timesheet.weekly",
+        "trial.payment_status",
+        "workspace.create"
+      ],
+      "buyer_contexts": []
+    },
+    "jibble--toggl-track": {
+      "software": [
+        "jibble",
+        "toggl-track"
+      ],
+      "certification": "INSUFFICIENT_DATA",
+      "last_verified_at": null,
+      "publication_gate": "NOT_PUBLISHABLE",
+      "editorial_path": null,
+      "dimensions": [],
+      "candidate_dimensions_without_pairwise_certification": [
+        "calendar.view",
+        "client.create",
+        "dashboard.team",
+        "export.csv",
+        "export.pdf",
+        "export.xlsx",
+        "gps.location",
+        "integration.api",
+        "integration.google_calendar",
+        "invoice.create",
+        "kiosk.create",
+        "kiosk.pin_cycle",
+        "leave.policy_balance",
+        "leave.request_approve",
+        "offline.tracking",
+        "organization.settings",
+        "overtime.daily",
+        "project.assign_member",
+        "project.budget_time",
+        "project.create",
+        "project.rate",
+        "project.task",
+        "report.attendance",
+        "report.detailed",
+        "report.summary",
+        "report.weekly",
+        "schedule.create",
+        "security.audit_log",
+        "security.sso",
+        "team.group_create",
+        "team.member_create",
+        "team.permissions",
+        "team.role_manager",
+        "time_entry.delete",
+        "time_entry.edit",
+        "time_entry.manual",
+        "time_tracking.pause",
+        "time_tracking.resume",
+        "time_tracking.timer_cycle",
+        "timesheet.approval",
+        "timesheet.lock",
+        "timesheet.weekly",
+        "trial.payment_status",
+        "workspace.create"
+      ],
+      "buyer_contexts": []
+    }
+  }
+}

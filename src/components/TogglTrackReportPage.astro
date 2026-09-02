@@ -6,6 +6,7 @@ import AffiliateDisclosure from '@/components/AffiliateDisclosure.astro';
 import EvidenceMethod from '@/components/EvidenceMethod.astro';
 import AccessTypeBadge from '@/components/AccessTypeBadge.astro';
 import PublicDatasetSoftwareReport from '@/components/PublicDatasetSoftwareReport.astro';
+import CompareSoftwareLink from '@/components/CompareSoftwareLink.astro';
 import { publicSoftware, usingPublicDataset } from '@/data/public-contract';
 import { togglTrackReport as report } from '@/data/toggl-track-report';
 import '@/styles/toggl-report.css';
@@ -40,6 +41,7 @@ const schema = {
           <h1>Toggl Track mérite-t-il votre temps&nbsp;?</h1>
           <p>{report.verdict.title}</p>
           <div class="toggl-context"><strong>Testé le {report.testedOn}</strong><span>Test réalisé dans un environnement d’essai Premium sans carte.</span><small>Cette mention décrit uniquement l’environnement observé le jour du test et ne garantit pas les conditions commerciales actuelles.</small></div>
+          <CompareSoftwareLink slug="toggl-track" name="Toggl Track"/>
         </div>
         <div class="toggl-coverage-card" aria-label="Couverture Datagraphe : 58,2 pour cent">
           <span>Couverture Datagraphe</span><strong>{report.metrics.coverage}</strong><div><i></i></div><p>{report.metrics.total} fonctionnalités recensées</p><small>Aucune note globale inventée · Non noté</small>

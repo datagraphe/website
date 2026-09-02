@@ -5,6 +5,7 @@ import AffiliateDisclosure from '@/components/AffiliateDisclosure.astro';
 import EvidenceMethod from '@/components/EvidenceMethod.astro';
 import AccessTypeBadge from '@/components/AccessTypeBadge.astro';
 import PublicDatasetSoftwareReport from '@/components/PublicDatasetSoftwareReport.astro';
+import CompareSoftwareLink from '@/components/CompareSoftwareLink.astro';
 import { publicSoftware, usingPublicDataset } from '@/data/public-contract';
 import { localizedPath, localeTags, type Locale } from '@/i18n/config';
 import { t } from '@/i18n';
@@ -25,7 +26,7 @@ const schema={
 
 <BaseLayout locale={locale} routePath={routePath} title={c.title} description={c.description}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)}/>
-  <header class="jibble-hero"><div class="shell"><Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.tests,href:localizedPath(locale,'tests')},{label:'Clockify'}]} ariaLabel={`${common.tests} — Clockify`}/><div class="jibble-hero-grid"><div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span>{locale === 'fr' && <AccessTypeBadge type="essai Pro" detail="sept jours, sans carte"/>}</div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}{locale === 'fr' ? ' · Environnement web isolé' : ''}</small></div><div class="jibble-score" aria-label={`${c.scoreLabel}: 8.1 sur 10`}><span>{c.scoreLabel}</span><strong>8,1<small>/10</small></strong><div><i style="width:56%"></i></div><small>{c.scopeLabel}: {clockifyReportData.coverageRate}</small></div></div></div></header>
+  <header class="jibble-hero"><div class="shell"><Breadcrumb items={[{label:common.home,href:localizedPath(locale)},{label:common.tests,href:localizedPath(locale,'tests')},{label:'Clockify'}]} ariaLabel={`${common.tests} — Clockify`}/><div class="jibble-hero-grid"><div><div class="jibble-tags"><span class="status status-tested">TESTED</span><span class="status">{c.category}</span>{locale === 'fr' && <AccessTypeBadge type="essai Pro" detail="sept jours, sans carte"/>}</div><h1>{c.question}</h1><p>{c.verdictTitle}</p><small>{c.testedOn}{locale === 'fr' ? ' · Environnement web isolé' : ''}</small>{locale === 'fr' && <CompareSoftwareLink slug="clockify" name="Clockify"/>}</div><div class="jibble-score" aria-label={`${c.scoreLabel}: 8.1 sur 10`}><span>{c.scoreLabel}</span><strong>8,1<small>/10</small></strong><div><i style="width:56%"></i></div><small>{c.scopeLabel}: {clockifyReportData.coverageRate}</small></div></div></div></header>
 
   {usingPublicDataset && locale === 'fr' ? <PublicDatasetSoftwareReport data={publicSoftware.clockify} software="Clockify"/> : <Fragment><section class="jibble-report-section"><div class="shell test-layout"><article class="jibble-report">
     <section id="verdict" class="jibble-verdict"><span class="eyebrow">{c.verdictLabel}</span><h2>{c.verdictTitle}</h2><p>{c.verdict}</p><p class="jibble-caveat">{c.caveat}</p></section>

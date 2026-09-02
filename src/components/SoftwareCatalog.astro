@@ -5,6 +5,7 @@ import { testedSoftwareForLocale } from '@/data/software';
 import { catalogCopy } from '@/i18n/catalog';
 import CategoryIcon from './CategoryIcon.astro';
 import SoftwareTestCard from './SoftwareTestCard.astro';
+import ComparisonSelectionBar from './ComparisonSelectionBar.astro';
 
 interface Props { locale:Locale }
 const { locale } = Astro.props;
@@ -47,6 +48,7 @@ const hasScores = testedSoftware.some((software)=>software.score !== null);
     </div>
   </div>
 </div>
+{locale === 'fr' && <ComparisonSelectionBar />}
 <script is:inline define:vars={{emptyCategoryTitle:copy.emptyTitle,emptyCategoryText:copy.emptyText,emptySearchTitle:copy.emptySearchTitle,emptySearchText:copy.emptySearchText}}>
   document.querySelectorAll('[data-software-catalog]').forEach((catalog)=>{
     const cards=[...catalog.querySelectorAll('[data-software-card]')],buttons=[...catalog.querySelectorAll('[data-category]')],grid=catalog.querySelector('[data-software-grid]'),search=catalog.querySelector('[data-software-search]'),sort=catalog.querySelector('[data-software-sort]'),empty=catalog.querySelector('[data-catalog-empty]'),count=catalog.querySelector('[data-result-count]'),countLabel=catalog.querySelector('[data-result-label]'),current=catalog.querySelector('[data-current-category]'),mobileCurrent=catalog.querySelector('[data-mobile-category]'),mobileDetails=catalog.querySelector('.catalog-mobile-filter');

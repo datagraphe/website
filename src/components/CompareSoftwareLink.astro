@@ -1,0 +1,5 @@
+---
+interface Props { slug:string; name:string; class?:string }
+const { slug, name, class:className='' } = Astro.props;
+---
+<a class:list={['button','secondary','compare-software-link',className]} href={`/fr/comparatifs/?software=${encodeURIComponent(slug)}`}>Comparer {name}</a>

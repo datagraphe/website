@@ -3,15 +3,21 @@
   "name": "datagraphe-user-api",
   "main": "src/index.mjs",
   "compatibility_date": "2026-09-02",
+  "routes": [
+    {
+      "pattern": "datagraphe.com/api/user/*",
+      "zone_name": "datagraphe.com"
+    }
+  ],
   "d1_databases": [
     {
       "binding": "USER_DB",
       "database_name": "datagraphe-users",
-      "database_id": "00000000-0000-0000-0000-000000000001",
+      "database_id": "01f7e3f0-cbdc-4f87-8da1-794d7ef4492f",
       "migrations_dir": "migrations"
     }
   ],
   "vars": {
-    "AUTHORIZED_PARTIES": "https://datagraphe.com,http://127.0.0.1:4321,http://localhost:4321,http://127.0.0.1:4324,http://localhost:4324"
+    "AUTHORIZED_PARTIES": "https://datagraphe.com"
   }
 }

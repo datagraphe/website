@@ -3,6 +3,12 @@ import { authenticatedFetch, getClerk } from './clerk-client';
 
 const targetMap = new Map(targets.map((target) => [`${target.type}:${target.key}`, target]));
 const escape = (value: unknown) => String(value ?? '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]!);
+const followGroups = [
+  { type: 'SOFTWARE', title: 'Logiciels', empty: 'Vous ne suivez encore aucun logiciel.' },
+  { type: 'CATEGORY', title: 'Catégories', empty: 'Vous ne suivez encore aucune catégorie.' },
+  { type: 'COMPARISON', title: 'Comparatifs', empty: 'Vous ne suivez encore aucun comparatif.' },
+  { type: 'DATAGRAPHE', title: 'Datagraphe', empty: 'Vous ne suivez pas encore l’actualité Datagraphe.' }
+] as const;
 
 async function loadJson(path: string, init?: RequestInit) {
   const response = await authenticatedFetch(path, init);
@@ -41,15 +47,31 @@ export async function initAccountPage() {
       });
     } else if (mode === 'follows') {
       const subscriptions = (await loadJson('/api/user/subscriptions/')).subscriptions;
-      content.innerHTML = subscriptions.length ? `<div class="follow-list">${subscriptions.map((item: any) => { const target = targetMap.get(`${item.subscription_type}:${item.target_key}`); return `<article><div><span>${escape(target?.group || item.subscription_type)}</span><h2>${escape(target?.label || 'Suivi indisponible')}</h2><p>Ajouté le ${escape(new Date(item.created_at).toLocaleDateString('fr-FR'))}</p></div><button class="button secondary" data-unfollow-id="${escape(item.id)}">Retirer</button></article>`; }).join('')}</div>` : '<div class="account-empty"><h2>Aucun suivi pour le moment</h2><p>Ajoutez un logiciel, une catégorie ou un comparatif depuis les pages publiques.</p><a class="button primary" href="/fr/tests/">Explorer les tests</a></div>';
+      content.innerHTML = `${subscriptions.length ? '' : '<div class="account-empty account-empty-summary"><h2>Aucun suivi pour le moment</h2><p>Choisissez les logiciels, catégories ou comparatifs que vous souhaitez retrouver ici.</p><a class="button primary" href="/fr/tests/">Explorer les logiciels</a></div>'}<div class="follow-groups">${followGroups.map((group) => {
+        const items = subscriptions.filter((item: any) => item.subscription_type === group.type);
+        return `<section class="follow-group" data-follow-group="${group.type}"><div class="follow-group-head"><h2>${group.title}</h2><span>${items.length} suivi${items.length > 1 ? 's' : ''}</span></div><div class="follow-list">${items.map((item: any) => {
+          const target = targetMap.get(`${item.subscription_type}:${item.target_key}`);
+          const statusLabel = item.status === 'ACTIVE' ? 'Actif' : item.status === 'PAUSED' ? 'Suspendu' : 'Inactif';
+          return `<article><div><span class="follow-status" data-follow-status="${escape(item.status)}">${statusLabel}</span><h3>${escape(target?.label || 'Suivi indisponible')}</h3><p>Ajouté le ${escape(new Date(item.created_at).toLocaleDateString('fr-FR'))}</p></div><button class="button secondary" data-unfollow-id="${escape(item.id)}" type="button">Retirer</button></article>`;
+        }).join('')}</div><p class="follow-group-empty" ${items.length ? 'hidden' : ''}>${group.empty}</p></section>`;
+      }).join('')}</div>`;
       content.querySelectorAll<HTMLButtonElement>('[data-unfollow-id]').forEach((button) => button.addEventListener('click', async () => {
         button.disabled = true;
-        try { await loadJson(`/api/user/subscriptions/${encodeURIComponent(button.dataset.unfollowId!)}/`, { method: 'DELETE' }); button.closest('article')?.remove(); }
+        try {
+          await loadJson(`/api/user/subscriptions/${encodeURIComponent(button.dataset.unfollowId!)}/`, { method: 'DELETE' });
+          const group = button.closest<HTMLElement>('[data-follow-group]');
+          button.closest('article')?.remove();
+          const remaining = group?.querySelectorAll('.follow-list article').length ?? 0;
+          const count = group?.querySelector<HTMLElement>('.follow-group-head span');
+          const empty = group?.querySelector<HTMLElement>('.follow-group-empty');
+          if (count) count.textContent = `${remaining} suivi${remaining > 1 ? 's' : ''}`;
+          if (!remaining) empty?.removeAttribute('hidden');
+        }
         catch { button.disabled = false; button.textContent = 'Réessayer'; }
       }));
     } else if (mode === 'preferences') {
       const preferences = me.preferences;
-      content.innerHTML = `<form class="preferences-form" data-preferences-form><p class="account-notice">Ajoutez vos logiciels à vos suivis. Les préférences de notification sont disponibles dans votre compte.</p>${[
+      content.innerHTML = `<form class="preferences-form" data-preferences-form><p class="account-notice">Choisissez les sujets pour lesquels vous souhaitez être notifié. L’envoi des alertes sera activé prochainement.</p>${[
         ['email_enabled','Emails activés'],['new_tests','Nouveaux tests'],['verified_changes','Changements vérifiés'],['new_comparisons','Nouveaux comparatifs'],['datagraphe_news','Actualité Datagraphe']
       ].map(([key, label]) => `<label><span>${label}</span><input type="checkbox" name="${key}" ${Number(preferences[key]) ? 'checked' : ''}/></label>`).join('')}<button class="button primary" type="submit">Enregistrer</button><p role="status" data-preferences-status></p></form>`;
       const form = content.querySelector<HTMLFormElement>('[data-preferences-form]');
